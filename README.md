@@ -58,3 +58,40 @@ Cấu hình bảo mật MariaDB
 mysql_secure_installation
 ```
 
+##### Restore database
+
+Copy file backup database lên máy chủ vào một thư mục nào đó ví dụ /home/vmblogs3_db.sql
+
+Đăng nhập database server bằng tài khoản root đã tạo ở bước mysql_secure_installation
+
+```
+mysql -u root -p
+```
+
+Tạo database cho wordpress và gán tài khoản đăng nhập cho riêng database
+
+```
+create database vmblogs3_db;
+use vmblogs3_db;
+grant all on vmblogs3_db.* to 'vmblogs3_dbuser'@'localhost' identified by 'yscnlav8ko';
+```
+
+Restore database
+
+```
+mysqldum -u root -p vmblogs3_db < /home/vmblogs3_db.sql
+```
+
+hoặc 
+
+```
+mysql -u root -p
+use vmblogs3_db;
+source /home/vmblogs3_db.sql
+```
+
+##### Restore thư mục wordpress
+
+Upload thư mục wordpress đã backup lên máy chủ bằng FTP hoặc SFTP vào thư mục bất kỳ ví dụ 
+
+> /var/www/html/vmblogs

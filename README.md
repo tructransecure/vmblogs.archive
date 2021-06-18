@@ -2,7 +2,7 @@
 
 ------
 
-![homepage](https://github.com/tructransecure/vmblogs.archive/blob/main/resource/homepage.png)
+![homepage](https://github.com/tructransecure/vmblogs.archive/blob/main/resource/homepage.jpg)
 
 Để cài đặt blog worppress, chúng ta cần có đủ các thành phần cơ bản như sau:
 
@@ -136,4 +136,6 @@ firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --add-service=https
 firewall-cmd --reload
 ```
+
+### 7.Khác
 

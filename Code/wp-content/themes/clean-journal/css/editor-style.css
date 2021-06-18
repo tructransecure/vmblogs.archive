@@ -1,0 +1,387 @@
+/*
+Theme Name: Clean Journal
+Description: Used to style the TinyMCE editor.
+*/
+
+
+/**
+ * 1.0 Reset
+ */
+
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+
+/**
+ * 2.0 Typography
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Droid Sans",sans-serif;
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+
+/**
+ * 3.0 Elements
+ */
+
+p {
+	margin-bottom: 20px;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 20px 40px;
+}
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 30px;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+address {
+	font-style: normal;
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-top: 0;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code {
+	background-color: #333;
+	color: #ddd;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+a {
+	color: #21759b;
+	text-decoration: none;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin-top: 0;
+    margin-bottom: 20px;
+}
+
+ol, 
+ul {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+ol > li {
+	list-style-type: decimal;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+ol ol,
+ul ul {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+
+/**
+ * 4.0 Alignment
+ */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/**
+ * 5.0 Caption
+ */
+
+.wp-caption {
+	background-color:  #f3f3f3;
+	border: 1px solid #ddd;
+	margin-top: 0;
+	margin-bottom: 15px;
+	max-width: 100%;
+	padding: 5px 5px 0;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 8px 0;
+	padding: 0;
+}
+
+dl.wp-caption, dl.wp-caption * {
+	width: 100%;
+}
+
+.wp-caption-dd {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 4px 5px;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+
+/**
+ * 6.0 Galleries
+ */
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery img {
+    border: 1px solid #eee;
+    padding: 5px;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.gallery .gallery-caption {
+	font-size: 15px;
+	line-height: 1.5;
+	margin-top: 0;
+	margin-bottom:  15px;
+}
+
+
+/**
+ * 7.0 Table
+ */
+table.mce-item-table {
+	border-top: 1px solid #eee;
+	border-right: none;
+	border-bottom: none;
+	border-left: 1px solid #eee;
+	margin: 0 0 2em;
+	width: 100%;
+}
+table.mce-item-table th {
+	border-top: none;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-left: none;
+	color: #666;
+	font-size: 13px;
+	font-weight: 700;
+	padding: 8px;
+	text-transform: uppercase;
+}
+table.mce-item-table td {
+	border-top: none;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+    border-left: none;
+    font-size: 13px;
+	padding: 8px;
+}

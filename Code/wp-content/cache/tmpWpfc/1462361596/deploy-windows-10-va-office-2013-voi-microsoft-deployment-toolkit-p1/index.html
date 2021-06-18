@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="profile" href="//gmpg.org/xfn/11">
+<link rel="pingback" href="">
+<!--[if lt IE 9]>
+<script src="//vmblogs.vn/wp-content/themes/clean-journal/js/html5.min.js"></script>
+<![endif]-->
+<title>Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</title>
+<!-- This site is optimized with the Yoast SEO plugin v3.2.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="keywords" content="Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1"/>
+<link rel="canonical" href="//vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1" />
+<meta property="og:description" content="Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1 Xin chào các bạn, Trong bài post này mình sẽ hướng dẫn các bạn cài đặt Windows 10 và Office qua mạng sử dụng Microsoft Deployment Toolkit (MDT) và Windows Deployment Services (WDS) Để chuẩn bị cho việc cài đặt Windows và Office qua Read More ..." />
+<meta property="og:url" content="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/" />
+<meta property="og:site_name" content="VMBlogs" />
+<meta property="article:publisher" content="https://www.facebook.com/tructransecure" />
+<meta property="article:author" content="https://www.facebook.com/tructransecure" />
+<meta property="article:tag" content="Microsoft Deployment Toolkit" />
+<meta property="article:section" content="Microsoft" />
+<meta property="article:published_time" content="2015-11-29T20:36:06+00:00" />
+<meta property="article:modified_time" content="2015-11-29T23:02:58+00:00" />
+<meta property="og:updated_time" content="2015-11-29T23:02:58+00:00" />
+<meta property="og:image" content="https://vmblogs.vn/wp-content/uploads/2015/11/MDT.png" />
+<meta property="og:image:width" content="1025" />
+<meta property="og:image:height" content="769" />
+<!-- / Yoast SEO plugin. -->
+<link rel="alternate" type="application/rss+xml" title="VMBlogs &raquo; Feed" href="//vmblogs.vn/feed/" />
+<link rel="alternate" type="application/rss+xml" title="VMBlogs &raquo; Comments Feed" href="//vmblogs.vn/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="VMBlogs &raquo; Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1 Comments Feed" href="//vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/vmblogs.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.1"}};
+!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='gglcptch-css'  href='//vmblogs.vn/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.23' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='//vmblogs.vn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journal-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CDroid+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journal-style-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/style.css?ver=4.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/css/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sidr-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/css/jquery.sidr.light.min.css?ver=2.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='//vmblogs.vn/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.12' type='text/css' media='all' />
+<style id='A2A_SHARE_SAVE-inline-css' type='text/css'>
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+</style>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/jquery.sidr.min.js?ver=2.2.1.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-custom-scripts.min.js'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+<link rel='https://api.w.org/' href='//vmblogs.vn/wp-json/' />
+<meta name="generator" content="WordPress 4.5.1" />
+<link rel='shortlink' href='//vmblogs.vn/?p=1702' />
+<link rel="alternate" type="application/json+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F" />
+<link rel="alternate" type="text/xml+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&#038;format=xml" />
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});a2a_config.templates=a2a_config.templates||{};
+//--></script>
+<!-- refreshing cache --><link rel="shortcut icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" type="image/x-icon" /><!-- refreshing cache -->	<style type="text/css">
+.site-title a,
+.site-description {
+color: #111111;
+}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f9f9f9; }
+</style>
+<link rel="icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" sizes="32x32" />
+<link rel="icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" />
+<meta name="msapplication-TileImage" content="https://vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" />
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+var analyticsFileTypes = [''];
+var analyticsSnippet = 'disabled';
+var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+ga('send', 'pageview');
+ga('send', 'pageview');
+</script>
+</head>
+<body class="single single-post postid-1702 single-format-standard custom-background two-columns content-left excerpt-image-left mobile-menu-one">
+<div id="page" class="hfeed site">
+<div id="header-top" class="header-top-bar">
+<div class="wrapper">
+<div class="header-top-right full-width">
+<section class="widget widget_clean_journal_social_icons" id="header-right-social-icons">
+<div class="widget-wrap">
+<a class="genericon_parent genericon genericon-facebook-alt" target="_blank" title="Facebook" href="https://www.facebook.com/tructransecure"><span class="screen-reader-text">Facebook</span> </a><a class="genericon_parent genericon genericon-youtube" target="_blank" title="YouTube" href="https://www.youtube.com/user/tructransecure"><span class="screen-reader-text">YouTube</span> </a><a class="genericon_parent genericon genericon-skype" target="_blank" title="Skype" href="tructransecure"><span class="screen-reader-text">Skype</span> </a>								</div><!-- .widget-wrap -->
+</section><!-- #header-right-social-icons -->
+</div><!-- .header-top-right -->
+</div><!-- .wrapper -->
+</div><!-- #header-top -->
+<header id="masthead" role="banner">
+<div class="wrapper">
+<div id="mobile-header-left-menu" class="mobile-menu-anchor primary-menu">
+<a href="#mobile-header-left-nav" id="header-left-menu" class="genericon genericon-menu">
+<span class="mobile-menu-text">Menu</span>
+</a>
+</div><!-- #mobile-header-menu -->
+<div id="site-branding">
+<div id="site-header">
+<h1 class="site-title"><a href="https://vmblogs.vn/">VMBlogs</a></h1>
+<h2 class="site-description">Chia sẻ tri thức công nghệ</h2>
+</div><!-- #site-header --></div><!-- #site-branding-->	<aside class="sidebar sidebar-header-right widget-area">
+<section class="widget widget_search" id="header-right-search">
+<div class="widget-wrap">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</section>
+</aside><!-- .sidebar .header-sidebar .widget-area -->
+</div><!-- .wrapper -->
+</header><!-- #masthead -->
+<nav class="nav-primary search-enabled" role="navigation">
+<div class="wrapper">
+<h1 class="assistive-text">Primary Menu</h1>
+<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+<ul id="menu-vmblogs" class="menu clean-journal-nav-menu"><li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li>
+<li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li>
+<li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li>
+</ul>
+</li>
+<li id="menu-item-335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>
+<li id="menu-item-721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li>
+</ul>
+</li>
+<li id="menu-item-339" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li>
+<li id="menu-item-612" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li>
+<li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li id="menu-item-1172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li>
+</ul>
+</li>
+<li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li>
+</ul>                <div id="search-toggle" class="genericon">
+<a class="screen-reader-text" href="#search-container">Search</a>
+</div>
+<div id="search-container" class="displaynone">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</div><!-- .wrapper -->
+</nav><!-- .nav-primary -->
+<!-- Disable Header Image --><div id="breadcrumb-list">
+<div class="wrapper"><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/">Home <span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/category/microsoft/">Microsoft<span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb-current">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</span></div><!-- .wrapper -->
+</div><!-- #breadcrumb-list -->		<div id="content" class="site-content">
+<div class="wrapper">
+<main id="main" class="site-main" role="main">
+<article id="post-1702" class="post-1702 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft tag-microsoft-deployment-toolkit">
+<!-- Page/Post Single Image Disabled or No Image set in Post Thumbnail -->
+<div class="entry-container">
+<header class="entry-header">
+<h1 class="entry-title">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</h1>
+<p class="entry-meta"><span class="posted-on"><span class="screen-reader-text">Posted on</span><a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/" rel="bookmark"><time class="entry-date published" datetime="2015-11-29T20:36:06+00:00">November 29, 2015</time><time class="updated" datetime="2015-11-29T23:02:58+00:00">November 29, 2015</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author</span><a class="url fn n" href="https://vmblogs.vn/author/admin/">Trung Truc Tran</a></span></span><span class="comments-link"><a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/#comments">2 Comments</a></span></p><!-- .entry-meta -->		</header><!-- .entry-header -->
+<div class="entry-content">
+<div class="addtoany_share_save_container addtoany_content_top"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_button_facebook a2a_counter" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a>
+<script type="text/javascript"><!--
+if(wpa2a)wpa2a.script_load();
+//--></script>
+</div></div><h3><span style="color: #0000ff;">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</span></h3>
+<p>Xin chào các bạn,</p>
+<p>Trong bài post này mình sẽ hướng dẫn các bạn cài đặt Windows 10 và Office qua mạng sử dụng Microsoft Deployment Toolkit (MDT) và Windows Deployment Services (WDS)</p>
+<p>Để chuẩn bị cho việc cài đặt Windows và Office qua mạng các bạn cần chuẩn bị các thành phần như bên dưới</p>
+<ul>
+<li>Windows 10 Pro (Build 10240)</li>
+<li>Microsoft Office 2010/2013</li>
+<li>Windows 10 ADK</li>
+<li>Microsoft Deployment Toolkit 2013 Update 1</li>
+<li>Windows Server 2012 R2 (Server 2008 WDS không hỗ trợ chế độ StandAlone bắt buộc phải Join WDS vào domain)</li>
+</ul>
+<p>Ngoài việc chuẩn bị các công cụ như trên chúng ta cũng cần chuẩn bị một DHCP Server và DNS server, việc boot PXE phụ thuộc vào DHCP, do đó cân phải cấu hình một cách cẩn thận</p>
+<p>Microsoft Deployment Toolkit không hỗ trợ boot PXE nên để thuận tiện chúng ta sử dụng thêm WDS để hỗ trợ client boot PXE. Nếu không dùng WDS thì client phải boot thủ công từ đĩa LiteTouch</p>
+<p><strong>1 &#8211; Cài đặt Windows 10 ADK</strong></p>
+<p>Dung lượng Windows 10 ADK tương đối lớn, để thuận tiện các bạn nên tải về để cài đặt Offline</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.28.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1703" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.28-620x455.png" alt="Snap 2015-11-29 at 13.32.28" width="620" height="455" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.28-620x455.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.28.png 751w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click Next để cài đặt</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.38.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1704" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.38-620x455.png" alt="Snap 2015-11-29 at 13.32.38" width="620" height="455" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.38-620x455.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.38.png 751w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đồng ý gửi thông tin hoặc không</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.49.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1705" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.49-620x455.png" alt="Snap 2015-11-29 at 13.32.49" width="620" height="455" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.49-620x455.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.32.49.png 751w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đồng ý thỏa thuận bản quyền</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.37.18.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1706" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.37.18-620x455.png" alt="Snap 2015-11-29 at 13.37.18" width="620" height="455" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.37.18-620x455.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.37.18.png 751w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn các thành phần cài đặt trong bộ Windows 10 ADK. Để sử dụng Windows Deployment Toolkit không nhất thiết phải chọn hết tuy nhiên các thành phần khác cũng có thể giúp ích nếu các bạn muốn tìm hiểu nhiều hơn</p>
+<p>Click Install để tiến hành cài đặt</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.55.17.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1708" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.55.17-620x455.png" alt="Snap 2015-11-29 at 13.55.17" width="620" height="455" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.55.17-620x455.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.55.17.png 751w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Hoàn tất.</p>
+<p><strong>2 &#8211; Cài đặt Microsoft Deployment Toolkit 2013 Update 1</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.58.41.png" rel="lightbox[1702]"><img class="aligncenter size-full wp-image-1709" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.58.41.png" alt="Snap 2015-11-29 at 13.58.41" width="500" height="390" /></a></p>
+<p>Click Next để bắt đầu</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.58.57.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1710" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.58.57.png" alt="Snap 2015-11-29 at 13.58.57" width="500" height="390" /></a></p>
+<p>Đồng ý thỏa thuận bản quyền</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.11.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1711" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.11.png" alt="Snap 2015-11-29 at 13.59.11" width="500" height="390" /></a></p>
+<p>Chọn các thành phần cài đặt =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.19.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1712" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.19.png" alt="Snap 2015-11-29 at 13.59.19" width="500" height="390" /></a></p>
+<p>Tham gia hoặc không tham gia chương trình của Microsoft</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.26.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1713" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.26.png" alt="Snap 2015-11-29 at 13.59.26" width="500" height="390" /></a></p>
+<p>Click Install để tiến hành cài đặt</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.39.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1714" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-13.59.39.png" alt="Snap 2015-11-29 at 13.59.39" width="500" height="390" /></a></p>
+<p>Hoàn tất</p>
+<p><strong>3 &#8211; Cài đặt Windows Deployment Services (WDS)</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.42.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1715" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.42-620x440.png" alt="Snap 2015-11-29 at 14.00.42" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.42-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.42.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Để cài đặt Windows Deployment Services, truy cập Server Manager và chọn Add Roles and Features Wizard</p>
+<p>Chọn Role-based&#8230;và Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.49.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1716" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.49-620x440.png" alt="Snap 2015-11-29 at 14.00.49" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.49-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.00.49.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Lựa chọn server để cài đặt =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.22.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1717" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.22-620x440.png" alt="Snap 2015-11-29 at 14.01.22" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.22-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.22.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn Windows Deployment Services =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.31.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1718" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.31-620x440.png" alt="Snap 2015-11-29 at 14.01.31" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.31-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.31.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.39.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1719" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.39-620x440.png" alt="Snap 2015-11-29 at 14.01.39" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.39-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.01.39.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.02.59.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1720" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.02.59-620x440.png" alt="Snap 2015-11-29 at 14.02.59" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.02.59-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.02.59.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn cả 2 Role service là Deployment Server và Transport server =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.03.09.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1721" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.03.09-620x440.png" alt="Snap 2015-11-29 at 14.03.09" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.03.09-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.03.09.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click Install để tiến hành cài đặt</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.04.18.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1722" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.04.18-620x440.png" alt="Snap 2015-11-29 at 14.04.18" width="620" height="440" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.04.18-620x440.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.04.18.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Hoàn tất</p>
+<p><strong>4 &#8211; Cấu hình Windows Deployment Services (WDS)</strong></p>
+<p>Vì chúng ta sử dụng chính là MDT nên cũng sẽ không có gì nhiều phải làm với WDS, nhiệm vụ chính của WDS là giúp client có thể boot PXE làm cho việc cài đặt qua mạng đơn giản hơn</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.16.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1723" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.16-620x430.png" alt="Snap 2015-11-29 at 14.10.16" width="620" height="430" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.16-620x430.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.16-920x638.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.16.png 977w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Mở cửa sổ Windows Deployment Services, click chuột phải vào tên server và chọn Configure Server</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.41.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1724" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.41.png" alt="Snap 2015-11-29 at 14.10.41" width="607" height="478" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.58.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1725" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.10.58.png" alt="Snap 2015-11-29 at 14.10.58" width="607" height="478" /></a></p>
+<p>Chọn WDS là Standalone server =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.08.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1726" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.08.png" alt="Snap 2015-11-29 at 14.11.08" width="607" height="478" /></a></p>
+<p>Thư mục chứa các thông tin cho WDS =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.26.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1727" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.26.png" alt="Snap 2015-11-29 at 14.11.26" width="607" height="478" /></a></p>
+<p>Yes</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.43.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1728" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.11.43.png" alt="Snap 2015-11-29 at 14.11.43" width="607" height="478" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.12.20.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1729" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.12.20.png" alt="Snap 2015-11-29 at 14.12.20" width="607" height="478" /></a></p>
+<p>Tùy chỉnh cho phép WDS server phản hồi yêu cầu boot PXE của client</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.12.37.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1730" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.12.37.png" alt="Snap 2015-11-29 at 14.12.37" width="607" height="478" /></a></p>
+<p>Finish</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.14.16.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1731" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.14.16-620x430.png" alt="Snap 2015-11-29 at 14.14.16" width="620" height="430" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.14.16-620x430.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.14.16-920x638.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.14.16.png 977w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Mục Boot Images là thứ duy nhất chúng ta cần quan tâm, mọi thứ khác đã có MDT thực hiện</p>
+<p><strong>5 &#8211; Cấu hình Microsoft Deployment Tools (MDT)</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.15.55.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1732" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.15.55-620x420.png" alt="Snap 2015-11-29 at 14.15.55" width="620" height="420" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.15.55-620x420.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.15.55-920x623.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.15.55.png 965w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Mở Deployment Workbench =&gt; click chuột phải mục Deployment Shares và chọn New Deployment Share</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.24.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1733" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.24-620x514.png" alt="Snap 2015-11-29 at 14.16.24" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.24-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.24.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn thư mục lưu trữ =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.59.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1734" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.59-620x514.png" alt="Snap 2015-11-29 at 14.16.59" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.59-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.16.59.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Tên share cho thư mục</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.11.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1735" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.11-620x514.png" alt="Snap 2015-11-29 at 14.17.11" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.11-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.11.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Mô tả</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.47.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1736" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.47-620x514.png" alt="Snap 2015-11-29 at 14.17.47" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.47-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.47.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Một vài tùy chọn cho Deployment Share, có thể tùy chỉnh sau. Ở đây mình chọn Ask if an image should be captured</p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.57.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1737" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.57-620x514.png" alt="Snap 2015-11-29 at 14.17.57" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.57-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.17.57.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.18.08.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1738" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.18.08-620x514.png" alt="Snap 2015-11-29 at 14.18.08" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.18.08-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.18.08.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Finish</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.19.27.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1739" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.19.27-620x388.png" alt="Snap 2015-11-29 at 14.19.27" width="620" height="388" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.19.27-620x388.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.19.27-920x576.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.19.27.png 1010w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Giao diện của Deployment Workbench sau khi cấu hình share</p>
+<p>Như các bạn cũng thấy thì Deployment Workbench chia ra thành nhiều mục như Application để lưu các thông tin về phần mềm, Operating system cho hệ điều hành, Out-of-box driver cho trình điều khiển thiết bị, Packages cho các bản vá lỗi (nếu có), Task Sequences lưu các thông tin quy trình và thứ tự hoạt động của các tác vụ khi deploy hệ điều hành</p>
+<p><strong>6 &#8211; Import hệ điều hành vào Workbench</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.31.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1740" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.31-620x367.png" alt="Snap 2015-11-29 at 14.22.31" width="620" height="367" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.31-620x367.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.31-920x544.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.31.png 1068w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click chuột phải vào mục Operating Systems và chọn Import Operating System</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.51.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1741" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.51-620x514.png" alt="Snap 2015-11-29 at 14.22.51" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.51-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.22.51.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn Full set of source file =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.16.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1742" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.16-620x514.png" alt="Snap 2015-11-29 at 14.23.16" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.16-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.16.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn thư mục chứa hệ điều hành =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.30.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1743" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.30-620x514.png" alt="Snap 2015-11-29 at 14.23.30" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.30-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.30.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đặt tên thư mục lưu hệ điều hành</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.36.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1744" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.36-620x514.png" alt="Snap 2015-11-29 at 14.23.36" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.36-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.23.36.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.25.09.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1745" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.25.09-620x514.png" alt="Snap 2015-11-29 at 14.25.09" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.25.09-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.25.09.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Finish</p>
+<p><strong>7 &#8211; Import bộ cài đặt Microsoft Office 2013 vào Workbench</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.35.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1746" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.35-620x367.png" alt="Snap 2015-11-29 at 14.29.35" width="620" height="367" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.35-620x367.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.35-920x544.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.35.png 1068w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click mục Application, click chuột phải chọn New Application</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.44.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1747" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.44-620x514.png" alt="Snap 2015-11-29 at 14.29.44" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.44-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.29.44.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn Application with source files =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.13.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1748" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.13-620x514.png" alt="Snap 2015-11-29 at 14.30.13" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.13-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.13.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đặt tên và các tham số cho Office</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.47.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1749" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.47-620x514.png" alt="Snap 2015-11-29 at 14.30.47" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.47-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.47.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Trỏ đường dẫn đến bộ cài Office</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.58.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1750" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.58-620x514.png" alt="Snap 2015-11-29 at 14.30.58" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.58-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.30.58.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đặt tên thư mục lưu bộ cài Office 2013</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.10.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1751" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.10-620x514.png" alt="Snap 2015-11-29 at 14.31.10" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.10-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.10.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Command line chọn setup.exe =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.17.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1752" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.17-620x514.png" alt="Snap 2015-11-29 at 14.31.17" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.17-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.17.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.51.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1753" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.51-620x514.png" alt="Snap 2015-11-29 at 14.31.51" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.51-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.31.51.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Finish</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.35.10.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1754" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.35.10-620x331.png" alt="Snap 2015-11-29 at 14.35.10" width="620" height="331" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.35.10-620x331.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.35.10-920x491.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.35.10.png 1367w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chuột phải vào Office và chọn Properties =&gt; Tab Office Products điền các thông tin đầy đủ</p>
+<p><strong>8 &#8211; Tùy chọn bộ cài Office 2013</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.05.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1755" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.05-620x512.png" alt="Snap 2015-11-29 at 14.38.05" width="620" height="512" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.05-620x512.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.05.png 736w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Ở tab Office Products, chọn Office Customization Tool</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.15.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1756" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.15.png" alt="Snap 2015-11-29 at 14.38.15" width="427" height="186" /></a></p>
+<p>Một hộp thoại thông báo đường dẫn cần lưu cho file MSP</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.53.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1757" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.53-620x354.png" alt="Snap 2015-11-29 at 14.38.53" width="620" height="354" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.53-620x354.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.53-920x526.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.38.53.png 997w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn bộ cài Office và OK</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.09.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1758" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.09-620x354.png" alt="Snap 2015-11-29 at 14.39.09" width="620" height="354" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.09-620x354.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.09-920x526.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.09.png 997w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Giao diện Microsoft Office Customization Tool</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.27.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1759" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.27-620x354.png" alt="Snap 2015-11-29 at 14.39.27" width="620" height="354" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.27-620x354.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.27-920x526.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.39.27.png 997w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Các bạn có thể thiết lập các tham số sao cho phù hợp với nhu cầu</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.41.45.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1760" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.41.45-620x354.png" alt="Snap 2015-11-29 at 14.41.45" width="620" height="354" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.41.45-620x354.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.41.45-920x526.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.41.45.png 997w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.45.34.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1761" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.45.34-620x354.png" alt="Snap 2015-11-29 at 14.45.34" width="620" height="354" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.45.34-620x354.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.45.34-920x526.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.45.34.png 997w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Sau khi đã tùy chỉnh xong chúng ta lưu lại với đường dẫn như đã được hướng dẫn</p>
+<p><strong>9 &#8211; Cấu hình Task Sequences</strong></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.01.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1762" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.01-620x367.png" alt="Snap 2015-11-29 at 14.48.01" width="620" height="367" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.01-620x367.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.01-920x544.png 920w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.01.png 1068w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click chuột phải mục Task Sequences =&gt; New Task Sequence</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.35.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1763" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.35-620x514.png" alt="Snap 2015-11-29 at 14.48.35" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.35-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.35.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Nhập Task Sequence ID và tên</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.58.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1764" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.58-620x514.png" alt="Snap 2015-11-29 at 14.48.58" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.58-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.48.58.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Lựa chọn Template có sẵn là Standard Client Task Sequence =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.10.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1765" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.10-620x514.png" alt="Snap 2015-11-29 at 14.49.10" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.10-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.10.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Lựa chọn hệ điều hành tương ứng với Task Sequence =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.19.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1766" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.19-620x514.png" alt="Snap 2015-11-29 at 14.49.19" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.19-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.49.19.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Nhập key kích hoạt Windows nếu muốn =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.00.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1767" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.00-620x514.png" alt="Snap 2015-11-29 at 14.50.00" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.00-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.00.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Thiết lập các thông tin cơ bản</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.21.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1768" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.21-620x514.png" alt="Snap 2015-11-29 at 14.50.21" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.21-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.21.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Nhập mật khẩu cho tài khoản Admin hoặc bỏ qua =&gt; Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.32.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1769" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.32-620x514.png" alt="Snap 2015-11-29 at 14.50.32" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.32-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.32.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Next</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.42.png" rel="lightbox[1702]"><img class="aligncenter size-medium wp-image-1770" src="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.42-620x514.png" alt="Snap 2015-11-29 at 14.50.42" width="620" height="514" srcset="//vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.42-620x514.png 620w, //vmblogs.vn/wp-content/uploads/2015/11/Snap-2015-11-29-at-14.50.42.png 741w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Finish</p>
+<p>Như vậy chúng ta đã hoàn tất việc cấu hình Deployment server. Trong phần tiếp theo chúng ta sẽ tiến hành deploy Windows và Office cho client qua mạng cũng như Capture một máy mẫu và deploy cho các máy khác.</p>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_2"><a class="a2a_button_facebook a2a_counter" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div></div>					</div><!-- .entry-content -->
+<footer class="entry-footer">
+<p class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Categories</span><a href="https://vmblogs.vn/category/microsoft/" rel="category tag">Microsoft</a></span><span class="tags-links"><span class="screen-reader-text">Tags</span><a href="https://vmblogs.vn/tag/microsoft-deployment-toolkit/" rel="tag">Microsoft Deployment Toolkit</a></span></p><!-- .entry-meta -->		</footer><!-- .entry-footer -->
+</div><!-- .entry-container -->
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links"><div class="nav-previous"><a href="https://vmblogs.vn/tuy-chinh-bo-cai-windows-voi-ntlite/" rel="prev"><span class="meta-nav" aria-hidden="true">&larr; Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Tùy chỉnh bộ cài Windows với NTLite</span></a></div><div class="nav-next"><a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p2-2/" rel="next"><span class="meta-nav" aria-hidden="true">Next &rarr;</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P2</span></a></div></div>
+</nav>
+<div id="comments" class="comments-area">
+<h2 class="comments-title">
+2 thoughts on &ldquo;<span>Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</span>&rdquo;		</h2>
+<ol class="comment-list">
+<li id="comment-83" class="comment byuser comment-author-phamthong even thread-even depth-1 parent">
+<article id="div-comment-83" class="comment-body">
+<footer class="comment-meta">
+<div class="comment-author vcard">
+<img alt='' src='//secure.gravatar.com/avatar/17511498cbf03943d1d236ef31d3ddd7?s=48&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/17511498cbf03943d1d236ef31d3ddd7?s=96&amp;d=retro&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />						<cite class="fn">phamthong</cite> <span class="says">says:</span>					</div><!-- .comment-author -->
+<div class="comment-metadata">
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/#comment-83">
+<time datetime="2016-04-25T13:29:30+00:00">
+April 25, 2016 at 1:29 pm							</time>
+</a>
+</div><!-- .comment-metadata -->
+</footer><!-- .comment-meta -->
+<div class="comment-content">
+<p>Mấy bài viết của bạn hay thật, mình đang học về MCSA bạn cho mình xin tài liệu về phần Deploy Software từ Server xuống Client dc ko. Server 2012 ấy.<br />
+Cảm ơn bạn nhiều<br />
+e-mail: <a href="mailto:phamthongdno@hotmail.com">phamthongdno@hotmail.com</a></p>
+</div><!-- .comment-content -->
+<div class="reply"><a rel="nofollow" class="comment-reply-login" href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F">Log in to Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+<li id="comment-84" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+<article id="div-comment-84" class="comment-body">
+<footer class="comment-meta">
+<div class="comment-author vcard">
+<img alt='' src='//secure.gravatar.com/avatar/3e3fb78e22003204bcd2b58a0f60cc78?s=48&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/3e3fb78e22003204bcd2b58a0f60cc78?s=96&amp;d=retro&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />						<cite class="fn"><a href='http://vmblogs.vn' rel='external nofollow' class='url'>Trung Truc Tran</a></cite> <span class="says">says:</span>					</div><!-- .comment-author -->
+<div class="comment-metadata">
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/#comment-84">
+<time datetime="2016-04-27T08:06:15+00:00">
+April 27, 2016 at 8:06 am							</time>
+</a>
+</div><!-- .comment-metadata -->
+</footer><!-- .comment-meta -->
+<div class="comment-content">
+<p>Hi bạn,</p>
+<p>Deploy software trong hệ thống Windows có rất nhiều cách, mình nêu một vài từ khóa bạn có thể tìm hiểu và nghiên cứu nhé.</p>
+<p>Domain GPO software deploy (msi)<br />
+Microsoft Deployment Toolkit cũng có thể deploy software nếu biết viết một số script<br />
+Deploy software bằng system center<br />
+Ảo hóa ứng dụng với Citrix XenApp, RemoteApp, AppV, VMware ThinApp&#8230;</p>
+<p>Nhìn chung nếu tìm hiểu thì trong quá trình tìm kiếm sẽ ra được nhiều thứ hay ho liên quan.</p>
+</div><!-- .comment-content -->
+<div class="reply"><a rel="nofollow" class="comment-reply-login" href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F">Log in to Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol>		
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F">logged in</a> to post a comment.</p>		</div><!-- #respond -->
+</div><!-- #comments -->
+</main><!-- #main -->
+<aside class="sidebar sidebar-primary widget-area" role="complementary">
+<section id="meta-9" class="widget widget_meta"><div class="widget-wrap"><h4 class="widget-title">Đăng nhập</h4>			<ul>
+<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap?action=register">Register</a></li>			<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap">Log in</a></li>
+<li><a href="https://vmblogs.vn/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://vmblogs.vn/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search --><section id="categories-5" class="widget widget_categories"><div class="widget-wrap"><h4 class="widget-title">Danh mục</h4>		<ul>
+<li class="cat-item cat-item-20"><a href="https://vmblogs.vn/category/citrix/" >Citrix</a> (22)
+</li>
+<li class="cat-item cat-item-25"><a href="https://vmblogs.vn/category/citrix-receiver/" >Citrix Receiver</a> (8)
+</li>
+<li class="cat-item cat-item-21"><a href="https://vmblogs.vn/category/microsoft/" >Microsoft</a> (6)
+</li>
+<li class="cat-item cat-item-56"><a href="https://vmblogs.vn/category/news/" >News</a> (2)
+</li>
+<li class="cat-item cat-item-22"><a href="https://vmblogs.vn/category/other/" >Other</a> (34)
+</li>
+<li class="cat-item cat-item-121"><a href="https://vmblogs.vn/category/pvs/" title="Citrix Provisioning Services">Provisioning Services</a> (10)
+</li>
+<li class="cat-item cat-item-116"><a href="https://vmblogs.vn/category/security/" title="Security information and products">Security</a> (18)
+</li>
+<li class="cat-item cat-item-23"><a href="https://vmblogs.vn/category/tools/" >Tools</a> (3)
+</li>
+<li class="cat-item cat-item-24"><a href="https://vmblogs.vn/category/vmware/" >VMWare</a> (3)
+</li>
+<li class="cat-item cat-item-15"><a href="https://vmblogs.vn/category/vsphere/" >VSphere</a> (1)
+</li>
+<li class="cat-item cat-item-17"><a href="https://vmblogs.vn/category/xenapp/" >XenApp</a> (14)
+</li>
+<li class="cat-item cat-item-18"><a href="https://vmblogs.vn/category/xendesktop/" >XenDesktop</a> (8)
+</li>
+<li class="cat-item cat-item-19"><a href="https://vmblogs.vn/category/xenserver/" >XenServer</a> (3)
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->		<section id="recent-posts-6" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widget-title">Bài đăng gần đây</h4>		<ul>
+<li>
+<a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/">Cài đặt CentOS 6.7 và Virtual Tape Library</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p3/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P3</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p2-2/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P2</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/tuy-chinh-bo-cai-windows-voi-ntlite/">Tùy chỉnh bộ cài Windows với NTLite</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/web-gui-cho-vmware-esxi/">Web GUI cho VMware ESXi</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/citrix-receiver-va-citrix-director/">Citrix Receiver và Citrix Director</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cai-dat-va-cau-hinh-storefront-server/">Cài đặt và cấu hình Storefront server</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-delivery-group/">Cấu hình XenDesktop Delivery Group</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-machine-catalog/">Cấu hình XenDesktop Machine Catalog</a>
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->			</aside><!-- .sidebar sidebar-primary widget-area -->
+
+</div><!-- .wrapper -->
+</div><!-- #content -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- refreshing cache -->
+<div id="site-generator">
+<div class="wrapper">
+<div id="footer-content" class="copyright">Copyright &copy; 2016 <a href="https://vmblogs.vn/">VMBlogs</a>. All Rights Reserved. &#124; Clean Journal&nbsp;by&nbsp;<a target="_blank" href="https://catchthemes.com/">Catch Themes</a></div>
+</div><!-- .wrapper -->
+</div><!-- #site-generator -->	</footer><!-- #colophon -->
+</div><!-- #page -->
+<!-- refreshing cache --><a href="#masthead" id="scrollup" class="genericon"><span class="screen-reader-text">Scroll Up</span></a><nav id="mobile-header-left-nav" class="mobile-menu" role="navigation"><ul id="header-left-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li>
+</ul></nav><!-- #mobile-header-left-nav -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style a2a_target" id="wpa2a_3" style="right:0px;top:100px;"><a class="a2a_button_facebook a2a_counter" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="https://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fdeploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1%2F&amp;linkname=Deploy%20Windows%2010%20v%C3%A0%20Office%202013%20v%E1%BB%9Bi%20Microsoft%20Deployment%20Toolkit%20P1" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div>
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:"Deploy Windows 10 v\u00e0 Office 2013 v\u1edbi Microsoft Deployment Toolkit P1",url:"https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/"},
+{title:"Deploy Windows 10 v\u00e0 Office 2013 v\u1edbi Microsoft Deployment Toolkit P1",url:"https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/"},
+{title:document.title,url:location.href}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/navigation.min.js?ver=20120206'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/skip-link-focus-fix.min.js?ver=20130115'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/comment-reply.min.js?ver=4.5.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/fitvids.min.js?ver=1.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-scrollup.min.js?ver=20072014'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/wp-embed.min.js?ver=4.5.1'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 1.2019481658936 seconds, on 27-04-16 2:20:14 Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)-->

@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red237\green237\blue237;}
+\margl1440\margr1440\vieww12140\viewh13120\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf2 \cb3 [root@vps-vmblogs-vn ~]# ls /dev/sd*\
+/dev/sda  /dev/sda1  /dev/sdb\
+[root@vps-vmblogs-vn ~]# fdisk /dev/sdb\
+Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel\
+Building a new DOS disklabel with disk identifier 0x974015e9.\
+Changes will remain in memory only, until you decide to write them.\
+After that, of course, the previous content won't be recoverable.\
+\
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)\
+\
+The device presents a logical sector size that is smaller than\
+the physical sector size. Aligning to a physical sector (or optimal\
+I/O) size boundary is recommended, or performance may be impacted.\
+\
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to\
+         switch off the mode (command 'c') and change display units to\
+\
+Discarding device blocks: done                            \
+Filesystem label=/backup\
+OS type: Linux\
+Block size=4096 (log=2)\
+Fragment size=4096 (log=2)\
+Stride=1 blocks, Stripe width=0 blocks\
+32768000 inodes, 131070062 blocks\
+6553503 blocks (5.00%) reserved for the super user\
+First data block=0\
+Maximum filesystem blocks=4294967296\
+4000 block groups\
+32768 blocks per group, 32768 fragments per group\
+8192 inodes per group\
+Superblock backups stored on blocks: \
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, \
+        4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968, \
+        102400000\
+\
+Writing inode tables: done                            \
+Creating journal (32768 blocks): done\
+Writing superblocks and filesystem accounting information: done\
+\
+This filesystem will be automatically checked every 26 mounts or\
+180 days, whichever comes first.  Use tune2fs -c or -i to override.\
+[root@vps-vmblogs-vn ~]# mkdir /backup\
+[root@vps-vmblogs-vn ~]# mount /dev/sdb1 /backup\
+[root@vps-vmblogs-vn ~]# mount\
+/dev/sda1 on / type ext4 (rw,barrier=0)\
+proc on /proc type proc (rw)\
+sysfs on /sys type sysfs (rw)\
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)\
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")\
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)\
+/dev/sdb1 on /backup type ext4 (rw)\
+[root@vps-vmblogs-vn ~]# nano /etc/fstab\
+[root@vps-vmblogs-vn ~]# \
+}

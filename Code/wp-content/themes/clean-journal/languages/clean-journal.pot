@@ -1,0 +1,1180 @@
+# Copyright (C) 2017-2020 Catch Themes
+# This file is distributed under the GNU General Public License, version 3 (GPLv3).
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Clean Journal\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2021-04-28 23:24-0700\n"
+"PO-Revision-Date: 2016-12-07 16:27-0500\n"
+"Last-Translator: Catch Themes <info@catchthemes.com>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;_ex:1,2c;"
+"_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: \n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links below "
+"or a search?"
+msgstr ""
+
+#: ../comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:50 ../comments.php:75
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:51 ../comments.php:76
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:52 ../comments.php:77
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:87
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:21 ../no-results.php:20
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:25 ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr ""
+
+#: ../content-none.php:30 ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can "
+"help."
+msgstr ""
+
+#: ../content-page.php:28 ../content-single.php:31 ../content.php:46
+msgid "Pages:"
+msgstr ""
+
+#: ../content-page.php:35 ../inc/clean-journal-core.php:668
+#: ../inc/clean-journal-core.php:687 ../inc/clean-journal-core.php:813
+msgid "Edit"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:57
+msgid "Home"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:58
+#, php-format
+msgid "%1$s Archive for %2$s"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:59
+#, php-format
+msgid "%1$sSearch results for: %2$s"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:60
+#, php-format
+msgid "%1$sPosts tagged %2$s"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:61
+#, php-format
+msgid "%1$sView all posts by %2$s"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:62
+msgid "Error 404"
+msgstr ""
+
+#: ../inc/clean-journal-breadcrumb.php:222
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:88 ../inc/clean-journal-menus.php:27
+msgid "Primary Menu"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:89 ../inc/clean-journal-menus.php:68
+msgid "Secondary Menu"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:90 ../inc/clean-journal-menus.php:204
+msgid "Header Top Menu"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:177
+msgid "Small"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:178
+msgid "S"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:183
+msgid "Normal"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:184
+msgid "M"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:189
+msgid "Large"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:190
+msgid "L"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:195
+msgid "Huge"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:196
+msgid "XL"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:206
+msgid "White"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:211
+msgid "Black"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:216
+msgid "Gray"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:221
+msgid "Viking"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:226
+msgid "Blue"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:254
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:260
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:636 ../inc/clean-journal-core.php:1530
+msgid "Post navigation"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:645
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:646
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:668
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:678
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:684
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:691
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/clean-journal-core.php:794
+msgid "<span class=\"screen-reader-text\">Posted on</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:801
+msgctxt "Used before post author name."
+msgid "<span class=\"screen-reader-text\">Author</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:809
+msgid "Leave a comment"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:809
+msgid "1 Comment"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:809
+msgid "% Comments"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:830 ../inc/clean-journal-core.php:838
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: ../inc/clean-journal-core.php:833
+msgctxt "Used before category names."
+msgid "<span class=\"screen-reader-text\">Categories</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:841
+msgctxt "Used before tag names."
+msgid "<span class=\"screen-reader-text\">Tags</span>"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1451
+msgid "Scroll Up"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1469
+msgid "Posted on"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1470
+msgid "By"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1512
+msgid "Next &rarr;"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1513
+msgid "Next post:"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1515
+msgid "&larr; Previous"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:1516
+msgid "Previous post:"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:56
+msgid "Read More ..."
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:67
+msgid "Clean Journal is a Premium Responsive WordPress Theme"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:68
+msgid ""
+"This is promotion headline. You can edit this from Appearance -> Customize -> Theme "
+"Options -> Promotion Headline Options"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:69
+msgid "Reviews"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:74
+msgid "Search..."
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:85
+#: ../inc/clean-journal-featured-content.php:56
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:34
+msgid "Featured Content"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:86
+msgid "Here you can showcase the x number of Featured Content."
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:115
+msgid "Light"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:116
+msgid "Dark"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:130
+#: ../inc/clean-journal-default-options.php:496
+msgid "Primary Sidebar, Content"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:131
+#: ../inc/clean-journal-default-options.php:501
+msgid "Content, Primary Sidebar"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:132
+#: ../inc/clean-journal-default-options.php:506
+msgid "No Sidebar ( Content Width )"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:145
+#: ../inc/clean-journal-default-options.php:242
+msgid "Show Excerpt"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:146
+msgid "Show Full Content (No Featured Image)"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:160
+#: ../inc/clean-journal-default-options.php:196
+msgid "Homepage / Frontpage"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:161
+msgid "Excluding Homepage"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:162
+msgid "Excluding Homepage, Page/Post Featured Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:163
+#: ../inc/clean-journal-default-options.php:197
+msgid "Entire Site"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:164
+msgid "Entire Site, Page/Post Featured Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:165
+msgid "Pages and Posts"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:166
+#: ../inc/clean-journal-default-options.php:198
+#: ../inc/clean-journal-default-options.php:330
+msgid "Disabled"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:180
+#: ../inc/clean-journal-default-options.php:559
+msgid "Full Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:181
+msgid "Large Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:182
+msgid "Slider Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:212
+#: ../inc/clean-journal-default-options.php:258
+msgid "Demo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:213
+#: ../inc/clean-journal-default-options.php:259
+msgid "Page"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:227
+msgid "3 columns"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:228
+msgid "4 columns"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:243
+msgid "Show Full Content"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:244
+msgid "Hide Content"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:273
+msgid "Fade"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:274
+msgid "Fade Out"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:275
+msgid "None"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:276
+msgid "Scroll Horizontal"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:277
+msgid "Scroll Vertical"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:278
+msgid "Flip Horizontal"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:279
+msgid "Flip Vertical"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:280
+msgid "Tile Slide"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:281
+msgid "Tile Blind"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:295
+msgid "True"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:296
+msgid "Wait"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:297
+msgid "False"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:311
+msgid "Default(Older Posts/Newer Posts)"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:312
+msgid "Numeric"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:313
+msgid "Infinite Scroll (Click)"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:314
+msgid "Infinite Scroll (Scroll)"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:328
+msgid "Featured"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:329
+msgid "Full Size"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:345
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:349
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:353
+msgid "Googleplus"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:357
+#: ../inc/clean-journal-social-icons.php:36
+msgid "Email"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:361
+msgid "Feed"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:365
+msgid "WordPress"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:369
+msgid "GitHub"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:373
+msgid "LinkedIn"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:377
+msgid "Pinterest"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:381
+msgid "Flickr"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:385
+msgid "Vimeo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:389
+msgid "YouTube"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:393
+msgid "Tumblr"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:397
+msgid "Instagram"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:401
+msgid "PollDaddy"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:405
+msgid "CodePen"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:409
+msgid "Path"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:413
+msgid "Dribbble"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:417
+msgid "Skype"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:421
+msgid "Digg"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:425
+msgid "Reddit"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:429
+msgid "Stumbleupon"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:433
+msgid "Pocket"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:437
+msgid "DropBox"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:441
+msgid "Spotify"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:445
+msgid "Foursquare"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:449
+msgid "Twitch"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:453
+msgid "Website"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:457
+msgid "Phone"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:461
+msgid "Handset"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:465
+msgid "Cart"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:469
+msgid "Cloud"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:473
+msgid "Link"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:491
+#: ../inc/clean-journal-default-options.php:522
+#: ../inc/clean-journal-default-options.php:549
+msgid "Default"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:527
+msgid "Enable"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:532
+msgid "Disable"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:554
+msgid "Featured Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:564
+msgid "Disable Image"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:579
+#, php-format
+msgctxt "1: Year, 2: Site Title with home URL 3: Privacy Policy Link\n"
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved. %3$s"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:580
+msgid "Y"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:582
+msgid "by"
+msgstr ""
+
+#: ../inc/clean-journal-featured-content.php:57
+msgid ""
+"Here you can showcase the x number of Featured Content. You can edit this Headline, "
+"Subheadline and Feaured Content from \"Appearance -> Customize -> Featured Content "
+"Options\"."
+msgstr ""
+
+#: ../inc/clean-journal-featured-content.php:256
+#: ../inc/clean-journal-featured-slider.php:180
+msgid "Permalink to: "
+msgstr ""
+
+#: ../inc/clean-journal-menus.php:43
+msgid "Search"
+msgstr ""
+
+#: ../inc/clean-journal-menus.php:157 ../inc/clean-journal-menus.php:176
+msgid "Menu"
+msgstr ""
+
+#: ../inc/clean-journal-metabox.php:89
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:181
+msgid "Layout Options"
+msgstr ""
+
+#: ../inc/clean-journal-metabox.php:106
+msgid "Header Featured Image Options"
+msgstr ""
+
+#: ../inc/clean-journal-metabox.php:123
+msgid "Single Page/Post Image Layout"
+msgstr ""
+
+#: ../inc/clean-journal-metabox.php:186
+msgid "Clean Journal Options"
+msgstr ""
+
+#: ../inc/clean-journal-structure.php:65
+msgid "Skip to content"
+msgstr ""
+
+#: ../inc/clean-journal-structure.php:89
+msgid ""
+"This is Header Top Area. Assign Header Top Menu and Social Icons from Theme "
+"Customizer"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:30
+msgid "Primary Sidebar"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:36
+msgid ""
+"This is the primary sidebar if you are using a two or three column site layout "
+"option."
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:43
+#, php-format
+msgid "Footer Area %d"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:49
+#, php-format
+msgid "Footer %d widget area."
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:69
+msgid "CT: Social Icons"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:70
+msgid "Use this widget to add Social Icons as a widget. "
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:111
+msgid "Title (optional):"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:29
+msgid "All Categories"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:36
+msgid "Hold down the Ctrl (windows) / Command (Mac) button to select multiple options."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:49
+msgid "Theme Instructions"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:53
+msgid "Support"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:57
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:61
+msgid "Donate Now"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:65
+msgid "Review"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:28
+msgid "Featured Content Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:46
+msgid "Enable Featured Content on"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:62
+msgid "Select Featured Content Layout"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:77
+msgid "Check to Move above Footer"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:93
+msgid "Select Content Type"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:108
+msgid "Leave field empty if you want to remove Headline"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:109
+msgid "Headline for Featured Content"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:125
+msgid "Leave field empty if you want to remove Sub-headline"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:126
+msgid "Sub-headline for Featured Content"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:142
+msgid ""
+"Save and refresh the page if No. of Featured Content is changed (Max no of Featured "
+"Content is 20)"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:149
+msgid "No of Featured Content"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:166
+msgid "Display Content"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:184
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:171
+msgid "Featured Page"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:27
+msgid "Featured Slider Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:33
+msgid "Featured Slider"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:45
+msgid "Enable Slider on"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:61
+msgid "Transition Effect"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:77
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:96
+msgid "seconds(s)"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:81
+msgid "Transition Delay"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:100
+msgid "Transition Length"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:116
+msgid "Image Loader"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:132
+msgid "Select Slider Type"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:147
+msgid "Save and refresh the page if No. of Slides is changed (Max no of slides is 20)"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:154
+msgid "No of Slides"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:25
+msgid "Enable Featured Header Image on "
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:40
+msgid "Page/Post Featured Header Image Size"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:53
+msgid "Featured Header Image Alt/Title Tag "
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:66
+msgid "Featured Header Image Link URL"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:79
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:364
+msgid "Check to Open Link in New Window/Tab"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:19
+msgid "Note: Enter the url for correponding social networking website"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:28
+msgid "Social Links"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:41
+msgid ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?{action}. "
+"More Information in readme file"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:20
+msgid "Basic theme Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:23
+msgid "Theme Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:29
+msgid ""
+"Breadcrumbs are a great way of letting your visitors find out where they are on your "
+"site with just a glance. You can enable/disable them on homepage and entire site."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:31
+msgid "Breadcrumb Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:42
+msgid "Check to enable Breadcrumb"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:55
+msgid "Check to enable Breadcrumb on Homepage"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:71
+msgid "Separator between Breadcrumbs"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:86
+msgid "Custom/Inline CSS"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:89
+msgid "Custom CSS Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:99
+msgid "Enter Custom CSS"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:113
+msgid "Excerpt Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:123
+msgid "Excerpt length. Default is 55 words"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:130
+msgid "Excerpt Length (words)"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:144
+msgid "Read More Text"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:153
+msgid ""
+"Only posts that belong to the categories selected here will be displayed on the "
+"front page"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:156
+msgid "Homepage / Frontpage Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:166
+msgid "Select Categories"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:192
+msgid "Default Layout"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:206
+msgid "Archive Content Layout"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:219
+msgid "Single Page/Post Image Layout "
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:230
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%1$s\">WP-PageNavi Plugin</a>."
+"<br/>Infinite Scroll Options requires <a target=\"_blank\" href=\"%2$s\">JetPack "
+"Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:237
+#, php-format
+msgid ""
+"Infinite Scroll Options requires <a target=\"_blank\" href=\"%s\">JetPack Plugin</a> "
+"with Infinite Scroll module Enabled."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:248
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi Plugin</a>."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:259
+msgid "Pagination Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:270
+msgid "Pagination type"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:279
+msgid "To disable the fields, simply leave them empty."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:282
+msgid "Promotion Headline Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:293
+msgid "Enable Promotion Headline on"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:307
+msgid "Appropriate Words: 10"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:308
+msgid "Promotion Headline Text"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:321
+msgid "Appropriate Words: 15"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:322
+msgid "Promotion Subheadline Text"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:335
+msgid "Appropriate Words: 3"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:336
+msgid "Promotion Headline Button Text "
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:350
+msgid "Promotion Headline Link"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:376
+msgid "Scrollup Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:386
+msgid "Check to disable Scroll Up"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:395
+msgid "Change default placeholder text in Search."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:398
+msgid "Search Options"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:408
+msgid "Default Display Text in Search"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:53
+msgid "Logo"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:66
+msgid "Check to disable logo"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:80
+msgid "Logo Alt Text"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:95
+msgid "Check to move Site Title and Tagline before logo"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:113
+msgid "Color Scheme"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:138
+msgid ""
+"Caution: Reset all settings to default. Refresh the page after save to view full "
+"effects."
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:140
+msgid "Reset all settings"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:151
+msgid "Check to reset all settings to default"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:161
+#: ../inc/customizer-includes/clean-journal-customizer.php:172
+msgid "Important Links"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:206
+msgid "Refresh the customizer page after saving to view reset effects"
+msgstr ""
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:76
+msgid "Clean Journal Pro"
+msgstr ""
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:77
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../no-results.php:14
+msgid "Error 404-Page NOT Found"
+msgstr ""
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../sidebar.php:37
+msgid "Primary Sidebar Widget Area"
+msgstr ""
+
+#: ../sidebar.php:40
+msgid ""
+"This is the Primary Sidebar Widget Area if you are using a two or three column site "
+"layout option."
+msgstr ""
+
+#: ../sidebar.php:41
+#, php-format
+msgid ""
+"By default it will load Search and Archives widgets as shown below. You can add "
+"widget to this area by visiting your <a href=\"%s\">Widgets Panel</a> which will "
+"replace default widgets."
+msgstr ""
+
+#: ../sidebar.php:54
+msgid "Archives"
+msgstr ""

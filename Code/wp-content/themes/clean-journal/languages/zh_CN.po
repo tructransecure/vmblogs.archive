@@ -1,0 +1,1955 @@
+# Translation of Themes - Clean Journal in Chinese (China)
+# This file is distributed under the same license as the Themes - Clean Journal package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clean Journal\n"
+"POT-Creation-Date: 2021-04-28 23:25-0700\n"
+"PO-Revision-Date: 2021-04-28 23:25-0700\n"
+"Last-Translator: \n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "有点尴尬诶！该页无法显示。"
+
+#: ../404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr " 看起来这个位置没有内容，试试下面的链接或搜索一下或许有帮助。"
+
+#: ../comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "《%s》有一个想法"
+
+#: ../comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "《%2$s》有%1$s个想法"
+
+#: ../comments.php:50 ../comments.php:75
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: ../comments.php:51 ../comments.php:76
+msgid "&larr; Older Comments"
+msgstr "← 早期评论"
+
+#: ../comments.php:52 ../comments.php:77
+msgid "Newer Comments &rarr;"
+msgstr "较新评论 →"
+
+#: ../comments.php:87
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr "未有发现"
+
+#: ../content-none.php:21 ../no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"
+
+#: ../content-none.php:25 ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: ../content-none.php:30 ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: ../content-page.php:28 ../content-single.php:31 ../content.php:46
+msgid "Pages:"
+msgstr "页"
+
+#: ../content-page.php:35 ../inc/clean-journal-core.php:668
+#: ../inc/clean-journal-core.php:687 ../inc/clean-journal-core.php:813
+msgid "Edit"
+msgstr "离开"
+
+#: ../inc/clean-journal-breadcrumb.php:57
+msgid "Home"
+msgstr "主页"
+
+#: ../inc/clean-journal-breadcrumb.php:58
+#, php-format
+msgid "%1$s Archive for %2$s"
+msgstr "%1$s 归档 %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:59
+#, php-format
+msgid "%1$sSearch results for: %2$s"
+msgstr "%1$s的搜索结果: %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:60
+#, php-format
+msgid "%1$sPosts tagged %2$s"
+msgstr "%1$s 的文章标记为 %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:61
+#, php-format
+msgid "%1$sView all posts by %2$s"
+msgstr "%1$s查看 %2$s的所有文章"
+
+#: ../inc/clean-journal-breadcrumb.php:62
+msgid "Error 404"
+msgstr "404错误"
+
+#: ../inc/clean-journal-breadcrumb.php:222
+#, php-format
+msgid "Page %s"
+msgstr "页码 %s"
+
+#: ../inc/clean-journal-core.php:88 ../inc/clean-journal-menus.php:27
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: ../inc/clean-journal-core.php:89 ../inc/clean-journal-menus.php:68
+msgid "Secondary Menu"
+msgstr "二级菜单"
+
+#: ../inc/clean-journal-core.php:90 ../inc/clean-journal-menus.php:204
+msgid "Header Top Menu"
+msgstr "页眉顶部菜单"
+
+#: ../inc/clean-journal-core.php:177
+msgid "Small"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:178
+msgid "S"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:183
+msgid "Normal"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:184
+msgid "M"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:189
+msgid "Large"
+msgstr "大"
+
+#: ../inc/clean-journal-core.php:190
+msgid "L"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:195
+msgid "Huge"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:196
+msgid "XL"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:206
+msgid "White"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:211
+msgid "Black"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:216
+msgid "Gray"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:221
+msgid "Viking"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:226
+msgid "Blue"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:254
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "on"
+
+#: ../inc/clean-journal-core.php:260
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "on"
+
+#: ../inc/clean-journal-core.php:636 ../inc/clean-journal-core.php:1530
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: ../inc/clean-journal-core.php:645
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 早期文章"
+
+#: ../inc/clean-journal-core.php:646
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "较新文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/clean-journal-core.php:668
+msgid "Pingback:"
+msgstr "Pingback"
+
+#: ../inc/clean-journal-core.php:678
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">说：</span>"
+
+#: ../inc/clean-journal-core.php:684
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: ../inc/clean-journal-core.php:691
+msgid "Your comment is awaiting moderation."
+msgstr "你的评论正等待审核"
+
+#: ../inc/clean-journal-core.php:794
+msgid "<span class=\"screen-reader-text\">Posted on</span>"
+msgstr "<span class=\"screen-reader-text\">发布于</span>"
+
+#: ../inc/clean-journal-core.php:801
+msgctxt "Used before post author name."
+msgid "<span class=\"screen-reader-text\">Author</span>"
+msgstr "<span class=\"screen-reader-text\">作者</span>"
+
+#: ../inc/clean-journal-core.php:809
+msgid "Leave a comment"
+msgstr "发表回复"
+
+#: ../inc/clean-journal-core.php:809
+msgid "1 Comment"
+msgstr "一条评论"
+
+#: ../inc/clean-journal-core.php:809
+msgid "% Comments"
+msgstr "%条评论"
+
+#: ../inc/clean-journal-core.php:830 ../inc/clean-journal-core.php:838
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr "、"
+
+#: ../inc/clean-journal-core.php:833
+msgctxt "Used before category names."
+msgid "<span class=\"screen-reader-text\">Categories</span>"
+msgstr "<span class=\"screen-reader-text\">分类</span>"
+
+#: ../inc/clean-journal-core.php:841
+msgctxt "Used before tag names."
+msgid "<span class=\"screen-reader-text\">Tags</span>"
+msgstr "<span class=\"screen-reader-text\">标签</span>"
+
+#: ../inc/clean-journal-core.php:1451
+msgid "Scroll Up"
+msgstr "向上滚动"
+
+#: ../inc/clean-journal-core.php:1469
+msgid "Posted on"
+msgstr "张贴在"
+
+#: ../inc/clean-journal-core.php:1470
+msgid "By"
+msgstr "由 "
+
+#: ../inc/clean-journal-core.php:1512
+msgid "Next &rarr;"
+msgstr "下一个 &rarr;"
+
+#: ../inc/clean-journal-core.php:1513
+msgid "Next post:"
+msgstr "下篇文章："
+
+#: ../inc/clean-journal-core.php:1515
+msgid "&larr; Previous"
+msgstr "&larr; 上一个"
+
+#: ../inc/clean-journal-core.php:1516
+msgid "Previous post:"
+msgstr "上篇文章："
+
+#: ../inc/clean-journal-default-options.php:56
+msgid "Read More ..."
+msgstr "继续阅读"
+
+#: ../inc/clean-journal-default-options.php:67
+msgid "Clean Journal is a Premium Responsive WordPress Theme"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:68
+msgid ""
+"This is promotion headline. You can edit this from Appearance -> Customize -"
+"> Theme Options -> Promotion Headline Options"
+msgstr "这是大标题推广栏。你可以进入 外观-定制-主题选项-大标题推广栏 编辑"
+
+#: ../inc/clean-journal-default-options.php:69
+msgid "Reviews"
+msgstr "评论"
+
+#: ../inc/clean-journal-default-options.php:74
+msgid "Search..."
+msgstr "搜索..."
+
+#: ../inc/clean-journal-default-options.php:85
+#: ../inc/clean-journal-featured-content.php:56
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:34
+msgid "Featured Content"
+msgstr "特色内容"
+
+#: ../inc/clean-journal-default-options.php:86
+msgid "Here you can showcase the x number of Featured Content."
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:115
+msgid "Light"
+msgstr "发光"
+
+#: ../inc/clean-journal-default-options.php:116
+msgid "Dark"
+msgstr "暗色"
+
+#: ../inc/clean-journal-default-options.php:130
+#: ../inc/clean-journal-default-options.php:496
+msgid "Primary Sidebar, Content"
+msgstr "主侧边栏，内容"
+
+#: ../inc/clean-journal-default-options.php:131
+#: ../inc/clean-journal-default-options.php:501
+msgid "Content, Primary Sidebar"
+msgstr "内容，主侧边栏"
+
+#: ../inc/clean-journal-default-options.php:132
+#: ../inc/clean-journal-default-options.php:506
+msgid "No Sidebar ( Content Width )"
+msgstr "无侧边栏（内容宽度）"
+
+#: ../inc/clean-journal-default-options.php:145
+#: ../inc/clean-journal-default-options.php:242
+msgid "Show Excerpt"
+msgstr "显示摘要"
+
+#: ../inc/clean-journal-default-options.php:146
+msgid "Show Full Content (No Featured Image)"
+msgstr "显示完整内容（无特征图）"
+
+#: ../inc/clean-journal-default-options.php:160
+#: ../inc/clean-journal-default-options.php:196
+msgid "Homepage / Frontpage"
+msgstr "主页"
+
+#: ../inc/clean-journal-default-options.php:161
+msgid "Excluding Homepage"
+msgstr "排除首页"
+
+#: ../inc/clean-journal-default-options.php:162
+msgid "Excluding Homepage, Page/Post Featured Image"
+msgstr "排除首页，页面/文章特征图"
+
+#: ../inc/clean-journal-default-options.php:163
+#: ../inc/clean-journal-default-options.php:197
+msgid "Entire Site"
+msgstr "全站"
+
+#: ../inc/clean-journal-default-options.php:164
+msgid "Entire Site, Page/Post Featured Image"
+msgstr "全站，页面/文章特征图"
+
+#: ../inc/clean-journal-default-options.php:165
+msgid "Pages and Posts"
+msgstr "页面和文章"
+
+#: ../inc/clean-journal-default-options.php:166
+#: ../inc/clean-journal-default-options.php:198
+#: ../inc/clean-journal-default-options.php:330
+msgid "Disabled"
+msgstr "禁用"
+
+#: ../inc/clean-journal-default-options.php:180
+#: ../inc/clean-journal-default-options.php:559
+msgid "Full Image"
+msgstr "完整图片"
+
+#: ../inc/clean-journal-default-options.php:181
+msgid "Large Image"
+msgstr "大图"
+
+#: ../inc/clean-journal-default-options.php:182
+msgid "Slider Image"
+msgstr "幻灯片图片"
+
+#: ../inc/clean-journal-default-options.php:212
+#: ../inc/clean-journal-default-options.php:258
+msgid "Demo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:213
+#: ../inc/clean-journal-default-options.php:259
+msgid "Page"
+msgstr "页面"
+
+#: ../inc/clean-journal-default-options.php:227
+msgid "3 columns"
+msgstr "3 列"
+
+#: ../inc/clean-journal-default-options.php:228
+msgid "4 columns"
+msgstr "4 列"
+
+#: ../inc/clean-journal-default-options.php:243
+msgid "Show Full Content"
+msgstr "显示全部内容"
+
+#: ../inc/clean-journal-default-options.php:244
+msgid "Hide Content"
+msgstr "隐藏内容"
+
+#: ../inc/clean-journal-default-options.php:273
+msgid "Fade"
+msgstr "渐变"
+
+#: ../inc/clean-journal-default-options.php:274
+msgid "Fade Out"
+msgstr "淡出"
+
+#: ../inc/clean-journal-default-options.php:275
+msgid "None"
+msgstr "无"
+
+#: ../inc/clean-journal-default-options.php:276
+msgid "Scroll Horizontal"
+msgstr "水平滚动"
+
+#: ../inc/clean-journal-default-options.php:277
+msgid "Scroll Vertical"
+msgstr "垂直滚动"
+
+#: ../inc/clean-journal-default-options.php:278
+msgid "Flip Horizontal"
+msgstr "书评轻掷"
+
+#: ../inc/clean-journal-default-options.php:279
+msgid "Flip Vertical"
+msgstr "书评轻甩"
+
+#: ../inc/clean-journal-default-options.php:280
+msgid "Tile Slide"
+msgstr "瓦片滑动"
+
+#: ../inc/clean-journal-default-options.php:281
+msgid "Tile Blind"
+msgstr "瓦片百叶"
+
+#: ../inc/clean-journal-default-options.php:295
+msgid "True"
+msgstr "真"
+
+#: ../inc/clean-journal-default-options.php:296
+msgid "Wait"
+msgstr "等待"
+
+#: ../inc/clean-journal-default-options.php:297
+msgid "False"
+msgstr "假"
+
+#: ../inc/clean-journal-default-options.php:311
+msgid "Default(Older Posts/Newer Posts)"
+msgstr "默认(老的文章/新的文章)"
+
+#: ../inc/clean-journal-default-options.php:312
+msgid "Numeric"
+msgstr "数字"
+
+#: ../inc/clean-journal-default-options.php:313
+msgid "Infinite Scroll (Click)"
+msgstr "无限滚动（点击）"
+
+#: ../inc/clean-journal-default-options.php:314
+msgid "Infinite Scroll (Scroll)"
+msgstr "无限滚动（滚动）"
+
+#: ../inc/clean-journal-default-options.php:328
+msgid "Featured"
+msgstr "展出"
+
+#: ../inc/clean-journal-default-options.php:329
+msgid "Full Size"
+msgstr "全尺寸"
+
+#: ../inc/clean-journal-default-options.php:345
+msgid "Facebook"
+msgstr "脸书"
+
+#: ../inc/clean-journal-default-options.php:349
+msgid "Twitter"
+msgstr "推特"
+
+#: ../inc/clean-journal-default-options.php:353
+msgid "Googleplus"
+msgstr "谷歌plus"
+
+#: ../inc/clean-journal-default-options.php:357
+#: ../inc/clean-journal-social-icons.php:36
+msgid "Email"
+msgstr "邮箱"
+
+#: ../inc/clean-journal-default-options.php:361
+msgid "Feed"
+msgstr "源"
+
+#: ../inc/clean-journal-default-options.php:365
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../inc/clean-journal-default-options.php:369
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/clean-journal-default-options.php:373
+msgid "LinkedIn"
+msgstr "领英"
+
+#: ../inc/clean-journal-default-options.php:377
+msgid "Pinterest"
+msgstr "Printerest"
+
+#: ../inc/clean-journal-default-options.php:381
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/clean-journal-default-options.php:385
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/clean-journal-default-options.php:389
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/clean-journal-default-options.php:393
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/clean-journal-default-options.php:397
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/clean-journal-default-options.php:401
+msgid "PollDaddy"
+msgstr "在线投票统计系统"
+
+#: ../inc/clean-journal-default-options.php:405
+msgid "CodePen"
+msgstr "代码钢笔"
+
+#: ../inc/clean-journal-default-options.php:409
+msgid "Path"
+msgstr "标签层级"
+
+#: ../inc/clean-journal-default-options.php:413
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/clean-journal-default-options.php:417
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/clean-journal-default-options.php:421
+msgid "Digg"
+msgstr "Digg"
+
+#: ../inc/clean-journal-default-options.php:425
+msgid "Reddit"
+msgstr "Reddit"
+
+#: ../inc/clean-journal-default-options.php:429
+msgid "Stumbleupon"
+msgstr "Stumbleupon"
+
+#: ../inc/clean-journal-default-options.php:433
+msgid "Pocket"
+msgstr "Pocket"
+
+#: ../inc/clean-journal-default-options.php:437
+msgid "DropBox"
+msgstr "DropBox"
+
+#: ../inc/clean-journal-default-options.php:441
+msgid "Spotify"
+msgstr "Spotify"
+
+#: ../inc/clean-journal-default-options.php:445
+msgid "Foursquare"
+msgstr "FourSquare"
+
+#: ../inc/clean-journal-default-options.php:449
+msgid "Twitch"
+msgstr "Twitch"
+
+#: ../inc/clean-journal-default-options.php:453
+msgid "Website"
+msgstr "站点"
+
+#: ../inc/clean-journal-default-options.php:457
+msgid "Phone"
+msgstr "电话号码"
+
+#: ../inc/clean-journal-default-options.php:461
+msgid "Handset"
+msgstr "手持机"
+
+#: ../inc/clean-journal-default-options.php:465
+msgid "Cart"
+msgstr "购物车"
+
+#: ../inc/clean-journal-default-options.php:469
+msgid "Cloud"
+msgstr "云"
+
+#: ../inc/clean-journal-default-options.php:473
+msgid "Link"
+msgstr "链接"
+
+#: ../inc/clean-journal-default-options.php:491
+#: ../inc/clean-journal-default-options.php:522
+#: ../inc/clean-journal-default-options.php:549
+msgid "Default"
+msgstr "默认"
+
+#: ../inc/clean-journal-default-options.php:527
+msgid "Enable"
+msgstr "开启"
+
+#: ../inc/clean-journal-default-options.php:532
+msgid "Disable"
+msgstr "禁用"
+
+#: ../inc/clean-journal-default-options.php:554
+msgid "Featured Image"
+msgstr "特色图片"
+
+#: ../inc/clean-journal-default-options.php:564
+msgid "Disable Image"
+msgstr "禁用图片"
+
+#: ../inc/clean-journal-default-options.php:579
+#, fuzzy, php-format
+#| msgctxt "1: Year, 2: Site Title with home URL"
+#| msgid "Copyright &copy; %1$s %2$s. All Rights Reserved"
+msgctxt "1: Year, 2: Site Title with home URL 3: Privacy Policy Link\n"
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved. %3$s"
+msgstr "版权 &copy; %1$s %2$s. 版权所有"
+
+#: ../inc/clean-journal-default-options.php:580
+msgid "Y"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:582
+msgid "by"
+msgstr "由"
+
+#: ../inc/clean-journal-featured-content.php:57
+msgid ""
+"Here you can showcase the x number of Featured Content. You can edit this "
+"Headline, Subheadline and Feaured Content from \"Appearance -> Customize -> "
+"Featured Content Options\"."
+msgstr ""
+"在这里你可以展示第某篇特色内容。你可以进入外观-定制-特色内容选项去编辑这个大"
+"标题，副标题和特色内容"
+
+#: ../inc/clean-journal-featured-content.php:256
+#: ../inc/clean-journal-featured-slider.php:180
+msgid "Permalink to: "
+msgstr "永久链接到"
+
+#: ../inc/clean-journal-menus.php:43
+msgid "Search"
+msgstr "查找"
+
+#: ../inc/clean-journal-menus.php:157 ../inc/clean-journal-menus.php:176
+msgid "Menu"
+msgstr "菜单"
+
+#: ../inc/clean-journal-metabox.php:89
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:181
+msgid "Layout Options"
+msgstr "布局设定"
+
+#: ../inc/clean-journal-metabox.php:106
+msgid "Header Featured Image Options"
+msgstr "页眉特色图片选项"
+
+#: ../inc/clean-journal-metabox.php:123
+#, fuzzy
+#| msgid "Single Page/Post Image Layout "
+msgid "Single Page/Post Image Layout"
+msgstr "单一页面/文章图片布局"
+
+#: ../inc/clean-journal-metabox.php:186
+msgid "Clean Journal Options"
+msgstr "Clean Journal选项"
+
+#: ../inc/clean-journal-structure.php:65
+msgid "Skip to content"
+msgstr "跳至内容"
+
+#: ../inc/clean-journal-structure.php:89
+msgid ""
+"This is Header Top Area. Assign Header Top Menu and Social Icons from Theme "
+"Customizer"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:30
+msgid "Primary Sidebar"
+msgstr "主边栏"
+
+#: ../inc/clean-journal-widgets.php:36
+msgid ""
+"This is the primary sidebar if you are using a two or three column site "
+"layout option."
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:43
+#, php-format
+msgid "Footer Area %d"
+msgstr "页脚区域 %d"
+
+#: ../inc/clean-journal-widgets.php:49
+#, php-format
+msgid "Footer %d widget area."
+msgstr "页脚 %d 小工具区域"
+
+#: ../inc/clean-journal-widgets.php:69
+msgid "CT: Social Icons"
+msgstr "CT: 社交icons"
+
+#: ../inc/clean-journal-widgets.php:70
+msgid "Use this widget to add Social Icons as a widget. "
+msgstr "使用这个小工具区添加社交icons作为一个widget"
+
+#: ../inc/clean-journal-widgets.php:111
+msgid "Title (optional):"
+msgstr "标题（可选）："
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:29
+msgid "All Categories"
+msgstr "全部分类"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:36
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr "按住ctrl键或苹果command键选择多个位置。"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:49
+msgid "Theme Instructions"
+msgstr "主题说明"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:53
+msgid "Support"
+msgstr "技术支持"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:57
+msgid "Changelog"
+msgstr "更新记录"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:61
+msgid "Donate Now"
+msgstr "Donate Now"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:65
+msgid "Review"
+msgstr "评论"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:28
+msgid "Featured Content Options"
+msgstr "特色内容选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:46
+msgid "Enable Featured Content on"
+msgstr "在以下启用特色内容"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:62
+msgid "Select Featured Content Layout"
+msgstr "选择特色内容布局"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:77
+msgid "Check to Move above Footer"
+msgstr "移动到页脚之上"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:93
+msgid "Select Content Type"
+msgstr "选择内容类型"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:108
+msgid "Leave field empty if you want to remove Headline"
+msgstr "如果你想清除标题，这里留空"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:109
+msgid "Headline for Featured Content"
+msgstr "特色内容标题"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:125
+msgid "Leave field empty if you want to remove Sub-headline"
+msgstr "如果你想清除副标题，此处留空"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:126
+msgid "Sub-headline for Featured Content"
+msgstr "特色内容副标题"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:142
+msgid ""
+"Save and refresh the page if No. of Featured Content is changed (Max no of "
+"Featured Content is 20)"
+msgstr "如果第某篇特色内容被改变请保存并刷新页面（特色内容数量最大20）"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:149
+msgid "No of Featured Content"
+msgstr "特色内容序号"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:166
+msgid "Display Content"
+msgstr "显示内容"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:184
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:171
+msgid "Featured Page"
+msgstr "特色页面"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:27
+msgid "Featured Slider Options"
+msgstr "特色幻灯片选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:33
+msgid "Featured Slider"
+msgstr "图片幻灯"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:45
+msgid "Enable Slider on"
+msgstr "在以下启用幻灯片"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:61
+msgid "Transition Effect"
+msgstr "渐变效果"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:77
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:96
+msgid "seconds(s)"
+msgstr "秒"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:81
+msgid "Transition Delay"
+msgstr "渐变停顿时间"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:100
+msgid "Transition Length"
+msgstr "渐变时长"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:116
+msgid "Image Loader"
+msgstr "图片加载器"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:132
+msgid "Select Slider Type"
+msgstr "选择幻灯片类型"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:147
+msgid ""
+"Save and refresh the page if No. of Slides is changed (Max no of slides is "
+"20)"
+msgstr "如果第某张幻灯片被改变，保存并刷新页面（幻灯片最大数量20）"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:154
+msgid "No of Slides"
+msgstr "幻灯片序号"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:25
+msgid "Enable Featured Header Image on "
+msgstr "启用特色页眉图片在："
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:40
+msgid "Page/Post Featured Header Image Size"
+msgstr "页面/文章特色页眉图片尺寸"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:53
+msgid "Featured Header Image Alt/Title Tag "
+msgstr "特色页眉图片alt/标题标记"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:66
+msgid "Featured Header Image Link URL"
+msgstr "特色页眉图片链接url"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:79
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:364
+msgid "Check to Open Link in New Window/Tab"
+msgstr "勾选设定新窗口/标签打开连接"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:19
+msgid "Note: Enter the url for correponding social networking website"
+msgstr "注意：输入相应的社交网站网址"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:28
+msgid "Social Links"
+msgstr "社会化媒体链接"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:41
+msgid ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?"
+"{action}. More Information in readme file"
+msgstr ""
+"Skype链接可以是这种形式：callto://+{号码}<br> skype:{用户名}?{action}. readme"
+"文件里有更多信息"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:20
+msgid "Basic theme Options"
+msgstr "基本主题选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:23
+msgid "Theme Options"
+msgstr "主题选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:29
+msgid ""
+"Breadcrumbs are a great way of letting your visitors find out where they are "
+"on your site with just a glance. You can enable/disable them on homepage and "
+"entire site."
+msgstr ""
+"面包屑是一种优秀的引导方式，让你的访客轻松得知自己所处的位置。你可以启用/禁用"
+"面包屑，无论是首页还是整站。"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:31
+msgid "Breadcrumb Options"
+msgstr "面包屑选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:42
+msgid "Check to enable Breadcrumb"
+msgstr "启用面包屑"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:55
+msgid "Check to enable Breadcrumb on Homepage"
+msgstr "首页启用面包屑"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:71
+msgid "Separator between Breadcrumbs"
+msgstr "面包屑间隔符"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:86
+msgid "Custom/Inline CSS"
+msgstr "自定义/内联CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:89
+msgid "Custom CSS Options"
+msgstr "自定义CSS选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:99
+msgid "Enter Custom CSS"
+msgstr "输入自定义CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:113
+msgid "Excerpt Options"
+msgstr "摘要选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:123
+msgid "Excerpt length. Default is 55 words"
+msgstr "摘要长度，默认55个字"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:130
+msgid "Excerpt Length (words)"
+msgstr "摘要长度（单词）"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:144
+msgid "Read More Text"
+msgstr "提示 阅读更多 的文本"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:153
+msgid ""
+"Only posts that belong to the categories selected here will be displayed on "
+"the front page"
+msgstr "只有所选分类里的文章将会显示在首页"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:156
+msgid "Homepage / Frontpage Options"
+msgstr "首页/主页选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:166
+msgid "Select Categories"
+msgstr "选择分类"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:192
+msgid "Default Layout"
+msgstr "默认布局"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:206
+msgid "Archive Content Layout"
+msgstr "归档内容布局"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:219
+msgid "Single Page/Post Image Layout "
+msgstr "单一页面/文章图片布局"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:230
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%1$s\">WP-PageNavi "
+"Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" href="
+"\"%2$s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"数字选项要求<a target=\"_blank\" href=\"%1$s\">WP-PageNavi插件</a>.<br/>无限"
+"滚动选项要求 <a target=\"_blank\" href=\"%2$s\">JetPack插件</a> 并且无限滚动"
+"模块启用。"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:237
+#, php-format
+msgid ""
+"Infinite Scroll Options requires <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"无限滚动选项要求<a target=\"_blank\" href=\"%s\">JetPack插件</a>并启用无限滚"
+"动模块。"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:248
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi Plugin</"
+"a>."
+msgstr "数字选项要求<a target=\"_blank\" href=\"%s\">WP-PageNavi插件</a>。"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:259
+msgid "Pagination Options"
+msgstr "分页选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:270
+msgid "Pagination type"
+msgstr "分页类型"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:279
+msgid "To disable the fields, simply leave them empty."
+msgstr "留空以禁用fields."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:282
+msgid "Promotion Headline Options"
+msgstr "推广大标题选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:293
+msgid "Enable Promotion Headline on"
+msgstr "启用推广大标题在："
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:307
+msgid "Appropriate Words: 10"
+msgstr "合适的字数：10"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:308
+msgid "Promotion Headline Text"
+msgstr "推广大标题文本"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:321
+msgid "Appropriate Words: 15"
+msgstr "合适的字数：15"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:322
+msgid "Promotion Subheadline Text"
+msgstr "推广副标题文本"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:335
+msgid "Appropriate Words: 3"
+msgstr "合适的字数：3"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:336
+msgid "Promotion Headline Button Text "
+msgstr "推广大标题按钮文本"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:350
+msgid "Promotion Headline Link"
+msgstr "推广大标题链接"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:376
+msgid "Scrollup Options"
+msgstr "向上滚动选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:386
+msgid "Check to disable Scroll Up"
+msgstr "禁用向上滚动"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:395
+msgid "Change default placeholder text in Search."
+msgstr "更改默认搜索占位符"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:398
+msgid "Search Options"
+msgstr "搜索选项"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:408
+msgid "Default Display Text in Search"
+msgstr "搜索占位符"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:53
+msgid "Logo"
+msgstr "Logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:66
+msgid "Check to disable logo"
+msgstr "勾选此处禁用logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:80
+msgid "Logo Alt Text"
+msgstr "Logo的alt值"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:95
+msgid "Check to move Site Title and Tagline before logo"
+msgstr "勾选此处移动网站标题和副标题在Logo前面"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:113
+msgid "Color Scheme"
+msgstr "颜色样式"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:138
+msgid ""
+"Caution: Reset all settings to default. Refresh the page after save to view "
+"full effects."
+msgstr "小心：重置所有设置到默认选项。保存后刷新查看完整效果"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:140
+msgid "Reset all settings"
+msgstr "重置所有设置"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:151
+msgid "Check to reset all settings to default"
+msgstr "选择此处重置所有设置到默认"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:161
+#: ../inc/customizer-includes/clean-journal-customizer.php:172
+msgid "Important Links"
+msgstr "重要链接"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:206
+msgid "Refresh the customizer page after saving to view reset effects"
+msgstr "保存后刷新自定义页面查看重置效果"
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:76
+msgid "Clean Journal Pro"
+msgstr "Clean Journal Pro"
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:77
+msgid "Upgrade Now"
+msgstr "Upgrade Now"
+
+#: ../no-results.php:14
+msgid "Error 404-Page NOT Found"
+msgstr "404错误-页面没有找到"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "针对以下内容的搜索结果：%s"
+
+#: ../searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "搜索："
+
+#: ../sidebar.php:37
+msgid "Primary Sidebar Widget Area"
+msgstr "主侧边栏小工具区"
+
+#: ../sidebar.php:40
+msgid ""
+"This is the Primary Sidebar Widget Area if you are using a two or three "
+"column site layout option."
+msgstr "如果你在使用两栏或者三栏网站布局，这里则是注册边栏小工具区。"
+
+#: ../sidebar.php:41
+#, php-format
+msgid ""
+"By default it will load Search and Archives widgets as shown below. You can "
+"add widget to this area by visiting your <a href=\"%s\">Widgets Panel</a> "
+"which will replace default widgets."
+msgstr ""
+"默认它会加载搜索和归档小工具，如下所示。你可以向这个区域添加小工具，访问你的 "
+"<a href=\"%s\">小工具面板</a> 将会替代默认小工具。"
+
+#: ../sidebar.php:54
+msgid "Archives"
+msgstr "归档"
+
+#~ msgid "Shuffle"
+#~ msgstr "洗牌打乱"
+
+#~ msgid "Demo Featured Content"
+#~ msgstr "案例特色内容"
+
+#~ msgid "Featured Page Content"
+#~ msgstr "特色页面内容"
+
+#~ msgid "Demo Featured Slider"
+#~ msgstr "案例特色幻灯片"
+
+#~ msgid "Featured Page Slider"
+#~ msgstr "特色页面幻灯片"
+
+#~ msgid "Icon Options"
+#~ msgstr "Icon选项"
+
+#~ msgid "Select/Add Favicon"
+#~ msgstr "选择/添加Favicon"
+
+#~ msgid "Select/Add Web Clip Icon"
+#~ msgstr "选择/添加网络剪切Icon"
+
+#~ msgid "Header Right Menu"
+#~ msgstr "页眉右侧菜单"
+
+#~ msgid "Footer Menu"
+#~ msgstr "页脚菜单"
+
+#~ msgid "Clean Journal Pro is a Responsive WordPress Theme"
+#~ msgstr "Clean Journal专业版是一个响应式WP主题"
+
+#~ msgid "Buy Now"
+#~ msgstr "现在购买"
+
+#~ msgid "No Sidebar ( One Column )"
+#~ msgstr "无侧边栏（一栏）"
+
+#~ msgid "No Sidebar ( Full Width )"
+#~ msgstr "无侧边栏（完整宽度）"
+
+#~ msgid "Excerpt Image Left"
+#~ msgstr "摘要图片在左"
+
+#~ msgid "Excerpt Image Right"
+#~ msgstr "摘要图片在右"
+
+#~ msgid "Excerpt Image Top"
+#~ msgstr "摘要图片在顶部"
+
+#~ msgid "Before Menu"
+#~ msgstr "菜单前面"
+
+#~ msgid "After Menu"
+#~ msgstr "菜单后面"
+
+#~ msgid "Before Header"
+#~ msgstr "页眉前面"
+
+#~ msgid "After Slider"
+#~ msgstr "幻灯片后面"
+
+#~ msgid "Featured Widget Content"
+#~ msgstr "特色小工具内容"
+
+#~ msgid "Featured Post Content"
+#~ msgstr "特色文章内容"
+
+#~ msgid "Featured Category Content"
+#~ msgstr "特色分类内容"
+
+#~ msgid "Featured Image Content"
+#~ msgstr "特色图片内容"
+
+#~ msgid "2 columns"
+#~ msgstr "两列"
+
+#~ msgid "Featured Post Slider"
+#~ msgstr "特色文章幻灯片"
+
+#~ msgid "Featured Category Slider"
+#~ msgstr "特色分类幻灯片"
+
+#~ msgid "Featured Image Slider"
+#~ msgstr "特色图片幻灯片"
+
+#~ msgid "Full size"
+#~ msgstr "完整尺寸"
+
+#~ msgid "Slider Image Size"
+#~ msgstr "幻灯片图片尺寸"
+
+#~ msgid "Featured Image Size"
+#~ msgstr "特色图尺寸"
+
+#~ msgid "Use WordPress Setting"
+#~ msgstr "使用WP设置"
+
+#~ msgid "Disable in Pages"
+#~ msgstr "页面内禁用"
+
+#~ msgid "Disable Completely"
+#~ msgstr "完全禁用"
+
+#~ msgid "Text Color"
+#~ msgstr "文字颜色"
+
+#~ msgid "Link Color"
+#~ msgstr "链接颜色"
+
+#~ msgid "Link Hover Color"
+#~ msgstr "链接鼠标指向时颜色"
+
+#~ msgid "Content Wrapper Background Color"
+#~ msgstr "内容外皮背景色"
+
+#~ msgid "Content Background Color"
+#~ msgstr "内容背景色"
+
+#~ msgid "Content Title Color"
+#~ msgstr "内容标题色"
+
+#~ msgid "Content Title Hover Color"
+#~ msgstr "内容标题鼠标指向时颜色"
+
+#~ msgid "Content Meta Color"
+#~ msgstr "内容meta色"
+
+#~ msgid "Content Meta Hover Color"
+#~ msgstr "内容meta鼠标浮动色"
+
+#~ msgid "Header Background color"
+#~ msgstr "页眉背景色"
+
+#~ msgid "Site Title Hover Color"
+#~ msgstr "网站标题鼠标浮动色"
+
+#~ msgid "Tagline Color"
+#~ msgstr "副标题色"
+
+#~ msgid "Sidebar Background Color"
+#~ msgstr "侧边栏背景色"
+
+#~ msgid "Sidebar Widget Title Color"
+#~ msgstr "侧边栏小工具标题色"
+
+#~ msgid "Sidebar Widget Text Color"
+#~ msgstr "侧边栏小工具文本颜色"
+
+#~ msgid "Sidebar Widget Link Color"
+#~ msgstr "侧边栏小工具链接色"
+
+#~ msgid "Pagination Background Color"
+#~ msgstr "分页背景色"
+
+#~ msgid "Pagination Hover Background Color"
+#~ msgstr "分页鼠标浮动背景色"
+
+#~ msgid "Pagination Text Color"
+#~ msgstr "分页文本颜色"
+
+#~ msgid "Pagination Link Color"
+#~ msgstr "分页链接颜色"
+
+#~ msgid "Pagination Hover/Active Color"
+#~ msgstr "分页鼠标hover/active色"
+
+#~ msgid "Numeric/Infinite Scroll Background Color"
+#~ msgstr "数字/无限滚动背景色"
+
+#~ msgid "Numeric/Infinite Scroll Hover Background Color"
+#~ msgstr "数字/无限滚动hover背景色"
+
+#~ msgid "Footer Background Color"
+#~ msgstr "页脚背景色"
+
+#~ msgid "Footer Text Color"
+#~ msgstr "页脚文字颜色"
+
+#~ msgid "Footer Link Color"
+#~ msgstr "页脚链接颜色"
+
+#~ msgid "Footer Sidebar Area Background Color"
+#~ msgstr "页脚侧边栏区背景色"
+
+#~ msgid "Footer Widget Background Color"
+#~ msgstr "页脚小工具背景色"
+
+#~ msgid "Footer Widget Title Color"
+#~ msgstr "页脚小工具标题色"
+
+#~ msgid "Footer Widget Text Color"
+#~ msgstr "页脚小工具文本颜色"
+
+#~ msgid "Footer Widget Link Color"
+#~ msgstr "页脚小工具链接颜色"
+
+#~ msgid "Footer Widget Link Hover Color"
+#~ msgstr "页脚小工具链接hover颜色"
+
+#~ msgid "Promotion Headline Background Color"
+#~ msgstr "推广大标题背景色"
+
+#~ msgid "Promotion Headline Title Color"
+#~ msgstr "推广大标题之标题色"
+
+#~ msgid "Promotion Headline Text Color"
+#~ msgstr "推广大标题之文本色"
+
+#~ msgid "Promotion Headline Link Color"
+#~ msgstr "推广大标题之链接色"
+
+#~ msgid "Promotion Headline Link Hover Color"
+#~ msgstr "推广大标题之链接hover色"
+
+#~ msgid "Promotion Headline Button Background Color"
+#~ msgstr "推广大标题之按钮背景色"
+
+#~ msgid "Promotion Headline Button Text Color"
+#~ msgstr "推广大标题之按钮文字颜色"
+
+#~ msgid "Promotion Headline Button Hover Background Color"
+#~ msgstr "推广大标题之按钮hover背景色"
+
+#~ msgid "Promotion Headline Button Hover Text Color"
+#~ msgstr "推广大标题之按钮hover文本色"
+
+#~ msgid "Scrollup Background Color"
+#~ msgstr "向上滚动背景色"
+
+#~ msgid "Scrollup Hover Background Color"
+#~ msgstr "向上滚动hover背景色"
+
+#~ msgid "Scrollup Text Color"
+#~ msgstr "向上滚动文字颜色"
+
+#~ msgid "Scrollup Hover Text Color"
+#~ msgstr "向上滚动hover文本色"
+
+#~ msgid "Slider Content Background Color"
+#~ msgstr "幻灯片内容背景色"
+
+#~ msgid "Slider Text Color"
+#~ msgstr "幻灯片文字颜色"
+
+#~ msgid "Slider Link Color"
+#~ msgstr "幻灯片链接颜色"
+
+#~ msgid "Slider Link Hover Color"
+#~ msgstr "幻灯片链接hover色"
+
+#~ msgid "Featured Content Background Color"
+#~ msgstr "特色内容背景色"
+
+#~ msgid "Featured Content Title Color"
+#~ msgstr "特色内容标题色"
+
+#~ msgid "Featured Content Text Color"
+#~ msgstr "特色内容文本颜色"
+
+#~ msgid "Featured Content Link Color"
+#~ msgstr "特色内容链接颜色"
+
+#~ msgid "Menu Background color"
+#~ msgstr "菜单背景色"
+
+#~ msgid "Menu Color"
+#~ msgstr "菜单色"
+
+#~ msgid "Hover Active Background Color"
+#~ msgstr "Hover Active 背景色"
+
+#~ msgid "Hover Active Text Color"
+#~ msgstr "Hover Active 文本色"
+
+#~ msgid "Sub Menu Background Color"
+#~ msgstr "子菜单背景色"
+
+#~ msgid "Sub Menu Text Color"
+#~ msgstr "子菜单文本颜色"
+
+#~ msgid "Default Sidebar"
+#~ msgstr "默认幻灯片"
+
+#~ msgid "Optional Sidebar One"
+#~ msgstr "默认幻灯片1"
+
+#~ msgid "Optional Sidebar Two"
+#~ msgstr "默认幻灯片2"
+
+#~ msgid "Optional Sidebar three"
+#~ msgstr "默认幻灯片3"
+
+#~ msgid "Select Sidebar"
+#~ msgstr "选择侧边栏"
+
+#~ msgid ""
+#~ "This is the primary sidebar if you are using a two column site layout "
+#~ "option."
+#~ msgstr "如果你在使用两栏站点布局选项，这里是主边栏"
+
+#~ msgid "Header Top Left"
+#~ msgstr "页眉左上方"
+
+#~ msgid ""
+#~ "This is the header top left widget area. It typically appears on the Top "
+#~ "left of the site"
+#~ msgstr "这是页眉左上角小工具区域，一般出现在网站的左上角。"
+
+#~ msgid "Header Top Right"
+#~ msgstr "页眉右上角"
+
+#~ msgid ""
+#~ "This is the header top widget area. It typically appears on the Top Right "
+#~ "of the site."
+#~ msgstr "这是页眉的顶部小工具区域，一般出现在网站的右上角。"
+
+#~ msgid "Header Right"
+#~ msgstr "页眉右侧"
+
+#~ msgid ""
+#~ "This is the header right widget area. It typically appears on the right "
+#~ "of the site title or logo. This widget area is not equipped to display "
+#~ "any widget, and works best with a custom menu assigned as header right "
+#~ "menu, a search form, social icons widget or possibly a text widget."
+#~ msgstr ""
+#~ "这是页眉右侧小工具区域，一般出现在网站的标题或者logo右侧。但此处不能展示任"
+#~ "何小工具，最好显示自定义菜单（页眉右侧菜单分配的）、一个搜索框，社交icons"
+#~ "或者一个文本小工具。"
+
+#~ msgid ""
+#~ "This is the Featured Widget Content. Enable it by going to Appearance => "
+#~ "Customize => Featured Widget Content Options => Enable Featured content "
+#~ "Widget Content on"
+#~ msgstr "这是特色小工具内容。在外观-定制-特色小工具内容选项 那里启用"
+
+#~ msgid "Promotion Headline Left"
+#~ msgstr "推广大标题左侧"
+
+#~ msgid ""
+#~ "This is the Promotion Headline Left. Enable it by going to Appearance => "
+#~ "Customize => Theme Options => Promotion Headline Options."
+#~ msgstr "这是推广大标题左侧。在外观-定制-主题选项-推广大标题选项 启用"
+
+#~ msgid "Promotion Headline Right"
+#~ msgstr "推广大标题右侧"
+
+#~ msgid ""
+#~ "This is the Promotion Headline Right. Enable it by going to Appearance => "
+#~ "Customize => Theme Options => Promotion Headline Options."
+#~ msgstr "这是推广大标题左侧。在外观-定制-主题选项-推广大标题选项 启用"
+
+#~ msgid "404 Page Not Found Content"
+#~ msgstr "404页面 内容没有找到"
+
+#~ msgid "Replaces the default 404 Page Not Found Content"
+#~ msgstr "替代默认的 404页面 内容没有找到"
+
+#~ msgid "WooCommerce Primary Sidebar"
+#~ msgstr "WooCommerce主边栏"
+
+#~ msgid "This is Optional Primary Sidebar for WooCommerce"
+#~ msgstr "这是给WooCommerce的主边栏，可选"
+
+#~ msgid "Optional Homepage Sidebar"
+#~ msgstr "可选的主页侧边栏"
+
+#~ msgid "This is Optional Sidebar for Homepage"
+#~ msgstr "这是可选的主页边栏"
+
+#~ msgid "Optional Archive Sidebar"
+#~ msgstr "可选的归档边栏"
+
+#~ msgid "This is Optional Sidebar for Archive"
+#~ msgstr "这是可选的归档边栏"
+
+#~ msgid "Optional Page Sidebar"
+#~ msgstr "可选的页面边栏"
+
+#~ msgid "This is Optional Sidebar for Page"
+#~ msgstr "这是可选的页面边栏"
+
+#~ msgid "Optional Post Sidebar"
+#~ msgstr "可选的文章边栏"
+
+#~ msgid "This is Optional Sidebar for Post"
+#~ msgstr "这里是可选的文章侧边栏"
+
+#~ msgid "This is Optional Sidebar One"
+#~ msgstr "这里是可选的侧边栏1"
+
+#~ msgid "This is Optional Sidebar Two"
+#~ msgstr "这里是可选的侧边栏2"
+
+#~ msgid "Optional Sidebar Three"
+#~ msgstr "可选侧边栏3"
+
+#~ msgid "This is Optional Sidebar Three"
+#~ msgstr "这里是可选的侧边栏3"
+
+#~ msgid "CT: Featured Page"
+#~ msgstr "CT: 特色页面"
+
+#~ msgid "Display Featured Page. Suitable for Home Top Area and Home Left Area"
+#~ msgstr "展示特色页面。适用于首页顶部区域和顶部左侧区域"
+
+#~ msgid "Title:"
+#~ msgstr "标题："
+
+#~ msgid "Displays the title of the Page if title input is empty."
+#~ msgstr "如果标题输入为空，显示页面标题。"
+
+#~ msgid "Remove Featured image"
+#~ msgstr "清除特色图"
+
+#~ msgid "Show Image Before Title"
+#~ msgstr "标题前展示图片"
+
+#~ msgid "Show Image After Title"
+#~ msgstr "标题后展示图片"
+
+#~ msgid "Show Content"
+#~ msgstr "展示内容"
+
+#~ msgid "Excerpt"
+#~ msgstr "摘要"
+
+#~ msgid "Full Content"
+#~ msgstr "完整内容"
+
+#~ msgid "Hide"
+#~ msgstr "隐藏"
+
+#~ msgid "Content Character Limit for Excerpt Only"
+#~ msgstr "内容字数限制，只用于摘要"
+
+#~ msgid "CT: Featured Post"
+#~ msgstr "CT: 特色文章"
+
+#~ msgid "Display Featured Post. Suitable for Home Top Area and Home Left Area"
+#~ msgstr "展示特色文章。适用于首页顶部区域和首页左侧区域"
+
+#~ msgid "Displays the title of the Post if title input is empty."
+#~ msgstr "如果标题输入为空，展示文章标题"
+
+#~ msgid "ID of the Post:"
+#~ msgstr "文章的ID"
+
+#~ msgid "This Post ID is Not Valid"
+#~ msgstr "这个文章ID是无效的"
+
+#~ msgid "Content Character Limit"
+#~ msgstr "内容字符数限制"
+
+#~ msgid "CT: Advertisement"
+#~ msgstr "CT: 广告"
+
+#~ msgid "Use this widget to add any type of Advertisement as a widget"
+#~ msgstr "使用这个小工具区添加任何类型的广告作为一个小工具"
+
+#~ msgid "Advertisement Code:"
+#~ msgstr "广告代码："
+
+#~ msgid "Image Url:"
+#~ msgstr "图片url:"
+
+#~ msgid "Link URL:"
+#~ msgstr "链接url:"
+
+#~ msgid "Open Link in New Window"
+#~ msgstr "新窗口打开链接"
+
+#~ msgid "Alt text:"
+#~ msgstr "alt文本"
+
+#~ msgid "Check to Hide Ad on 404 page"
+#~ msgstr "隐藏404页面广告"
+
+#~ msgid "Add Advertisement Code or Image URL"
+#~ msgstr "添加广告代码或者图片网址"
+
+#~ msgid "Color Options"
+#~ msgstr "颜色选项"
+
+#~ msgid "Basic Color Options"
+#~ msgstr "基础颜色选项"
+
+#~ msgid "Header Color Options"
+#~ msgstr "页眉颜色选项"
+
+#~ msgid "Content Color Options"
+#~ msgstr "内容颜色选项"
+
+#~ msgid "Only for Primary and Secondary Sidebars"
+#~ msgstr "只用于主要和次要边栏"
+
+#~ msgid "Sidebar Color Options"
+#~ msgstr "侧边栏颜色选项"
+
+#~ msgid "Pagination Color Options"
+#~ msgstr "分页颜色选项"
+
+#~ msgid "Footer Color Options"
+#~ msgstr "页脚颜色选项"
+
+#~ msgid "Promotion Headline Color Options"
+#~ msgstr "推广大标题颜色选项"
+
+#~ msgid "Scrollup Color Options"
+#~ msgstr "向上滚动颜色选项"
+
+#~ msgid "Slider Color Options"
+#~ msgstr "幻灯片颜色选项"
+
+#~ msgid "Featured Content Color Options"
+#~ msgstr "特色内容颜色选项"
+
+#~ msgid "Primary Menu Color Options"
+#~ msgstr "主菜单颜色选项"
+
+#~ msgid "Secondary Menu Color Options"
+#~ msgstr "次要菜单颜色选项"
+
+#~ msgid "Header Top Color Options"
+#~ msgstr "页眉顶部颜色选项"
+
+#~ msgid "Header Top Background Color"
+#~ msgstr "页眉顶部背景颜色"
+
+#~ msgid "Header Right Menu Color Options"
+#~ msgstr "页眉右侧颜色选项"
+
+#~ msgid "Footer Menu Color Options"
+#~ msgstr "页脚菜单颜色选项"
+
+#~ msgid "Google+"
+#~ msgstr "谷歌plus"
+
+#~ msgid "Featured Post"
+#~ msgstr "特色文章"
+
+#~ msgid "Featured Content #"
+#~ msgstr "特色内容#"
+
+#~ msgid "Image"
+#~ msgstr "图片"
+
+#~ msgid "Title"
+#~ msgstr "标题"
+
+#~ msgid "Content"
+#~ msgstr "内容"
+
+#~ msgid "Check to exclude Slider post from Homepage posts"
+#~ msgstr "排除来自首页文章的幻灯片文章"
+
+#~ msgid "Featured Slide #"
+#~ msgstr "排除幻灯片#"
+
+#~ msgid "Featured Header Image Position"
+#~ msgstr "特色页眉图片位置"
+
+#~ msgid "Social Icon Size(px)"
+#~ msgstr "社交icon尺寸（像素）"
+
+#~ msgid ""
+#~ "Save and refresh the page if No. of custom social icon is changed (Max "
+#~ "number of icons is 10)"
+#~ msgstr "某个社交icon如果被改变，请保存并刷新（最大社交icon数量10）"
+
+#~ msgid "Custom Social Links"
+#~ msgstr "自定义社交链接"
+
+#~ msgid "Number of Custom Social Icons"
+#~ msgstr "自定义社交icon的数量"
+
+#~ msgid "Custom Social Icon #"
+#~ msgstr "自定义社交icon#"
+
+#~ msgid "Hover Image(Optional)"
+#~ msgstr "hover图片（可选）"
+
+#~ msgid ""
+#~ "Comments can also be disabled on a per post/page basis when creating/"
+#~ "editing posts/pages."
+#~ msgstr "当创建或者编辑文章/页面时，评论也能基于每篇文章/页面禁用。"
+
+#~ msgid "Comment Options"
+#~ msgstr "评论选项"
+
+#~ msgid "Comment Option"
+#~ msgstr "评论选项"
+
+#~ msgid "Check to Disable Notes"
+#~ msgstr "禁用备忘录"
+
+#~ msgid "Check to Disable Website Field"
+#~ msgstr "禁用网站Field"
+
+#~ msgid ""
+#~ "If your custom feed(s) are not handled by Feedblitz or Feedburner, do not "
+#~ "use the redirect options."
+#~ msgstr "如果你的feed并不是由Feedblitz/Feedburner处理，不要使用重定向选项。"
+
+#~ msgid "Feed Redirect"
+#~ msgstr "feed重定向"
+
+#~ msgid "Font Family Options"
+#~ msgstr "字体家族选项"
+
+#~ msgid "Site Title Font Family"
+#~ msgstr "网站标题字体家族"
+
+#~ msgid "Default Font Family"
+#~ msgstr "默认字体家族"
+
+#~ msgid "Site Tagline Font Family"
+#~ msgstr "网站副标题字体家族"
+
+#~ msgid "Content Title Font Family"
+#~ msgstr "内容标题字体家族"
+
+#~ msgid "Content Body Font Family"
+#~ msgstr "内容主体字体家族"
+
+#~ msgid "Headings Tags from h1 to h6 Font Family"
+#~ msgstr "标题标记H1-H6字体家族"
+
+#~ msgid "Check to reset fonts"
+#~ msgstr "重置字体"
+
+#~ msgid "You can either add html or plain text"
+#~ msgstr "要么添加html要么纯文本"
+
+#~ msgid "Footer Editor Options"
+#~ msgstr "页脚编辑选项"
+
+#~ msgid ""
+#~ "You can add custom shortcodes, which will be automatically inserted into "
+#~ "your theme. Some shorcodes: [the-year], [site-link] and [privacy-policy-"
+#~ "link] for current year and site link respectively."
+#~ msgstr ""
+#~ "你可以添加自定义shortcode, 它将会自动插入到你的主题中，比如[the-year]和"
+#~ "[site-link] 指的是当前年份和网站链接。"
+
+#~ msgid "Footer Left Content"
+#~ msgstr "页脚左侧内容"
+
+#~ msgid "Check to reset Footer Content"
+#~ msgstr "重置页脚内容"
+
+#~ msgid "Header Right Sidebar Options"
+#~ msgstr "页眉右侧边栏选项"
+
+#~ msgid "Check to disable Header Right Sidebar"
+#~ msgstr "禁用页眉右侧边栏"
+
+#~ msgid "Header Top Options"
+#~ msgstr "页眉顶部选项"
+
+#~ msgid "Check to disable header top"
+#~ msgstr "禁用页眉顶部"
+
+#~ msgid "Check to fix header to top"
+#~ msgstr "fix页眉到顶部"
+
+#~ msgid "Header Top Left Sidebar Widget Area Width "
+#~ msgstr "页眉顶部左侧边栏小工具区域宽度"
+
+#~ msgid ""
+#~ "This is Width for Header Top Left Sidebar Widget Area. Once this is "
+#~ "adjusted, the width for Header Top Right Sidebar Widget Area is set "
+#~ "automatically. in %"
+#~ msgstr ""
+#~ "这是页眉顶部左侧边栏小工具区域宽度。一旦这里调整，页眉顶部右侧边栏小工具区"
+#~ "域宽度自动调整，以百分比。"
+
+#~ msgid ""
+#~ "Remove Icon images to disable. <br/> Web Clip Icon for Apple devices. "
+#~ "Recommended Size - Width 144px and Height 144px height, which will "
+#~ "support High Resolution Devices like iPad Retina."
+#~ msgstr ""
+#~ "清除icon图片从而禁用。<br/>网络剪切icon用于苹果设备，推荐尺寸-144px*144px,"
+#~ "这可以支持高清设备，比如iPad Retina."
+
+#~ msgid "Woocommerce Layout"
+#~ msgstr "Woocommerce布局"
+
+#~ msgid "Promotion Headline Left Section Width"
+#~ msgstr "推广大标题左侧区域宽度"
+
+#~ msgid ""
+#~ "This is promotion headline left section width. Once this is adjusted, the "
+#~ "width for promotion headline right section is set automatically. in %"
+#~ msgstr ""
+#~ "这是推广大标题左侧区域宽度。一旦这里被调整，推广大标题右侧区域宽度自动调"
+#~ "整，以百分比。"
+
+#~ msgid "Responsive Options"
+#~ msgstr "响应式选项"
+
+#~ msgid "Check to disable footer mobile menu"
+#~ msgstr "禁用页脚移动端菜单"
+
+#~ msgid "Single Post Navigation"
+#~ msgstr "单一文章导航"
+
+#~ msgid "Check to disable Single Post Navigation"
+#~ msgstr "勾选此处禁用单一文章导航"
+
+#~ msgid "Update Notifier"
+#~ msgstr "更新通知器"
+
+#~ msgid "Check to disable update notifications"
+#~ msgstr "勾选此处禁用更新通知"
+
+#~ msgid "Extra Menu Options specific to this theme"
+#~ msgstr "专门针对于本主题的额外菜单选项"
+
+#~ msgid "Menu Options"
+#~ msgstr "菜单选项"
+
+#~ msgid "Check to disable Primary Menu"
+#~ msgstr "勾选此处禁用主菜单"
+
+#~ msgid "Check to disable search box in Primary Menu"
+#~ msgstr "勾选此处禁用主菜单的搜索框"
+
+#~ msgid ""
+#~ "This is Header Top Sidebar Widget Area. Assign Header Top Menu and Social "
+#~ "Icons from Theme Customizer"
+#~ msgstr ""
+#~ "这是页眉顶部边栏小工具区。请从主题定制器分配页眉顶部菜单和社交icon。"
+
+#~ msgctxt "submit button"
+#~ msgid "Search"
+#~ msgstr "搜索"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "《%2$s》有%1$s个想法"
+
+#~ msgid "Catch Themes"
+#~ msgstr "Catch Themes"

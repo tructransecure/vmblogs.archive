@@ -1,0 +1,3140 @@
+# Copyright (C) 2012-2020 the Catch Themes Team
+# This file is distributed under the  GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clean Journal\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2021-04-28 23:24-0700\n"
+"PO-Revision-Date: 2021-04-28 23:24-0700\n"
+"Last-Translator: Johan Michaelsen <johan.orgel@post.tele.dk>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr_e;esc_attr__;"
+"_nx:1,2,4c;esc_html__;esc_attr_x:1,2c;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hov! Siden kunne ikke findes"
+
+#: ../404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Der kunne ikke findes noget på denne adresse. Prøv et link herunder eller en "
+"søgning."
+
+#: ../comments.php:30
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "En mening om &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:35
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "En mening om &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s meninger om &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:50 ../comments.php:75
+msgid "Comment navigation"
+msgstr "Kommentar navigation"
+
+#: ../comments.php:51 ../comments.php:76
+msgid "&larr; Older Comments"
+msgstr "&larr; Ældre kommentarer"
+
+#: ../comments.php:52 ../comments.php:77
+msgid "Newer Comments &rarr;"
+msgstr "Nyere kommentarer &rarr;"
+
+#: ../comments.php:87
+msgid "Comments are closed."
+msgstr "Lukket for kommentarer"
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: ../content-none.php:21 ../no-results.php:20
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klar til at udgive dit første indlæg? <a href=“%1$s”> Kom godt i gang her </"
+"a>."
+
+#: ../content-none.php:25 ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"﻿Beklager, men der er ingen resultater der matcher din søgning. Prøv venligst "
+"igen med andre søgeord."
+
+#: ../content-none.php:30 ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr "Beklager! Vi kan ikke finde det du søger. Prøv en ny søgning."
+
+#: ../content-page.php:28 ../content-single.php:31 ../content.php:46
+msgid "Pages:"
+msgstr "Sider:"
+
+#: ../content-page.php:35 ../inc/clean-journal-core.php:668
+#: ../inc/clean-journal-core.php:687 ../inc/clean-journal-core.php:813
+msgid "Edit"
+msgstr "Redigér"
+
+#: ../inc/clean-journal-breadcrumb.php:57
+msgid "Home"
+msgstr "Hjemme"
+
+#: ../inc/clean-journal-breadcrumb.php:58
+#, php-format
+msgid "%1$s Archive for %2$s"
+msgstr "%1$s Arkiv for %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:59
+#, php-format
+msgid "%1$sSearch results for: %2$s"
+msgstr "%1$s Søgeresultater for: %2$s"
+
+# I suggest consistency.
+# Either use Posts always, or indlæg.
+# Both would work.
+#: ../inc/clean-journal-breadcrumb.php:60
+#, php-format
+msgid "%1$sPosts tagged %2$s"
+msgstr "%1$sPosts tagget %2$s"
+
+# I suggest consistency.
+# Either use Posts always, or indlæg.
+# Both would work.
+#: ../inc/clean-journal-breadcrumb.php:61
+#, php-format
+msgid "%1$sView all posts by %2$s"
+msgstr "%1$s Vis alle indlæg af %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:62
+msgid "Error 404"
+msgstr "Fejl 404"
+
+#: ../inc/clean-journal-breadcrumb.php:222
+#, php-format
+msgid "Page %s"
+msgstr "Side %s"
+
+#: ../inc/clean-journal-core.php:88 ../inc/clean-journal-menus.php:27
+msgid "Primary Menu"
+msgstr "Primær Menu"
+
+#: ../inc/clean-journal-core.php:89 ../inc/clean-journal-menus.php:68
+msgid "Secondary Menu"
+msgstr "Sekundær menu"
+
+#: ../inc/clean-journal-core.php:90 ../inc/clean-journal-menus.php:204
+msgid "Header Top Menu"
+msgstr "Header Top Menu"
+
+#: ../inc/clean-journal-core.php:177
+msgid "Small"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:178
+msgid "S"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:183
+msgid "Normal"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:184
+msgid "M"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:189
+#, fuzzy
+#| msgid "Large Image"
+msgid "Large"
+msgstr "Stor Billede"
+
+#: ../inc/clean-journal-core.php:190
+msgid "L"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:195
+msgid "Huge"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:196
+msgid "XL"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:206
+msgid "White"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:211
+msgid "Black"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:216
+msgid "Gray"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:221
+msgid "Viking"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:226
+msgid "Blue"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:254
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "På"
+
+#: ../inc/clean-journal-core.php:260
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "På"
+
+# I suggest consistency.
+# Either use Posts always, or indlæg.
+# Both would work.
+#: ../inc/clean-journal-core.php:636 ../inc/clean-journal-core.php:1530
+msgid "Post navigation"
+msgstr "Indlægs navigation"
+
+#: ../inc/clean-journal-core.php:645
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=“meta-nav”> ← </ span> Ældre indlæg"
+
+#: ../inc/clean-journal-core.php:646
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyere indlæg <span class=“meta-nav”> → </ span>"
+
+#: ../inc/clean-journal-core.php:668
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/clean-journal-core.php:678
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">siger:</span>"
+
+#: ../inc/clean-journal-core.php:684
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: ../inc/clean-journal-core.php:691
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar afventer godkendelse"
+
+#: ../inc/clean-journal-core.php:794
+msgid "<span class=\"screen-reader-text\">Posted on</span>"
+msgstr "<span class=\"screen-reader-text\">Udgivet den</span>"
+
+#: ../inc/clean-journal-core.php:801
+msgctxt "Used before post author name."
+msgid "<span class=\"screen-reader-text\">Author</span>"
+msgstr "<span class=\"screen-reader-text\">Forfatter</span>"
+
+#: ../inc/clean-journal-core.php:809
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: ../inc/clean-journal-core.php:809
+msgid "1 Comment"
+msgstr "En kommentar"
+
+#: ../inc/clean-journal-core.php:809
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: ../inc/clean-journal-core.php:830 ../inc/clean-journal-core.php:838
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: ../inc/clean-journal-core.php:833
+msgctxt "Used before category names."
+msgid "<span class=\"screen-reader-text\">Categories</span>"
+msgstr "<span class=\"screen-reader-text\">kategorier</span>"
+
+#: ../inc/clean-journal-core.php:841
+msgctxt "Used before tag names."
+msgid "<span class=\"screen-reader-text\">Tags</span>"
+msgstr "<span class=\"screen-reader-text\">Tags</span>"
+
+#: ../inc/clean-journal-core.php:1451
+msgid "Scroll Up"
+msgstr "Scroll Op"
+
+#: ../inc/clean-journal-core.php:1469
+msgid "Posted on"
+msgstr "Udgivet den"
+
+#: ../inc/clean-journal-core.php:1470
+msgid "By"
+msgstr "Af"
+
+#: ../inc/clean-journal-core.php:1512
+msgid "Next &rarr;"
+msgstr "Næste &rarr;"
+
+#: ../inc/clean-journal-core.php:1513
+msgid "Next post:"
+msgstr "Næste indlæg:"
+
+#: ../inc/clean-journal-core.php:1515
+msgid "&larr; Previous"
+msgstr "&larr; Forrige"
+
+#: ../inc/clean-journal-core.php:1516
+msgid "Previous post:"
+msgstr "Forrige indlæg:"
+
+#: ../inc/clean-journal-default-options.php:56
+msgid "Read More ..."
+msgstr "Læs mere ..."
+
+#: ../inc/clean-journal-default-options.php:67
+msgid "Clean Journal is a Premium Responsive WordPress Theme"
+msgstr "Clean Journal er et Premium Responsivt WordPress Tema"
+
+#: ../inc/clean-journal-default-options.php:68
+msgid ""
+"This is promotion headline. You can edit this from Appearance -> Customize -> "
+"Theme Options -> Promotion Headline Options"
+msgstr ""
+"Dette er en promoverings overskrift. Du kan ændre denne fra Udseende -> "
+"Customize -> Tema Indstillinger -> Promoverings Overskrift."
+
+#: ../inc/clean-journal-default-options.php:69
+msgid "Reviews"
+msgstr "Anmeldelser"
+
+#: ../inc/clean-journal-default-options.php:74
+msgid "Search..."
+msgstr "Søg.."
+
+#: ../inc/clean-journal-default-options.php:85
+#: ../inc/clean-journal-featured-content.php:56
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:34
+msgid "Featured Content"
+msgstr "Fremhævet indhold"
+
+#: ../inc/clean-journal-default-options.php:86
+msgid "Here you can showcase the x number of Featured Content."
+msgstr "Her kan du udstille x antal fremhævet Indhold"
+
+#: ../inc/clean-journal-default-options.php:115
+msgid "Light"
+msgstr "Lys"
+
+#: ../inc/clean-journal-default-options.php:116
+msgid "Dark"
+msgstr "Mørk"
+
+#: ../inc/clean-journal-default-options.php:130
+#: ../inc/clean-journal-default-options.php:496
+msgid "Primary Sidebar, Content"
+msgstr "Primære Sidebar, Indhold"
+
+#: ../inc/clean-journal-default-options.php:131
+#: ../inc/clean-journal-default-options.php:501
+msgid "Content, Primary Sidebar"
+msgstr "Indhold, Primære sidebar"
+
+#: ../inc/clean-journal-default-options.php:132
+#: ../inc/clean-journal-default-options.php:506
+msgid "No Sidebar ( Content Width )"
+msgstr "Ingen sidebar (indholds bredde)"
+
+#: ../inc/clean-journal-default-options.php:145
+#: ../inc/clean-journal-default-options.php:242
+msgid "Show Excerpt"
+msgstr "Vis resumé"
+
+#: ../inc/clean-journal-default-options.php:146
+msgid "Show Full Content (No Featured Image)"
+msgstr "Vis fuldt indhold (Ingen Billeder)"
+
+#: ../inc/clean-journal-default-options.php:160
+#: ../inc/clean-journal-default-options.php:196
+msgid "Homepage / Frontpage"
+msgstr "Homepage / Forside"
+
+#: ../inc/clean-journal-default-options.php:161
+msgid "Excluding Homepage"
+msgstr "Udelad Forsiden"
+
+#: ../inc/clean-journal-default-options.php:162
+msgid "Excluding Homepage, Page/Post Featured Image"
+msgstr "Ekskluder Homepage, Side / Post Billede"
+
+#: ../inc/clean-journal-default-options.php:163
+#: ../inc/clean-journal-default-options.php:197
+msgid "Entire Site"
+msgstr "Hele sitet"
+
+#: ../inc/clean-journal-default-options.php:164
+msgid "Entire Site, Page/Post Featured Image"
+msgstr "Hele sitet, Fast-side/indlæg fremhævet billed"
+
+#: ../inc/clean-journal-default-options.php:165
+msgid "Pages and Posts"
+msgstr "Sider og Posts"
+
+#: ../inc/clean-journal-default-options.php:166
+#: ../inc/clean-journal-default-options.php:198
+#: ../inc/clean-journal-default-options.php:330
+msgid "Disabled"
+msgstr "Deaktiveret"
+
+#: ../inc/clean-journal-default-options.php:180
+#: ../inc/clean-journal-default-options.php:559
+msgid "Full Image"
+msgstr "Fuldt billede"
+
+#: ../inc/clean-journal-default-options.php:181
+msgid "Large Image"
+msgstr "Stor Billede"
+
+#: ../inc/clean-journal-default-options.php:182
+msgid "Slider Image"
+msgstr "Slider billede"
+
+#: ../inc/clean-journal-default-options.php:212
+#: ../inc/clean-journal-default-options.php:258
+msgid "Demo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:213
+#: ../inc/clean-journal-default-options.php:259
+msgid "Page"
+msgstr "Side"
+
+#: ../inc/clean-journal-default-options.php:227
+msgid "3 columns"
+msgstr "3 kolonner"
+
+#: ../inc/clean-journal-default-options.php:228
+msgid "4 columns"
+msgstr "4 kolonner"
+
+#: ../inc/clean-journal-default-options.php:243
+msgid "Show Full Content"
+msgstr "Vis fuldt indhold"
+
+#: ../inc/clean-journal-default-options.php:244
+msgid "Hide Content"
+msgstr "Skjul Indhold"
+
+#: ../inc/clean-journal-default-options.php:273
+msgid "Fade"
+msgstr "Falme"
+
+#: ../inc/clean-journal-default-options.php:274
+msgid "Fade Out"
+msgstr "Tone ud"
+
+#: ../inc/clean-journal-default-options.php:275
+msgid "None"
+msgstr "Ingen"
+
+#: ../inc/clean-journal-default-options.php:276
+msgid "Scroll Horizontal"
+msgstr "Scroll horisontal"
+
+#: ../inc/clean-journal-default-options.php:277
+msgid "Scroll Vertical"
+msgstr "Scroll vertikalt"
+
+#: ../inc/clean-journal-default-options.php:278
+msgid "Flip Horizontal"
+msgstr "Vend horisontalt"
+
+#: ../inc/clean-journal-default-options.php:279
+msgid "Flip Vertical"
+msgstr "Vend Vertikalt"
+
+#: ../inc/clean-journal-default-options.php:280
+msgid "Tile Slide"
+msgstr "Felt sliske"
+
+#: ../inc/clean-journal-default-options.php:281
+msgid "Tile Blind"
+msgstr "Felt Skjul"
+
+#: ../inc/clean-journal-default-options.php:295
+msgid "True"
+msgstr "Sandt"
+
+#: ../inc/clean-journal-default-options.php:296
+msgid "Wait"
+msgstr "Vent"
+
+#: ../inc/clean-journal-default-options.php:297
+msgid "False"
+msgstr "Falsk"
+
+#: ../inc/clean-journal-default-options.php:311
+msgid "Default(Older Posts/Newer Posts)"
+msgstr "Default (Gamle posts/Nye Posts)"
+
+#: ../inc/clean-journal-default-options.php:312
+msgid "Numeric"
+msgstr "Numerisk"
+
+#: ../inc/clean-journal-default-options.php:313
+msgid "Infinite Scroll (Click)"
+msgstr "Uendelig Scroll (Click)"
+
+#: ../inc/clean-journal-default-options.php:314
+msgid "Infinite Scroll (Scroll)"
+msgstr "Uendelig Scroll (Scroll)"
+
+#: ../inc/clean-journal-default-options.php:328
+msgid "Featured"
+msgstr "Fremhævet"
+
+#: ../inc/clean-journal-default-options.php:329
+msgid "Full Size"
+msgstr "Fuld Størrelse"
+
+#: ../inc/clean-journal-default-options.php:345
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/clean-journal-default-options.php:349
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/clean-journal-default-options.php:353
+msgid "Googleplus"
+msgstr "Googleplus"
+
+#: ../inc/clean-journal-default-options.php:357
+#: ../inc/clean-journal-social-icons.php:36
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/clean-journal-default-options.php:361
+msgid "Feed"
+msgstr "Feed"
+
+#: ../inc/clean-journal-default-options.php:365
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../inc/clean-journal-default-options.php:369
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/clean-journal-default-options.php:373
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/clean-journal-default-options.php:377
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: ../inc/clean-journal-default-options.php:381
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/clean-journal-default-options.php:385
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/clean-journal-default-options.php:389
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/clean-journal-default-options.php:393
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/clean-journal-default-options.php:397
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/clean-journal-default-options.php:401
+msgid "PollDaddy"
+msgstr "PollDaddy"
+
+#: ../inc/clean-journal-default-options.php:405
+msgid "CodePen"
+msgstr "CodePen"
+
+#: ../inc/clean-journal-default-options.php:409
+msgid "Path"
+msgstr "Path"
+
+#: ../inc/clean-journal-default-options.php:413
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/clean-journal-default-options.php:417
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/clean-journal-default-options.php:421
+msgid "Digg"
+msgstr "Digg"
+
+#: ../inc/clean-journal-default-options.php:425
+msgid "Reddit"
+msgstr "Reddit"
+
+#: ../inc/clean-journal-default-options.php:429
+msgid "Stumbleupon"
+msgstr "Stumbleupon"
+
+#: ../inc/clean-journal-default-options.php:433
+msgid "Pocket"
+msgstr "Pocket"
+
+#: ../inc/clean-journal-default-options.php:437
+msgid "DropBox"
+msgstr "DropBox"
+
+#: ../inc/clean-journal-default-options.php:441
+msgid "Spotify"
+msgstr "Spotify"
+
+#: ../inc/clean-journal-default-options.php:445
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: ../inc/clean-journal-default-options.php:449
+msgid "Twitch"
+msgstr "Twitch"
+
+#: ../inc/clean-journal-default-options.php:453
+msgid "Website"
+msgstr "Website"
+
+#: ../inc/clean-journal-default-options.php:457
+msgid "Phone"
+msgstr "Tlf."
+
+#: ../inc/clean-journal-default-options.php:461
+msgid "Handset"
+msgstr "Handset"
+
+#: ../inc/clean-journal-default-options.php:465
+msgid "Cart"
+msgstr "Kurv"
+
+#: ../inc/clean-journal-default-options.php:469
+msgid "Cloud"
+msgstr "Cloud"
+
+#: ../inc/clean-journal-default-options.php:473
+msgid "Link"
+msgstr "Link"
+
+#: ../inc/clean-journal-default-options.php:491
+#: ../inc/clean-journal-default-options.php:522
+#: ../inc/clean-journal-default-options.php:549
+msgid "Default"
+msgstr "Default"
+
+#: ../inc/clean-journal-default-options.php:527
+msgid "Enable"
+msgstr "Aktiver"
+
+#: ../inc/clean-journal-default-options.php:532
+msgid "Disable"
+msgstr "Deaktivér"
+
+#: ../inc/clean-journal-default-options.php:554
+msgid "Featured Image"
+msgstr "Indlæggets thumbnail "
+
+#: ../inc/clean-journal-default-options.php:564
+msgid "Disable Image"
+msgstr "Deaktiver billede"
+
+#: ../inc/clean-journal-default-options.php:579
+#, fuzzy, php-format
+#| msgctxt "1: Year, 2: Site Title with home URL"
+#| msgid "Copyright &copy; %1$s %2$s. All Rights Reserved."
+msgctxt "1: Year, 2: Site Title with home URL 3: Privacy Policy Link\n"
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved. %3$s"
+msgstr "Copyright &copy; %1$s %2$s. All Rights Reserved."
+
+#: ../inc/clean-journal-default-options.php:580
+msgid "Y"
+msgstr "Y"
+
+#: ../inc/clean-journal-default-options.php:582
+msgid "by"
+msgstr "af"
+
+#: ../inc/clean-journal-featured-content.php:57
+msgid ""
+"Here you can showcase the x number of Featured Content. You can edit this "
+"Headline, Subheadline and Feaured Content from \"Appearance -> Customize -> "
+"Featured Content Options\"."
+msgstr ""
+"Her kan du vise x antal fremhævet indhold. Du kan redigere denne Overskrift, "
+"Underoverskrift og Fremhævet indhold fra \"Udseende -> Customize -> Fremhævet "
+"indhold indstillinger"
+
+#: ../inc/clean-journal-featured-content.php:256
+#: ../inc/clean-journal-featured-slider.php:180
+msgid "Permalink to: "
+msgstr "Permalink til:"
+
+#: ../inc/clean-journal-menus.php:43
+msgid "Search"
+msgstr "Søg"
+
+#: ../inc/clean-journal-menus.php:157 ../inc/clean-journal-menus.php:176
+msgid "Menu"
+msgstr "Menu"
+
+#: ../inc/clean-journal-metabox.php:89
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:181
+msgid "Layout Options"
+msgstr "Layout indstillinger"
+
+#: ../inc/clean-journal-metabox.php:106
+msgid "Header Featured Image Options"
+msgstr "Header fremhævet billede indstillinger"
+
+#: ../inc/clean-journal-metabox.php:123
+#, fuzzy
+#| msgid "Single Page/Post Image Layout "
+msgid "Single Page/Post Image Layout"
+msgstr "Single Side/Post Billed Layout"
+
+#: ../inc/clean-journal-metabox.php:186
+msgid "Clean Journal Options"
+msgstr "Clean Journal Indstillinger"
+
+#: ../inc/clean-journal-structure.php:65
+msgid "Skip to content"
+msgstr "Spring til indhold"
+
+#: ../inc/clean-journal-structure.php:89
+msgid ""
+"This is Header Top Area. Assign Header Top Menu and Social Icons from Theme "
+"Customizer"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:30
+msgid "Primary Sidebar"
+msgstr "Primær sidebar"
+
+#: ../inc/clean-journal-widgets.php:36
+msgid ""
+"This is the primary sidebar if you are using a two or three column site "
+"layout option."
+msgstr ""
+"Dette er den primære sidebar hvis du bruger et to eller tre spaltet side "
+"layout."
+
+#: ../inc/clean-journal-widgets.php:43
+#, php-format
+msgid "Footer Area %d"
+msgstr "Footer område %d"
+
+#: ../inc/clean-journal-widgets.php:49
+#, php-format
+msgid "Footer %d widget area."
+msgstr "Footer %d widget område"
+
+#: ../inc/clean-journal-widgets.php:69
+msgid "CT: Social Icons"
+msgstr "CT: Sociale Ikoner"
+
+#: ../inc/clean-journal-widgets.php:70
+msgid "Use this widget to add Social Icons as a widget. "
+msgstr "Brug denne widget til at tilføje sociale ikoner som widgets."
+
+#: ../inc/clean-journal-widgets.php:111
+msgid "Title (optional):"
+msgstr "Titel (valgfri)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:29
+#, fuzzy
+#| msgid "Select Categories"
+msgid "All Categories"
+msgstr "Vælg Kategorier"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:36
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+"Hold Ctrl (Windows) / Kommando (Mac) knappen for at vælge flere muligheder."
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:49
+msgid "Theme Instructions"
+msgstr "Tema instruktioner"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:53
+msgid "Support"
+msgstr "Support"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:57
+msgid "Changelog"
+msgstr "Ændringslog"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:61
+msgid "Donate Now"
+msgstr "Doner nu"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:65
+msgid "Review"
+msgstr "Gennemse"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:28
+msgid "Featured Content Options"
+msgstr "Fremhævet Indhold indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:46
+msgid "Enable Featured Content on"
+msgstr "Aktiver Side Indhold"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:62
+msgid "Select Featured Content Layout"
+msgstr "Vælg Side Indholds Layout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:77
+msgid "Check to Move above Footer"
+msgstr "Tjek af for at flytte over sidefod"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:93
+msgid "Select Content Type"
+msgstr "Vælg indholds type"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:108
+msgid "Leave field empty if you want to remove Headline"
+msgstr "Lad feltet være tomt hvis du vil fjerne overskriften. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:109
+msgid "Headline for Featured Content"
+msgstr "Overskrift for Indhold"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:125
+msgid "Leave field empty if you want to remove Sub-headline"
+msgstr "Lad feltet være tomt hvis du vil fjerne underoverskriften. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:126
+msgid "Sub-headline for Featured Content"
+msgstr "Underoverskrift for Indhold"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:142
+msgid ""
+"Save and refresh the page if No. of Featured Content is changed (Max no of "
+"Featured Content is 20)"
+msgstr ""
+"Gem og opdater siden hvis Antal Fremhævet Indhold er ændret (Max antal "
+"Fremhævet indhold er 20)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:149
+msgid "No of Featured Content"
+msgstr "Antal Fremhævet Indhold"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:166
+msgid "Display Content"
+msgstr "Vis indhold"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:184
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:171
+msgid "Featured Page"
+msgstr "Fremhævet Side"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:27
+msgid "Featured Slider Options"
+msgstr "Fremhævet Slider Valgmuligheder"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:33
+msgid "Featured Slider"
+msgstr "Fremhævet slider"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:45
+msgid "Enable Slider on"
+msgstr "Aktiver Slider"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:61
+msgid "Transition Effect"
+msgstr "Overgangs effekt"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:77
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:96
+msgid "seconds(s)"
+msgstr "Sekund(er)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:81
+msgid "Transition Delay"
+msgstr "Transition - forsinkelse"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:100
+msgid "Transition Length"
+msgstr "Transitions-længde"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:116
+msgid "Image Loader"
+msgstr "Billede Loader"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:132
+msgid "Select Slider Type"
+msgstr "Vælg slider type"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:147
+msgid ""
+"Save and refresh the page if No. of Slides is changed (Max no of slides is 20)"
+msgstr ""
+"Gem og opdater siden hvis Antal Slides er ændret (Max antal slides er 20)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:154
+msgid "No of Slides"
+msgstr "Antal Slides"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:25
+msgid "Enable Featured Header Image on "
+msgstr "Aktiver Fremhævet Sidehoved Billede"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:40
+msgid "Page/Post Featured Header Image Size"
+msgstr "Side/post fremhævet sidehoved billedstørrelse. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:53
+msgid "Featured Header Image Alt/Title Tag "
+msgstr "Fremhævet Header billede alt/title tag"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:66
+msgid "Featured Header Image Link URL"
+msgstr "Fremhævet Header billede link url"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:79
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:364
+msgid "Check to Open Link in New Window/Tab"
+msgstr "Marker for at åbne i nyt vindue/faneblad"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:19
+msgid "Note: Enter the url for correponding social networking website"
+msgstr "Note: Indsæt URL for den tilsvarende sociale netværks hjemmeside."
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:28
+msgid "Social Links"
+msgstr "Sociale Links"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:41
+msgid ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?"
+"{action}. More Information in readme file"
+msgstr ""
+"Skype link kan være i formatet:<br>Ringtil://+{nummer}<br> skype:{brugernavn}?"
+"{action}. Mere Unformation i readme filen. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:20
+msgid "Basic theme Options"
+msgstr "Grundlæggende tema indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:23
+msgid "Theme Options"
+msgstr "Tema indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:29
+msgid ""
+"Breadcrumbs are a great way of letting your visitors find out where they are "
+"on your site with just a glance. You can enable/disable them on homepage and "
+"entire site."
+msgstr ""
+"Breadcrumbs er en god måde at lade dine besøgende finde ud af hvor de er på "
+"din side. Du kan aktivere/de-aktivere dem på forsiden og hele siden. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:31
+msgid "Breadcrumb Options"
+msgstr "Breadcrumb Indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:42
+msgid "Check to enable Breadcrumb"
+msgstr "Klik for at aktivere Breadcrumb"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:55
+msgid "Check to enable Breadcrumb on Homepage"
+msgstr "Klik for at aktivere Breadcrumb på Forsiden"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:71
+msgid "Separator between Breadcrumbs"
+msgstr "Separering mellem Breadcrumbs. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:86
+msgid "Custom/Inline CSS"
+msgstr "Brugerdefineret CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:89
+msgid "Custom CSS Options"
+msgstr "Brugerdefineret CSS indstilling"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:99
+msgid "Enter Custom CSS"
+msgstr "Tilføj dine brugerdefinerede CSS styles"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:113
+msgid "Excerpt Options"
+msgstr "Uddrags Instillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:123
+msgid "Excerpt length. Default is 55 words"
+msgstr "Uddrag længde. Default er 55 ord."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:130
+msgid "Excerpt Length (words)"
+msgstr "Uddrag længde (ord)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:144
+msgid "Read More Text"
+msgstr "Mere Tag Tekst"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:153
+msgid ""
+"Only posts that belong to the categories selected here will be displayed on "
+"the front page"
+msgstr ""
+"Kun indlæg som hører til de valgte kategorier vil blive vist på forsiden"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:156
+msgid "Homepage / Frontpage Options"
+msgstr "Homepage / Forside indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:166
+msgid "Select Categories"
+msgstr "Vælg Kategorier"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:192
+msgid "Default Layout"
+msgstr "Standard Layout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:206
+msgid "Archive Content Layout"
+msgstr "Arkiv Indhold Layout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:219
+msgid "Single Page/Post Image Layout "
+msgstr "Single Side/Post Billed Layout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:230
+#, fuzzy, php-format
+#| msgid ""
+#| "Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+#| "Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" href="
+#| "\"%s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%1$s\">WP-PageNavi "
+"Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" href="
+"\"%2$s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Numberisk Mulighed kræver <a target=\"_blank\" href=\"%s\">WP-SideNavi "
+"Plugin</a>.<br/>Uendelig Scroll Muligheder kræver <a target=\"_blank\" href="
+"\"%s\">JetPack Plugin</a> Med Uendelig Scroll modul Aktiveret."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:237
+#, php-format
+msgid ""
+"Infinite Scroll Options requires <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Uendelig Scroll Mulighed kræver <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> med Uendelig Scroll modul aktiveret."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:248
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi Plugin</"
+"a>."
+msgstr ""
+"Numerisk mulighed kræver <a target=\"_blank\" href=\"%s\">WP-SideNavi Plugin</"
+"a>."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:259
+msgid "Pagination Options"
+msgstr "Sideinddelings Instillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:270
+msgid "Pagination type"
+msgstr "Sideinddelings type"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:279
+msgid "To disable the fields, simply leave them empty."
+msgstr "For at deaktivere felterne, lad dem være tomme."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:282
+msgid "Promotion Headline Options"
+msgstr "Promotion Headline indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:293
+msgid "Enable Promotion Headline on"
+msgstr "Aktiver Promotion Headline for"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:307
+msgid "Appropriate Words: 10"
+msgstr "Passende ord: 10"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:308
+msgid "Promotion Headline Text"
+msgstr "Promotion Headline Tekst"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:321
+msgid "Appropriate Words: 15"
+msgstr "Passende ord: 15"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:322
+msgid "Promotion Subheadline Text"
+msgstr "Promotion Subheadline Tekst"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:335
+msgid "Appropriate Words: 3"
+msgstr "Passende ord: 3"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:336
+msgid "Promotion Headline Button Text "
+msgstr "Promotion Headline knap Tekst"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:350
+msgid "Promotion Headline Link"
+msgstr "Promotion Headline link"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:376
+msgid "Scrollup Options"
+msgstr "Scroll op indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:386
+msgid "Check to disable Scroll Up"
+msgstr "Afmærk for at deaktivere Scroll Up"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:395
+msgid "Change default placeholder text in Search."
+msgstr "Ændre standard pladsholder text i Søg. "
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:398
+msgid "Search Options"
+msgstr "Søgemuligheder"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:408
+msgid "Default Display Text in Search"
+msgstr "Standardvisning for tekst i søgning"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:53
+msgid "Logo"
+msgstr "Logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:66
+msgid "Check to disable logo"
+msgstr "Afmærk for at deaktivere logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:80
+msgid "Logo Alt Text"
+msgstr "Alternativ Logo Text"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:95
+msgid "Check to move Site Title and Tagline before logo"
+msgstr "Afmærk for at flytte side titel og beskrivelse før logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:113
+msgid "Color Scheme"
+msgstr "Farveskema"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:138
+msgid ""
+"Caution: Reset all settings to default. Refresh the page after save to view "
+"full effects."
+msgstr ""
+"Advarsel: Nulstil alle indstillinger til standard. Genindlæs siden efter "
+"arkivering for at se effekten."
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:140
+msgid "Reset all settings"
+msgstr "Nulstil alle indstillinger"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:151
+msgid "Check to reset all settings to default"
+msgstr "Afmærk for at nulstille alle indstillinger til standard"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:161
+#: ../inc/customizer-includes/clean-journal-customizer.php:172
+msgid "Important Links"
+msgstr "Vigtige links"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:206
+msgid "Refresh the customizer page after saving to view reset effects"
+msgstr ""
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:76
+msgid "Clean Journal Pro"
+msgstr "Clean Journal Pro"
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:77
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../no-results.php:14
+msgid "Error 404-Page NOT Found"
+msgstr "Fejl 404 - Emne Blev Ikke Fundet"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultater for: %s"
+
+#: ../searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "Søg efter:"
+
+#: ../searchform.php:17
+msgctxt "submit button"
+msgid "Search"
+msgstr "Søg"
+
+#: ../sidebar.php:37
+msgid "Primary Sidebar Widget Area"
+msgstr "Primære sidebar widget område"
+
+#: ../sidebar.php:40
+msgid ""
+"This is the Primary Sidebar Widget Area if you are using a two or three "
+"column site layout option."
+msgstr ""
+"Dette er det Primære Sidebar Widget Område hvis du bruger en to eller tre "
+"spaltet side layout udgave. "
+
+#: ../sidebar.php:41
+#, php-format
+msgid ""
+"By default it will load Search and Archives widgets as shown below. You can "
+"add widget to this area by visiting your <a href=\"%s\">Widgets Panel</a> "
+"which will replace default widgets."
+msgstr ""
+"Per default vil det loade Søge og Arkiv widgets som vist nedenfor. Du kan "
+"tilføje widgets til dette område ved at besøge dit <a href=\"%s\">Widgets "
+"Panel</a> der kan erstatte default widgets. "
+
+#: ../sidebar.php:54
+msgid "Archives"
+msgstr "Arkiv"
+
+#~ msgid "Shuffle"
+#~ msgstr "Shuffle"
+
+#~ msgctxt "Droid Sans font: on or off"
+#~ msgid "on"
+#~ msgstr "På"
+
+#~ msgid "Demo Featured Content"
+#~ msgstr "Demo Vist Indhold"
+
+#~ msgid "Featured Page Content"
+#~ msgstr "Vist Side Indhold"
+
+#~ msgid "Demo Featured Slider"
+#~ msgstr "Demo Fremhævet Slider"
+
+#~ msgid "Featured Page Slider"
+#~ msgstr "Fremhævet fast-side slider"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Remove Icon images to disable."
+#~ msgstr "Flyt Ikon billeder for at deaktivere"
+
+#~ msgid "Icon Options"
+#~ msgstr "ikon indstillinger"
+
+#~ msgid "Select/Add Favicon"
+#~ msgstr "Vælg/Tilføj Favicon"
+
+#~ msgid ""
+#~ "Web Clip Icon for Apple devices. Recommended Size - Width 144px and Height "
+#~ "144px height, which will support High Resolution Devices like iPad Retina."
+#~ msgstr ""
+#~ "Web Klip Ikon til Apple enheder. Anbefalet Størrelse - Bredde 144px og "
+#~ "Højde 144px, som vil understøtte Høj Opløsnings Enheder som iPad Retina"
+
+#~ msgid "Select/Add Web Clip Icon"
+#~ msgstr "Vælg/Tilføj Web Clip Ikon"
+
+#, fuzzy
+#~ msgid "Clean Journal"
+#~ msgstr "Clean Journal Indstillinger"
+
+#, fuzzy
+#~ msgid "https://catchthemes.com/themes/clean-journal"
+#~ msgstr "https://catchthemes.com/support/"
+
+#~ msgid "Catch Themes"
+#~ msgstr "Catch Themes"
+
+#~ msgid "https://catchthemes.com/"
+#~ msgstr "https://catchthemes.com/"
+
+#~ msgid "Upgrade To Pro &raquo;"
+#~ msgstr "Opgrader til Pro &raquo;"
+
+#~ msgid ""
+#~ "Some settings might be missing or disorganized in this version of "
+#~ "WordPress. So we suggest you to upgrade to version 4.0 or better."
+#~ msgstr ""
+#~ "Nogle indstillinger mangler muligvis  eller er uorganiseret i denne "
+#~ "version af WordPress. Vi foreslår at du opgradere til version 4.0 eller "
+#~ "senere. "
+
+#~ msgid "Author: %s"
+#~ msgstr "Forfatter: %s"
+
+#~ msgid "Day: %s"
+#~ msgstr "Dag: %s"
+
+#~ msgid "Month: %s"
+#~ msgstr "Måned: %s"
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+#~ msgid "Year: %s"
+#~ msgstr "År: %s"
+
+#~ msgctxt "yearly archives date format"
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Asides"
+#~ msgstr "Sidebemærkninger"
+
+#~ msgid "Galleries"
+#~ msgstr "Gallerier"
+
+#~ msgid "Images"
+#~ msgstr "Billeder"
+
+#~ msgid "Videos"
+#~ msgstr "Videoer"
+
+#~ msgid "Quotes"
+#~ msgstr "Citater"
+
+#~ msgid "Links"
+#~ msgstr "Genveje"
+
+#~ msgid "Statuses"
+#~ msgstr "Statusser"
+
+#~ msgid "Audios"
+#~ msgstr "Lyd"
+
+#~ msgid "Chats"
+#~ msgstr "Chats"
+
+#~ msgctxt "Used before publish date."
+#~ msgid "<span class=\"screen-reader-text\">Posted on</span>"
+#~ msgstr "<span class=\"screen-reader-text\">Udgivet den</span>"
+
+# Theme Customizer - Tema Tilpasning.
+#~ msgid ""
+#~ "This is Header Top Sidebar Widget Area. Assign Header Top Menu and Social "
+#~ "Icons from Theme Customizer"
+#~ msgstr ""
+#~ "Dette er Header Top Sidebar Widget området. Tildel Header Top Menu og "
+#~ "sociale ikoner fra Tema Tilpasning"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Mest anvendte kategorier"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Prøv at kigge i månedarkiver. %1$s"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Kategoriarkiv: %s"
+
+#~ msgid "Tag Archives: %s"
+#~ msgstr "Tag-arkiv: %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Forfatterarkiv: %s"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Dagsarkiv: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Månedsarkiv: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Årsarkiv: %s"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "En kommentar til &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s kommentarer til &ldquo;%2$s&rdquo;"
+
+#~ msgid "Permalink to %s"
+#~ msgstr "Permalink til %s"
+
+#~ msgid "Leave a reply"
+#~ msgstr "Efterlad et svar"
+
+#~ msgid "1 Reply"
+#~ msgstr "1 svar"
+
+#~ msgid "% Replies;"
+#~ msgstr "% svar;"
+
+#~ msgid "All Audio Posts"
+#~ msgstr "Alle lyd indlæg"
+
+#~ msgid "Audio"
+#~ msgstr "Lyd"
+
+#~ msgid "All Chat Posts"
+#~ msgstr "Alle chat indlæg"
+
+#~ msgid "Chat"
+#~ msgstr "Chat"
+
+#~ msgid "All Gallery Posts"
+#~ msgstr "Alle galleri indlæg"
+
+#~ msgid "Gallery"
+#~ msgstr "Galleri"
+
+#~ msgid "This gallery contains <a %1$s>%2$s photo</a>."
+#~ msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+#~ msgstr[0] "Dette galleri indeholder <a %1$s>%2$s foto</a>."
+#~ msgstr[1] "Dette galleri indeholder <a %1$s>%2$s fotos</a>."
+
+#~ msgid "All Image Posts"
+#~ msgstr "Alle billed indlæg"
+
+#~ msgid "Image"
+#~ msgstr "Billede"
+
+#~ msgid "All Link Posts"
+#~ msgstr "Alle link indlæg"
+
+#~ msgid "% Replies"
+#~ msgstr "% svar;"
+
+#~ msgid "About %s"
+#~ msgstr "Om %s"
+
+#~ msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Vis alle indlæg af %s <span class=“meta-nav”>&rarr;</span>"
+
+#~ msgid "All Status Posts"
+#~ msgstr "Alle status indlæg"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "All Video Posts"
+#~ msgstr "Alle video indlæg"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Featured post"
+#~ msgstr "Fremhævet indlæg"
+
+#~ msgid "Footer Menu"
+#~ msgstr "Footer menu"
+
+#~ msgid ""
+#~ "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+#~ "\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to "
+#~ "full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return "
+#~ "to %7$s\" rel=\"gallery\">%7$s</a>"
+#~ msgstr ""
+#~ "Udgivet <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+#~ "\"%1$s\" pubdate>%2$s</time></span> som <a href=\"%3$s\" title=\"Link til "
+#~ "billede\">%4$s &times; %5$s</a> i <a href=\"%6$s\" title=\"Tilbage %7$s\" "
+#~ "rel=\"gallery\">%7$s</a>"
+
+#~ msgid ""
+#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post "
+#~ "a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s"
+#~ "\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</"
+#~ "a>."
+#~ msgstr ""
+#~ "<a class=“comment-link” href=“#respond” title=“Skriv en kommentar“>Skriv "
+#~ "en kommentar</a> eller efterlad et trackback: <a class=“trackback-link” "
+#~ "href=“%s” title=“Trackback URL til dit indlæg“ rel=“trackback”>Trackback "
+#~ "URL</a>."
+
+#~ msgid ""
+#~ "Comments are closed, but you can leave a trackback: <a class=\"trackback-"
+#~ "link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+#~ "\">Trackback URL</a>."
+#~ msgstr ""
+#~ "Der er lukket for kommentarer, men du kan efterlade et trackback: <a "
+#~ "class=“trackback-link” href=“%s” title=“Trackback URL for dit indlæg” "
+#~ "rel=“trackback”>Trackback URL</a>."
+
+#~ msgid ""
+#~ "Trackbacks are closed, but you can <a class=\"comment-link\" href="
+#~ "\"#respond\" title=\"Post a comment\">post a comment</a>."
+#~ msgstr ""
+#~ "Trackbacks er lukket men du kan <a class=“comment-link” href=“#respond” "
+#~ "title=“skrive en kommentar“>skrive en kommentar</a>."
+
+#~ msgid "Both comments and trackbacks are currently closed."
+#~ msgstr "Både kommentarer og trackback er i øjeblikket lukket."
+
+#~ msgid ""
+#~ "You have selected Post Slider but you haven't added the Post ID in "
+#~ "\"Appearance => Theme Options => Featured Slider => Featured Post Slider "
+#~ "Options\""
+#~ msgstr ""
+#~ "Du har valgt post Slider men du ikke har tilføjet Post ID i “Udseende => "
+#~ "Tema Indstillinger => Udvalgte Slider => Udvalgte Indlæg Slider "
+#~ "indstillinger”"
+
+#~ msgid ""
+#~ "You have selected Page Slider but you haven't added the Page ID in "
+#~ "\"Appearance => Theme Options => Featured Slider => Featured Page Slider "
+#~ "Options\""
+#~ msgstr ""
+#~ "Du har valgt Side Slider men du ikke har tilføjet Page id i “Udseende => "
+#~ "Tema Indstillinger => Udvalgte Slider => Udvalgte Side Slider "
+#~ "indstillinger”"
+
+#~ msgid ""
+#~ "You have selected Category Slider but you haven't selected any categories "
+#~ "in \"Appearance => Theme Options => Featured Slider => Featured Category "
+#~ "Slider Options\""
+#~ msgstr ""
+#~ "Du har valgt Kategori Slider men du har ikke valgt nogen kategorier i "
+#~ "“Udseende => Tema Indstillinger => Udvalgte Slider => Featured Kategori "
+#~ "Slider indstillinger”"
+
+#~ msgid ""
+#~ "You have selected Image Slider but you haven't uploaded any image in "
+#~ "\"Appearance => Theme Options => Featured Slider => Featured Image Slider "
+#~ "Options\""
+#~ msgstr ""
+#~ "Du har valgt billede Slider men du har ikke uploadet et billede i "
+#~ "“Udseende => Tema Indstillinger => Udvalgte Slider => Featured billede "
+#~ "Slider indstillinger”"
+
+#~ msgid "Permalink to:"
+#~ msgstr "Permalink til:"
+
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s til %2$s"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "SlideShare"
+#~ msgstr "SlideShare"
+
+#~ msgid "FourSquare"
+#~ msgstr "FourSquare"
+
+#~ msgid "deviantART"
+#~ msgstr "deviantART"
+
+#~ msgid "MySpace"
+#~ msgstr "MySpace"
+
+#~ msgid "RSS"
+#~ msgstr "RSS"
+
+#~ msgid "Delicious"
+#~ msgstr "Delicious"
+
+#~ msgid "Last.fm"
+#~ msgstr "Last.fm"
+
+#~ msgid "Vkontakte"
+#~ msgstr "Vkontakte"
+
+#~ msgid "My World"
+#~ msgstr "My World"
+
+#~ msgid "Odnoklassniki"
+#~ msgstr "Odnoklassniki"
+
+#~ msgid "GoodReads"
+#~ msgstr "GoodReads"
+
+#~ msgid "SoundCloud"
+#~ msgstr "SoundCloud"
+
+#~ msgid "Contact"
+#~ msgstr "Contact"
+
+#~ msgid "Xing"
+#~ msgstr "Xing"
+
+#~ msgid "Meetup"
+#~ msgstr "Meetup"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Catch Kathmandu Options"
+#~ msgstr "Catch Kathmandu Indstillinger"
+
+#~ msgid "Default Layout Set in"
+#~ msgstr "Standard Layout sat i"
+
+#~ msgid "Customize"
+#~ msgstr "Tilpas"
+
+#~ msgid "Right sidebar"
+#~ msgstr "Højre sidebar"
+
+#~ msgid "Left sidebar"
+#~ msgstr "Venstre sidebar"
+
+#~ msgid "No sidebar"
+#~ msgstr "Ingen sidebar"
+
+#~ msgid "No sidebar, Full Width"
+#~ msgstr "Ingen sidebar, fuld bredde"
+
+#~ msgid "No Sidebar, One Column"
+#~ msgstr "Ingen sidebar, Een kolonne"
+
+#~ msgid "Default Sidebar"
+#~ msgstr "Standard sidebar"
+
+#~ msgid "Optional Sidebar One"
+#~ msgstr "Valgfri Sidebar eet"
+
+#~ msgid "Optional Sidebar Two"
+#~ msgstr "Valgfri Sidebar to"
+
+#~ msgid "Optional Sidebar three"
+#~ msgstr "Valgfri Sidebar tre"
+
+#~ msgid "Sidebar Layout"
+#~ msgstr "Sidebar Layout"
+
+#~ msgid "Select Sidebar"
+#~ msgstr "Vælg sidebar"
+
+#~ msgid "Content Featured Image Options"
+#~ msgstr "Indhold fremhævet billede indstillinger"
+
+#~ msgid "Main Sidebar"
+#~ msgstr "Primær sidebar"
+
+#~ msgid "Shows the Widgets at the side of Content"
+#~ msgstr "Viser widgets ved siden af indholdet"
+
+#~ msgid "Header Top Sidebar"
+#~ msgstr "Header top sidebar"
+
+#~ msgid "Shows the Widgets at the Top of Header"
+#~ msgstr "Viser widgets i toppen af Header"
+
+#~ msgid "Header Right Sidebar"
+#~ msgstr "Header Højre sidebar"
+
+#~ msgid "Shows the Widgets at the Top Right Side of Header"
+#~ msgstr "Viser widgets foroven i højre side af Header"
+
+#~ msgid "Optional Homepage Sidebar"
+#~ msgstr "Valgfri Homepage (forside) sidebar"
+
+#~ msgid "This is Optional Sidebar for Homepage"
+#~ msgstr "Dette er en valgfri sidebar for Homepage (forside)"
+
+#~ msgid "Optional Archive Sidebar"
+#~ msgstr "Valgfri arkiv sidebar"
+
+#~ msgid "This is Optional Sidebar for Archive"
+#~ msgstr "Dette er en valgfri sidebar for arkiver"
+
+#~ msgid "Optional Page Sidebar"
+#~ msgstr "Valgfri sidebar for sider (fast-side)"
+
+#~ msgid "This is Optional Sidebar for Page"
+#~ msgstr "Dette er en valgfri sidebar for faste sider"
+
+#~ msgid "Optional Post Sidebar"
+#~ msgstr "Valgfri indlægs sidebar"
+
+#~ msgid "This is Optional Sidebar for Post"
+#~ msgstr "Dette er en valgfri sidebar for indlægs-sider"
+
+#~ msgid "This is Optional Sidebar One"
+#~ msgstr "Dette er første valgfri sidebar"
+
+#~ msgid "This is Optional Sidebar Two"
+#~ msgstr "Dette er anden valgfri sidebar"
+
+#~ msgid "Optional Sidebar Three"
+#~ msgstr "Tredje valgfri sidebar"
+
+#~ msgid "This is Optional Sidebar Three"
+#~ msgstr "Dette er tredje valgfri sidebar"
+
+#~ msgid "WooCommerce Sidebar"
+#~ msgstr "WooCommerce sidebar"
+
+#~ msgid "This is Optional WooCommerce Sidebar"
+#~ msgstr "Dette er en valgfri sidebar for WooCommerce sider"
+
+#~ msgid "Footer Area One"
+#~ msgstr "Footer område eet"
+
+#~ msgid "An optional widget area for your site footer"
+#~ msgstr "Et valgfrit widget-område til footer’en"
+
+#~ msgid "Footer Area Two"
+#~ msgstr "Footer område to"
+
+#~ msgid "Footer Area Three"
+#~ msgstr "Footer område tre"
+
+#~ msgid "Footer Area Four"
+#~ msgstr "Footer område fire"
+
+#~ msgid "404 Page Not Found Content"
+#~ msgstr "404 Side ikke fundet indhold"
+
+#~ msgid "Replaces the default 404 Page Not Found Content"
+#~ msgstr "Erstatter 404 Side ikke fundet indhold"
+
+#~ msgid "CT: Social Widget"
+#~ msgstr "CT: Social Widget"
+
+#~ msgid ""
+#~ "Use this widget to add Social Icons from Social Icons Settings as a widget."
+#~ msgstr ""
+#~ "Brug denne widget til at tilføje sociale ikoner fra Social Ikoner "
+#~ "Indstillinger som en widget."
+
+#~ msgid "CT: Advertisement"
+#~ msgstr "CT: Annoncering"
+
+#~ msgid "Use this widget to add any type of Advertisement as a widget."
+#~ msgstr "Brug denne widget til at tilføje forskellige typer af annoncering"
+
+#~ msgid "Advertisement Code:"
+#~ msgstr "Annoncerings kode:"
+
+#~ msgid "Image Url:"
+#~ msgstr "Billed url:"
+
+#~ msgid "Link URL:"
+#~ msgstr "Link url:"
+
+#~ msgid "Open Link in New Window"
+#~ msgstr "Åben link i nyt vindue"
+
+#~ msgid "Alt text:"
+#~ msgstr "Alt tekst:"
+
+#~ msgid "Check to Hide Ad on 404 page"
+#~ msgstr "Afmærk for at skjule annonce på 404 siden"
+
+#~ msgid "Add Advertisement Code or Image URL"
+#~ msgstr "Tilføj annoncerings kode eller billed url"
+
+#~ msgid "CT: Featured Content"
+#~ msgstr "CT: Fremhævet indhold"
+
+#~ msgid "Use this widget to add Featured Content as a widget."
+#~ msgstr "Brug denne widget til at tilføje fremhævet indhold som widget."
+
+#~ msgid "Title:"
+#~ msgstr "Titel:"
+
+#~ msgid "Content:"
+#~ msgstr "indhold:"
+
+#~ msgid "Show Image Before Title"
+#~ msgstr "Vis billede før titel"
+
+#~ msgid "Show Image After Title"
+#~ msgstr "Vis billede efter titel"
+
+#~ msgid "CT: Featured Page"
+#~ msgstr "CT: Fremhævet side"
+
+#~ msgid "Use this widget to add Page as a widget."
+#~ msgstr "Brug denne widget til at tilføje en fast-side som widget."
+
+#~ msgid "Title (Optional): Add in the Title to replace the Page Title"
+#~ msgstr "Titel (valgfri): Skriv en titel for at erstatte sidens titel"
+
+#~ msgid "Image:"
+#~ msgstr "Billede:"
+
+#~ msgid "Show Small Image Size"
+#~ msgstr "Vis lille billed størrelse"
+
+#~ msgid "Show Featured Image Size"
+#~ msgstr "Vis fremhævet billed størrelse"
+
+#~ msgid "Show Slider Image Size"
+#~ msgstr "Vis slider billed størrelse"
+
+#~ msgid "Show Full Size Image Size"
+#~ msgstr "Vis fuld størrelse billed"
+
+#~ msgid "Move Image After Title?"
+#~ msgstr "Flyt billed efter titel?"
+
+#~ msgid "CT: Featured Post"
+#~ msgstr "CT: Fremhævet indlæg"
+
+#~ msgid "Use this widget to add Post as a widget."
+#~ msgstr "Brug denne widget til at tilføje et indlæg som widget."
+
+#~ msgid "Post ID"
+#~ msgstr "Indlægs ID"
+
+#~ msgid "CT: About Profile"
+#~ msgstr "CT: “Om” Profil"
+
+#~ msgid "Use this widget to add About Text with Image."
+#~ msgstr "Brug denne widget til at tilføje “Om”-tekst med billed"
+
+#~ msgid "Short Description:"
+#~ msgstr "Kort beskrivelse"
+
+#~ msgid "Default Logo"
+#~ msgstr "Standard logo"
+
+#~ msgid "Catch Kathmandu Logo"
+#~ msgstr "Catch Kathmandu Logo"
+
+#~ msgid "Continue Reading &rarr;"
+#~ msgstr "Gå til indlæg &rarr;"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Søg &hellip;"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "All Rights Reserved"
+#~ msgstr "Alle rettigheder forbeholdt"
+
+#~ msgid "https://catchthemes.com"
+#~ msgstr "https://catchthemes.com"
+
+#~ msgid "Catch Kathmandu Pro"
+#~ msgstr "Catch Kathmandu Pro"
+
+#~ msgid "Theme: Catch Kathmandu Pro"
+#~ msgstr "Theme: Catch Kathmandu Pro"
+
+#~ msgid "3 Columns"
+#~ msgstr "3 kolonner"
+
+#~ msgid "4 Columns"
+#~ msgstr "4 kolonner"
+
+#~ msgid "Homepage"
+#~ msgstr "Forside"
+
+#~ msgid "Pages & Posts"
+#~ msgstr "Fast-sider & indlæg"
+
+#~ msgid "Before Menu"
+#~ msgstr "Før menu"
+
+#~ msgid "After Menu"
+#~ msgstr "Efter menu"
+
+#~ msgid "Before Header"
+#~ msgstr "Før Header"
+
+#~ msgid "After Top Sidebar"
+#~ msgstr "Efter Top sidebar"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Højre sidebar"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Venstre sidebar"
+
+#~ msgid "No Sidebar"
+#~ msgstr "Ingen sidebar"
+
+#~ msgid "No Sidebar, Full Width"
+#~ msgstr "Ingen sidebar, fuld bredde"
+
+#~ msgid "Full Content Display"
+#~ msgstr "﻿Fuldt indhold visningstype"
+
+#~ msgid "Excerpt/Blog Display"
+#~ msgstr "Uddrag/Blog visningstype"
+
+#~ msgid "Demo Slider"
+#~ msgstr "Demo Slider"
+
+#~ msgid "Post Slider"
+#~ msgstr "Indlægs Slider"
+
+#~ msgid "Page Slider"
+#~ msgstr "Fast-side Slider"
+
+#~ msgid "Category Slider"
+#~ msgstr "Kategori Slider"
+
+#~ msgid "Image Slider"
+#~ msgstr "Billed Slider"
+
+#~ msgid "fade"
+#~ msgstr "fade"
+
+#~ msgid "wipe"
+#~ msgstr "wipe"
+
+#~ msgid "scrollUp"
+#~ msgstr "scrollUp"
+
+#~ msgid "scrollDown"
+#~ msgstr "scrollDown"
+
+#~ msgid "scrollLeft"
+#~ msgstr "scrollLeft"
+
+#~ msgid "scrollRight"
+#~ msgstr "scrollRight"
+
+#~ msgid "blindX"
+#~ msgstr "blindX"
+
+#~ msgid "blindY"
+#~ msgstr "blindY"
+
+#~ msgid "blindZ"
+#~ msgstr "blindZ"
+
+#~ msgid "cover"
+#~ msgstr "cover"
+
+#~ msgid "shuffle"
+#~ msgstr "shuffle"
+
+#~ msgid "Use WordPress Settings"
+#~ msgstr "Brug Wordpress indstillinger"
+
+#~ msgid "Disable in Pages"
+#~ msgstr "Deaktiver for sider"
+
+#~ msgid "Disable Completely"
+#~ msgstr "Deaktiver helt"
+
+#~ msgid "Demo Content"
+#~ msgstr "Demo indhold"
+
+#~ msgid "Post Content"
+#~ msgstr "Indlægs indhold"
+
+#~ msgid "Page Content"
+#~ msgstr "Fast-side indhold"
+
+#~ msgid "Category Content"
+#~ msgstr "Kategori- indhold"
+
+#~ msgid "Image Content"
+#~ msgstr "Billed indhold"
+
+#~ msgid "Homepage/Frontpage"
+#~ msgstr "Homepage/Forside"
+
+#~ msgid "Header Image / Logo"
+#~ msgstr "Header Billede / Logo"
+
+#~ msgid "Homepage Featured Content Options"
+#~ msgstr "Forside Fremhævet Indhold indstillinger"
+
+#~ msgid "Homepage/Frontpage Settings"
+#~ msgstr "Homepage / Forside indstillinger"
+
+#~ msgid "Responsive Design"
+#~ msgstr "Responsivt Design"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid "Webclip Icon Options"
+#~ msgstr "Webclip ikon indstillinger"
+
+#~ msgid ""
+#~ "Web Clip Icon for Apple devices. Recommended Size - Width 144px and Height "
+#~ "144px height, which will support High Resolution Devices like iPad Retina"
+#~ msgstr ""
+#~ "Web Clip ikonet for Apple-enheder. Anbefalede størrelse - bredde 144px og "
+#~ "højde 144px højde, som vil støtte høj opløsning enheder som iPad nethinden"
+
+#~ msgid "Header Options"
+#~ msgstr "Header Indstillinger"
+
+#~ msgid "Font Family Options"
+#~ msgstr "Font family indstillinger"
+
+#~ msgid "Search Text Settings"
+#~ msgstr "Søge tekst indstillinger"
+
+#~ msgid "Excerpt / More Tag Settings"
+#~ msgstr "Uddrag / Læs mere indstillinger"
+
+#~ msgid "Feed Redirect"
+#~ msgstr "Feed Redirect"
+
+#~ msgid ""
+#~ "This options will be retired in next version as per WordPress.org theme "
+#~ "review rules"
+#~ msgstr ""
+#~ "Disse indstillinger bliver udfaset i næste version pga WordPress.org’s "
+#~ "regler om temaer"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Brugerdefineret CSS"
+
+#~ msgid "Footer Editor Options"
+#~ msgstr "Footer Editor indstilling"
+
+#~ msgid "Update Notifier"
+#~ msgstr "Opdaterings notifikation"
+
+#~ msgid "Colors"
+#~ msgstr "Farver"
+
+#~ msgid "Color Scheme Options"
+#~ msgstr "Farveskema Indstillinger"
+
+#~ msgid "Primary Menu Color Options"
+#~ msgstr "Primær menu farveindstillinger"
+
+#~ msgid "Secondary Menu Color Options"
+#~ msgstr "Sekundær menu farve indstillinger"
+
+#~ msgid "Footer Menu Color Options"
+#~ msgstr "Footer menu farve indstillinger"
+
+#~ msgid "Reset Menu Color"
+#~ msgstr "Nulstil menu farver?"
+
+#~ msgid "Slider Color Options"
+#~ msgstr "Slider farve indstillinger"
+
+#~ msgid "Homepage Headline Color Options"
+#~ msgstr "Homepage Headling farve indstillinger"
+
+#~ msgid "Site Color Options"
+#~ msgstr "Site farve indstillinger"
+
+#~ msgid "Slider Options"
+#~ msgstr "Slider-indstillinger"
+
+#~ msgid "Add your social links here"
+#~ msgstr "Tilføj dine sociale links her"
+
+#~ msgid "Predefined Social Icons"
+#~ msgstr "Foruddefinerede Sociale Ikoner"
+
+#~ msgid "Custom Social Links"
+#~ msgstr "Brugerdefinerede Sociale Ikoner"
+
+#~ msgid "Webmaster Tools"
+#~ msgstr "Webmaster værktøjer"
+
+#~ msgid "Site Verification"
+#~ msgstr "Site Verification"
+
+#~ msgid "Header Footer Codes"
+#~ msgstr "Koder for sidehoved og –fod (Header og Footer)"
+
+#~ msgid "Custom Header"
+#~ msgstr "Brugerdefineret Header:"
+
+#~ msgid "Custom Background Color"
+#~ msgstr "Brugerdefineret baggrundsfarve"
+
+#~ msgid "Add link for your homepage headline button"
+#~ msgstr "Tilføj link til din Homepage Headline knap"
+
+#~ msgid "Check to Open Link in New Window"
+#~ msgstr "﻿Afmærk for at åbne i nyt vindue"
+
+#~ msgid "Check to Disable Promotion Headline"
+#~ msgstr "Deaktiver Promotion Headline knap?"
+
+#~ msgid "Check to Disable Promotion Subheadline"
+#~ msgstr "Deaktiver Promotion Subheadline?"
+
+#~ msgid "Check to Disable Promotion Button"
+#~ msgstr "Deaktiver Promotion Headline knap?"
+
+#~ msgid "Enable Content"
+#~ msgstr "Aktiver indhold"
+
+#~ msgid "Headline"
+#~ msgstr "Overskrift"
+
+#~ msgid "Number of Featured Content"
+#~ msgstr "Antal indlæg i fremhævet indhold"
+
+#~ msgid "Featured Content Layout"
+#~ msgstr "Fremhævet indhold layout"
+
+#~ msgid "Select Featured Content Categories "
+#~ msgstr "Vælg kategorier for Fremhævet kategori indhold"
+
+#~ msgid ""
+#~ "Use this only is you want to display posts from Specific Categories in "
+#~ "Featured Slider"
+#~ msgstr ""
+#~ "Brug kun denne hvis du kun vil vise indhold fra specifikke kategorier i "
+#~ "Fremhævet kategori slider"
+
+#~ msgid "Check to Enable Latest Posts on homepage"
+#~ msgstr "Afmærk for at aktivere seneste indlæg på forsiden"
+
+#~ msgid "Homepage posts categories:"
+#~ msgstr "Forside indlægs-kategorier:"
+
+#~ msgid "Check to Move above Homepage Featured Content"
+#~ msgstr "Afmærk for at flytte oven over Forside Fremhævet Indhold"
+
+#~ msgid "Check to Disable Responsive Design"
+#~ msgstr "Marker for at deaktivere Responsive Design"
+
+#~ msgid "Check to Enable Secondary Menu in Mobile Devices"
+#~ msgstr "Markér for at aktivere sekundær Menu i Mobile enheder"
+
+#~ msgid "Check to Disable Favicon"
+#~ msgstr "Afmærk for at deaktivere Favicon"
+
+#~ msgid "Fav Icon"
+#~ msgstr "Fav Icon"
+
+#~ msgid "Check to Disable Web Clip Icon"
+#~ msgstr "Afmærk for at deaktivere Web Clip Ikon"
+
+#~ msgid "Web Clip Icon"
+#~ msgstr "Web Clip Icon"
+
+#~ msgid "Check to Move Site Title & Description before Logo"
+#~ msgstr "Afmærk for at flytte site titel og beskrivelse før logo"
+
+#~ msgid "Check to Disable Header Right Sidebar"
+#~ msgstr "Afmærk for at deaktivere Header højre sidebar"
+
+#~ msgid "Menu Background Color"
+#~ msgstr "Menu baggrundsfarve"
+
+#~ msgid "Menu Text Color"
+#~ msgstr "Menu tekstfarve"
+
+#~ msgid "Menu Hover & Active Background Color"
+#~ msgstr "Menu hover & aktiv baggrundsfarve"
+
+#~ msgid "Menu Hover & Active Text Color"
+#~ msgstr "Menu hover & aktiv tekstfarve"
+
+#~ msgid "Sub-Menu Background Color"
+#~ msgstr "Sub-menu baggrundsfarve"
+
+#~ msgid "Sub-Menu Text Color"
+#~ msgstr "Sub-menu tekstfarve"
+
+#~ msgid "Check to Reset Menu Color"
+#~ msgstr "Afmærk for at nulstille menu farver"
+
+#~ msgid "Please refresh the customizer after saving if reset option is used"
+#~ msgstr "Opdatér venligst customizer’en efter arkivering, hvis du nulstiller"
+
+#~ msgid "Slider Background Color"
+#~ msgstr "Slider baggrundsfarve"
+
+#~ msgid "Slider Border Bottom Color"
+#~ msgstr "Slider border-bottom farve"
+
+#~ msgid "Slider Controller Background Color"
+#~ msgstr "Slider Controller baggrundsfarve"
+
+#~ msgid "Slider Controller Arrow Color"
+#~ msgstr "Slider Controller pile-farve"
+
+#~ msgid "Slider Content Background Color"
+#~ msgstr "Slider indhold baggrundsfarve"
+
+#~ msgid "Slider Content Text Color"
+#~ msgstr "Slider Indhold tekstfarve"
+
+#~ msgid "Check to Reset Slider Color"
+#~ msgstr "Afmærk for at nulstille slider farveindstillinger"
+
+#~ msgid "Background Color"
+#~ msgstr "Baggrundsfarve"
+
+#~ msgid "Text Color"
+#~ msgstr "Tekstfarve"
+
+#~ msgid "Border Bottom Color"
+#~ msgstr "Border-bottom farve"
+
+#~ msgid "Button Background Color"
+#~ msgstr "Knap baggrundsfarve"
+
+#~ msgid "Button Text Color"
+#~ msgstr "Knap tekstfarve"
+
+#~ msgid "Button Hover Background Color"
+#~ msgstr "Knap hover baggrundsfarve"
+
+#~ msgid "Button Hover Text Color"
+#~ msgstr "Knap hover tekstfarve"
+
+#~ msgid "Button Border Color"
+#~ msgstr "Knap border farve"
+
+#~ msgid "Check to Reset Homepage Headline Color"
+#~ msgstr "Nulstil Homepage Headline farve indstillinger?"
+
+#~ msgid "Header Background Color"
+#~ msgstr "Header baggrundsfarve"
+
+#~ msgid "Content Background Color"
+#~ msgstr "Indhold baggrundsfarve"
+
+#~ msgid "Footer Background Sidebar Color"
+#~ msgstr "Footer baggrundsfarve - sidebar"
+
+#~ msgid "Footer Background Color"
+#~ msgstr "Footer baggrundsfarve"
+
+#~ msgid "Title Color"
+#~ msgstr "Titel farve"
+
+#~ msgid "Title Hover Color"
+#~ msgstr "Titel hover farve"
+
+#~ msgid "Meta Description Color"
+#~ msgstr "Meta beskrivelse farve:"
+
+#~ msgid "Link Color"
+#~ msgstr "Linkfarve"
+
+#~ msgid "Sidebar Widget Title Color"
+#~ msgstr "Sidebar widget titel farve"
+
+#~ msgid "Sidebar Widget Text Color"
+#~ msgstr "Sidebar widget tekstfarve"
+
+#~ msgid "Sidebar Widget Link Color"
+#~ msgstr "Sidebar widget linkfarve"
+
+#~ msgid "Scroll Up Background Color"
+#~ msgstr "Scroll Up baggrundsfarve"
+
+#~ msgid "Scroll Up Text Color"
+#~ msgstr "Scroll Up tekstfarve"
+
+#~ msgid "Check to Reset Site Color"
+#~ msgstr "Afmærk for at nulstille farveindstillinger for hele sitet"
+
+#~ msgid "Enable Featured Header Image"
+#~ msgstr "Aktiver Featured Header Billede"
+
+#~ msgid "Page/Post Featured Image Size"
+#~ msgstr "Fast-side/Indlæg fremhævet billed størrelse"
+
+#~ msgid "Featured Header Image Position"
+#~ msgstr "Fremhævet Header billede position"
+
+#~ msgid "Featured Header Image"
+#~ msgstr "Fremhævet Header billede"
+
+#~ msgid "Featured Header Image Alt/Title Tag"
+#~ msgstr "Fremhævet Header billede alt/title tag"
+
+#~ msgid "Check to Open Link in New Tab/Window"
+#~ msgstr "Marker for at åbne i nyt vindue/faneblad"
+
+#~ msgid "Check to Reset Header Featured Image Options"
+#~ msgstr "Afmærk for at nulstille Header Fremhævet Billede indstillinger"
+
+#~ msgid "Content Featured Image Size"
+#~ msgstr "Fremhævet billed i indhold (størrelse)"
+
+#~ msgid "Sidebar Layout Options"
+#~ msgstr "Sidebar layout indstillinger"
+
+#~ msgid "Check to Reset Layout"
+#~ msgstr "Afmærk for at nulstille layout"
+
+#~ msgid "Default Font Family"
+#~ msgstr "Standard Font family"
+
+#~ msgid "Site Title Font Family"
+#~ msgstr "Font family for site titel"
+
+#~ msgid "Site Tagline Font Family"
+#~ msgstr "Font family for site beskrivelse"
+
+#~ msgid "Content Title Font Family"
+#~ msgstr "Font family for indholds overskrift"
+
+#~ msgid "Content Body Font Family"
+#~ msgstr "Font family for indhold body"
+
+#~ msgid "Headings Tags from h1 to h6 Font Family"
+#~ msgstr "Font family for header tags fra h1 til h6"
+
+#~ msgid "Check to Reset Fonts"
+#~ msgstr "Afmærk for at nulstille fonts"
+
+#~ msgid "More Tag Text"
+#~ msgstr "Læs mere tekst"
+
+#~ msgid "Excerpt length(words)"
+#~ msgstr "Uddrag længde (ord)"
+
+#~ msgid "Check to Reset Excerpt"
+#~ msgstr "Afmærk for at nulstille uddrags indstillinger"
+
+#~ msgid "Feed Redirect URL"
+#~ msgstr "Url til feed-omdirigering"
+
+#~ msgid "Add in the Feedburner URL"
+#~ msgstr "Tilføj Feedburner URL"
+
+#~ msgid "Disable Comment"
+#~ msgstr "Deaktivér kommentar"
+
+#~ msgid "Check to Disable Website Field"
+#~ msgstr "Afmærk for at deaktivere hjemmeside felt"
+
+#~ msgid "Footer Editor"
+#~ msgstr "Footer Editor"
+
+#~ msgid ""
+#~ "You can add custom HTML and/or shortcodes, which will be automatically "
+#~ "inserted into your theme.\n"
+#~ "Some shorcodes: [footer-image], [the-year], [site-link], [wp-link] for "
+#~ "current year, your site link, wordpress site link respectively."
+#~ msgstr ""
+#~ "Du kan tilføje brugerdefinerede HTML og / eller kortkoder, som vil "
+#~ "automatisk blive indsat i dit tema. Nogle shortcodes: [sidefod-billede], "
+#~ "[det år], [site-link], [wp-link] for hhv. indeværende år, dit websted "
+#~ "link, wordpress hjemmeside link."
+
+#~ msgid "Check to Reset Footer"
+#~ msgstr "Afmærk for at nulstille footer"
+
+#~ msgid "Enter your custom CSS styles"
+#~ msgstr "Tilføj dine brugerdefinerede CSS styles"
+
+#~ msgid "Check to Disable Scroll Up"
+#~ msgstr "Afmærk for at deaktivere Scroll Up"
+
+#~ msgid "Check to Disable Update Notifier"
+#~ msgstr "Afmærk for at deaktivere opdaterings notifikation"
+
+#~ msgid "Enable Slider"
+#~ msgstr "Aktiver slider"
+
+#~ msgid "Number of Slides"
+#~ msgstr "Antal Slides"
+
+#~ msgid ""
+#~ "Customizer page needs to be refreshed after saving if number of slides is "
+#~ "changed"
+#~ msgstr ""
+#~ "Customizer siden skal genindlæses efter arkivering af ændring i antal "
+#~ "slides"
+
+#~ msgid "Check to Exclude Slider posts from Homepage posts"
+#~ msgstr "Afmærk for at udelukke Slider indlæg fra homepage/forside indlæg?"
+
+#~ msgid "Select Slider Categories"
+#~ msgstr "Vælg slider kategorier"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Slideshare"
+#~ msgstr "Slideshare"
+
+#~ msgid "Goodreads"
+#~ msgstr "Goodreads"
+
+#~ msgid "Soundcloud"
+#~ msgstr "Soundcloud"
+
+#~ msgid "Number of Custom Social Icons"
+#~ msgstr "Antal brugerdefinerede sociale ikoner"
+
+#~ msgid ""
+#~ "Save and refresh the page if No. of custom social icon is changed (Max "
+#~ "number of icons is 10)"
+#~ msgstr ""
+#~ "Arkiver og genindlæs siden, hvis antallet af sociale ikoner ændres (Max "
+#~ "antal er 10)"
+
+#~ msgid "Google Site Verification ID"
+#~ msgstr "Google Site Verification ID"
+
+#~ msgid "Enter your Google ID number only"
+#~ msgstr "Indtast dit Google ID nummer"
+
+#~ msgid "Yahoo Site Verification ID"
+#~ msgstr "Yahoo site Verifikation ID"
+
+#~ msgid "Enter your Yahoo ID number only"
+#~ msgstr "Indtast dit Yahoo ID nummer"
+
+#~ msgid "Bing Site Verification ID"
+#~ msgstr "Bing site Verifikation ID"
+
+#~ msgid "Enter your Bing ID number only"
+#~ msgstr "Indtast dit Bing ID nummer"
+
+#~ msgid "Code to display on Header"
+#~ msgstr "Kode til visning i sidehoved (Header)"
+
+#~ msgid ""
+#~ "Here you can put scripts from Google, Facebook etc. which will load on "
+#~ "Header"
+#~ msgstr ""
+#~ "Her kan du sætte scripts fra Google, Facebook osv som bliver indlæst i "
+#~ "Header"
+
+#~ msgid "Code to display on Footer"
+#~ msgstr "Kode til visning i sidefod (Footer)"
+
+#~ msgid ""
+#~ "Here you can put scripts from Google, Facebook etc. which will load on "
+#~ "Footer"
+#~ msgstr ""
+#~ "Her kan du sætte scripts fra Google, Facebook osv som bliver indlæst i "
+#~ "Footer"
+
+#~ msgid "Featured Content #%s"
+#~ msgstr "Fremhævet indhold #%s"
+
+#~ msgid "Link URL"
+#~ msgstr "Link URL"
+
+#~ msgid "Check to Open Link in New Window?"
+#~ msgstr "Marker for at åbne i nyt vindue?"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Leave empty if you want to remove title"
+#~ msgstr "Lad feltet så tomt, hvis du vil fjerne titlen"
+
+#~ msgid "Content"
+#~ msgstr "Indhold"
+
+#~ msgid "Featured Post Content #%s"
+#~ msgstr "Fremhævet indlægs-indhold #%s"
+
+#~ msgid "Featured Page Content #%s"
+#~ msgstr "Fremhævet fastside indhold #%s"
+
+#~ msgid "Featured Post Slider #%s"
+#~ msgstr "Fremhævet indlægs slider #%s"
+
+#~ msgid "Featured Page Slider #%s"
+#~ msgstr "Fremhævet fast-side slider #%s"
+
+#~ msgid "Featured Slide #"
+#~ msgstr "Fremhævet Slide #"
+
+#~ msgid "Check to Open Link in New Window/Tab "
+#~ msgstr "Marker for at åbne i nyt vindue/faneblad"
+
+#~ msgid "Custom Social icon #"
+#~ msgstr "Brugerdefineret social ikon #%s"
+
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#~ msgid "Image URL"
+#~ msgstr "Billed url:"
+
+#~ msgid "Image URL on hover"
+#~ msgstr "Social Icon billed URL ved Hover "
+
+#~ msgid "Options Saved"
+#~ msgstr "Indstillinger gemt"
+
+#~ msgid "Theme Options By"
+#~ msgstr "Tema indstillinger af"
+
+#~ msgid "https://catchthemes.com/theme-instructions/catch-kathmandu-pro/"
+#~ msgstr "https://catchthemes.com/theme-instructions/catch-kathmandu-pro/"
+
+#~ msgid "Theme Instruction"
+#~ msgstr "Tema instruktioner"
+
+#~ msgid "https://www.facebook.com/catchthemes/"
+#~ msgstr "https://www.facebook.com/catchthemes/"
+
+#~ msgid "Like Catch Themes on Facebook"
+#~ msgstr "Like Catch Themes på Facebook"
+
+#~ msgid "https://twitter.com/catchthemes/"
+#~ msgstr "https://twitter.com/catchthemes/"
+
+#~ msgid "Follow Catch Themes on Twitter"
+#~ msgstr "Følg Catch Themes på Twitter"
+
+#~ msgid "http://wordpress.org/support/view/theme-reviews/catch-kathmandu"
+#~ msgstr "http://wordpress.org/support/view/theme-reviews/catch-kathmandu"
+
+#~ msgid "Rate us 5 Star on WordPress"
+#~ msgstr "Tildel os 5 stjerner på WordPress"
+
+#~ msgid "5 Star Rating"
+#~ msgstr "5-stjernet bedømmelse"
+
+#~ msgctxt "1: Customizer Link Start, 2: Customizer Link End"
+#~ msgid ""
+#~ "Theme Options Panel will be retired on future versions. Please use %1$s "
+#~ "Customizer %2$s instead."
+#~ msgstr ""
+#~ "Tema indstillinger bliver udfaset i fremtidige versioner. Brug venligst "
+#~ "%1$s Customizer %2$s i stedet."
+
+#~ msgid "Color Options"
+#~ msgstr "Farve Indstillinger"
+
+#~ msgid "Homepage / Frontpage Settings"
+#~ msgstr "Homepage / Forside indstillinger"
+
+#~ msgid "Enable Latest Posts?"
+#~ msgstr "Aktiver seneste indlæg?"
+
+#~ msgid "Check to Enable"
+#~ msgstr "Afmærk for at aktivere"
+
+#~ msgid "Add Page instead of Latest Posts"
+#~ msgstr "Tilføj side i stedet for seneste indlæg"
+
+#~ msgid "Click Here to Set Static Front Page Instead of Latest Posts"
+#~ msgstr "Klik her for at vælge en statisk forside i stedet for seneste indlæg"
+
+#~ msgid ""
+#~ "Only posts that belong to the categories selected here will be displayed "
+#~ "on the front page."
+#~ msgstr ""
+#~ "Kun indlæg tilhørende kategorierne, som er valgt her, vil blive vist på "
+#~ "forsiden."
+
+#~ msgid "--Disabled--"
+#~ msgstr "—Deaktiveret—"
+
+#~ msgid "You may select multiple categories by holding down the CTRL key."
+#~ msgstr ""
+#~ "Du kan vælge flere kategorier på én gang ved at holde CTRL-tasten nede."
+
+#~ msgid "Move above Homepage Featured Content?"
+#~ msgstr "Flyt ovenfor Homepage Fremhævet Indhold?"
+
+#~ msgid "Check to Move"
+#~ msgstr "Afmærk for at flytte"
+
+#~ msgid "Save Changes"
+#~ msgstr "Gem Ændringer"
+
+#~ msgid "The appropriate length for Headine is around 10 words."
+#~ msgstr "Den passende længde for Headline er omkring 10 ord."
+
+#~ msgid "The appropriate length for Headine is around 15 words."
+#~ msgstr "Den passende længde for Headline er omkring 15 ord."
+
+#~ msgid "Promotion Headline Button Text"
+#~ msgstr "Promotion Headline knap Tekst"
+
+#~ msgid "The appropriate length for Headine is around 3 words."
+#~ msgstr "Den passende længde for Headline er omkring 3 ord."
+
+#~ msgid "Target. Open Link in New Window? "
+#~ msgstr "﻿Target. Åbn link i nyt vindue? "
+
+#~ msgid "Check to open in new window"
+#~ msgstr "﻿Afmærk for at åbne i nyt vindue"
+
+#~ msgid "Disable Promotion Headline?"
+#~ msgstr "Deaktiver Promotion Headline?"
+
+#~ msgid "Check to disable"
+#~ msgstr "Afmærk for at deaktivere"
+
+#~ msgid "Disable Promotion Subheadline?"
+#~ msgstr "Deaktiver Promotion Subheadline?"
+
+#~ msgid "Disable Promotion Headline Button?"
+#~ msgstr "Deaktiver Promotion Headline knap?"
+
+#~ msgid "Disable Responsive Design?"
+#~ msgstr "Deaktiver Responsivt Design?"
+
+#~ msgid "Enable Secondary & Footer Menu in Mobile Devices?"
+#~ msgstr "Aktiver sekundær menu for mobile enheder?"
+
+#~ msgid "Check to enable"
+#~ msgstr "Markér for at aktivere"
+
+#~ msgid "Disable Favicon?"
+#~ msgstr "Deaktiver Favicon?"
+
+#~ msgid "Fav Icon URL:"
+#~ msgstr "Fav Icon URL:"
+
+#~ msgid "Insert as Fav Icon"
+#~ msgstr "Indsæt som Fav Icon"
+
+#~ msgid "Change Fav Icon"
+#~ msgstr "Skift Fav ikon"
+
+#~ msgid "Preview"
+#~ msgstr "Se eksempel"
+
+#~ msgid "Web Clip Icon Options"
+#~ msgstr "Web Clip Icon Indstillinger"
+
+#~ msgid "Disable Web Clip Icon?"
+#~ msgstr "Deaktiver Web Clip Ikon?"
+
+#~ msgid "Web Clip Icon URL:"
+#~ msgstr "Web Clip Icon URL:"
+
+#~ msgid "Insert as Web Clip Icon"
+#~ msgstr "Indsæt som Web Clip Icon"
+
+#~ msgid "Change Web Clip Icon"
+#~ msgstr "Skift Web Clip Ikon"
+
+#~ msgid ""
+#~ "Note: Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Bemærk: Web Clip Ikon til Apple enheder. Anbefalede størrelse - Bredde "
+#~ "144px og højde 144px højde, som vil støtte høj opløsning Enheder som iPad "
+#~ "Retina."
+
+#~ msgid "Custom Header: Logo & Site Details"
+#~ msgstr "Brugerdefineret Header: Logo og site beskrivelse"
+
+#~ msgid "Click Here to Add/Replace Header Logo & Site Details"
+#~ msgstr "Klik her for at tilføje/erstatte Header Logo & site beskrivelse"
+
+#~ msgid "Move Site Title & Description"
+#~ msgstr "Flyt site titel og beskrivelse"
+
+#~ msgid "Check to move before Logo"
+#~ msgstr "Afmærk for at flytte før logo"
+
+#~ msgid "Disable Header Right Sidebar?"
+#~ msgstr "Deaktiver højre header sidebar?"
+
+#~ msgid "Check to Disable"
+#~ msgstr "Afmærk for at deaktivere"
+
+#~ msgid "Widgets"
+#~ msgstr "Widgets"
+
+#~ msgid "Click Here to Add/Replace Widgets"
+#~ msgstr "﻿Klik her for at tilføje/erstatte widgets"
+
+#~ msgid "Featured HeaderImage Position"
+#~ msgstr "Fremhævet Headerbillede position"
+
+#~ msgid "Featured Header Image URL"
+#~ msgstr "Fremhævet Headerbillede url"
+
+#~ msgid "Insert as Featured Header Image"
+#~ msgstr "Indsæt som fremhævet Headerbillede"
+
+#~ msgid "Change Image"
+#~ msgstr "Skift billed"
+
+#~ msgid "Target. Open Link in New Window?"
+#~ msgstr "﻿Target. Åbn link i nyt vindue?"
+
+#~ msgid "Reset Header Featured Image Options?"
+#~ msgstr "﻿Nulstil Header Fremhævet billed Indstillinger?"
+
+#~ msgid "Check to reset"
+#~ msgstr "Afmærk for at nulstille"
+
+#~ msgid "Content Layout"
+#~ msgstr "﻿Indholdslayout"
+
+#~ msgid "Reset Layout?"
+#~ msgstr "Nulstil Layout?"
+
+#~ msgid "Reset Fonts?"
+#~ msgstr "Nulstil fonts?"
+
+#~ msgid "Reset Excerpt?"
+#~ msgstr "Nulstil uddrags indstillinger"
+
+#~ msgid "Comments Options"
+#~ msgstr "Kommentar indstillinger"
+
+#~ msgid "Disable Comment?"
+#~ msgstr "Deaktiver kommentar?"
+
+#~ msgid "Disable Website Field?"
+#~ msgstr "Deaktiver hjemmeside felt"
+
+#~ msgid "Footer Editor Option"
+#~ msgstr "Footer Editor indstilling"
+
+#~ msgid ""
+#~ "You can add custom <acronym title=\"Hypertext Markup Language\">HTML</"
+#~ "acronym> and/or shortcodes, which will be automatically inserted into your "
+#~ "theme.<br />Some shorcodes: [the-year], [site-link], [wp-link], [shop-"
+#~ "link]  for current year, your site link, wordpress site link, Catch Themes "
+#~ "shop link respectively."
+#~ msgstr ""
+#~ "Du kan tilføje brugerdefinerede <acronym title=“Hypertext Markup "
+#~ "Language”>HTML</acronym> og / eller shortcodes, som vil automatisk blive "
+#~ "indsat i dit tema. <br /> Nogle shorcodes: [the-year], [site-link], [wp-"
+#~ "link], [shop-link] for henholdsvis indeværende år, dit websted link, "
+#~ "wordpress hjemmeside link, Catch Temaer butik link."
+
+#~ msgid "Reset Footer?"
+#~ msgstr "Nulstil footer?"
+
+#~ msgid "Enter your custom CSS styles."
+#~ msgstr "Tilføj dine brugerdefinerede CSS styles"
+
+#~ msgid "CSS Tutorial from W3Schools."
+#~ msgstr "CSS Tutorial fra W3Schools."
+
+#~ msgid "http://www.w3schools.com/css/default.asp"
+#~ msgstr "http://www.w3schools.com/css/default.asp"
+
+#~ msgid "CSS Tutorial"
+#~ msgstr "CSS Tutorial"
+
+#~ msgid "Click Here to Read"
+#~ msgstr "Klik her for at læse"
+
+#~ msgid "Disable Scroll Up?"
+#~ msgstr "Deaktivér Scroll Up?"
+
+#~ msgid "Disable Update Notifier?"
+#~ msgstr "Deaktivér opdaterings notifikation?"
+
+#~ msgid "Default Color Scheme"
+#~ msgstr "Standard farveskema"
+
+#~ msgid "Menus Color Options"
+#~ msgstr "Menu farveindstillinger"
+
+#~ msgid "Menu Background Color:"
+#~ msgstr "Menu baggrundsfarve:"
+
+#~ msgid "Menu Text Color:"
+#~ msgstr "Menu tekstfarve:"
+
+#~ msgid "Menu Hover & Active Background Color:"
+#~ msgstr "Menu hover & aktiv baggrundsfarve:"
+
+#~ msgid "Menu Hover & Active Text Color:"
+#~ msgstr "Menu hover & aktiv tekstfarve:"
+
+#~ msgid "Sub-Menu Background Color:"
+#~ msgstr "Sub-menu baggrundsfarve:"
+
+#~ msgid "Sub-Menu Text Color:"
+#~ msgstr "Sub-menu tekstfarve:"
+
+#~ msgid "Reset Menu Color?"
+#~ msgstr "Nulstil menu farver?"
+
+#~ msgid "Pagination Color Options"
+#~ msgstr "Paginerings farve indstillinger"
+
+#~ msgid "Pages Color:"
+#~ msgstr "Sider farve:"
+
+#~ msgid "Pages Box Background Color:"
+#~ msgstr "Sider blok baggrundsfarve:"
+
+#~ msgid "Pages Box Text Color:"
+#~ msgstr "Sider blok tekstfarve:"
+
+#~ msgid "Pages Box Hover/Active Background Color:"
+#~ msgstr "Sider blok hover/aktiv baggrundsfarve:"
+
+#~ msgid "Pages Box Hover/Active Text Color:"
+#~ msgstr "Sider blok hover/aktiv tekstfarve:"
+
+#~ msgid "Reset Pagination Color?"
+#~ msgstr "Nulstil paginerings farve indstillinger?"
+
+#~ msgid "Slider Background Color:"
+#~ msgstr "Slider baggrundsfarve:"
+
+#~ msgid "Slider Border Bottom Color:"
+#~ msgstr "Slider border-bottom farve:"
+
+#~ msgid "Slider Controller Background Color:"
+#~ msgstr "Slider Controller baggrundsfarve:"
+
+#~ msgid "Slider Controller Arrow Color:"
+#~ msgstr "Slider Controller pile-farve:"
+
+#~ msgid "Slider Content Background Color:"
+#~ msgstr "Slider indhold baggrundsfarve:"
+
+#~ msgid "Slider Content Text Color:"
+#~ msgstr "Slider Indhold tekstfarve:"
+
+#~ msgid "Reset Slider Color?"
+#~ msgstr "Nulstil Slider farve indstillinger?"
+
+#~ msgid "Background Color:"
+#~ msgstr "Baggrundsfarve:"
+
+#~ msgid "Text Color:"
+#~ msgstr "Tekstfarve:"
+
+#~ msgid "Border Bottom Color:"
+#~ msgstr "Border-bottom farve:"
+
+#~ msgid "Button Background Color:"
+#~ msgstr "Knap baggrundsfarve:"
+
+#~ msgid "Button Text Color:"
+#~ msgstr "Knap tekstfarve:"
+
+#~ msgid "Button Hover Background Color:"
+#~ msgstr "Knap hover baggrundsfarve:"
+
+#~ msgid "Button Hover Text Color:"
+#~ msgstr "Knap hover tekstfarve:"
+
+#~ msgid "Button Border Color:"
+#~ msgstr "Knap border farve:"
+
+#~ msgid "Reset Homepage Headline Color?"
+#~ msgstr "Nulstil Homepage Headline farve indstillinger?"
+
+#~ msgid "Custom Background Color:"
+#~ msgstr "Brugerdefineret baggrundsfarve"
+
+#~ msgid "Click Here to change Background Color/Image"
+#~ msgstr "Klik her for at ændre baggrundsfarve/billed"
+
+#~ msgid "Header Background Color:"
+#~ msgstr "Header baggrundsfarve:"
+
+#~ msgid "Content Background Color:"
+#~ msgstr "Indhold baggrundsfarve:"
+
+#~ msgid "Footer Background Sidebar Color: "
+#~ msgstr "Footer baggrundsfarve - sidebar"
+
+#~ msgid "Footer Background Color: "
+#~ msgstr "Footer baggrundsfarve:"
+
+#~ msgid "Custom Header: "
+#~ msgstr "Brugerdefineret Header:"
+
+#~ msgid "Click Here to change Site Title and Tagline Color"
+#~ msgstr "Klik her for at ændre farve for site titel og beskrivelse"
+
+#~ msgid "Title Color:"
+#~ msgstr "Titel farve:"
+
+#~ msgid "Title Hover Color:"
+#~ msgstr "Titel hover farve:"
+
+#~ msgid "Meta Description Color:"
+#~ msgstr "Meta beskrivelse farve:"
+
+#~ msgid "Link Color:"
+#~ msgstr "Link farve:"
+
+#~ msgid "Sidebar Widget Title Color:"
+#~ msgstr "Sidebar widget titel farve:"
+
+#~ msgid "Sidebar Widget Text Color:"
+#~ msgstr "Sidebar widget tekstfarve:"
+
+#~ msgid "Sidebar Widget Link Color:"
+#~ msgstr "Sidebar widget linkfarve:"
+
+#~ msgid "Scroll Up Background Color:"
+#~ msgstr "Scroll Up baggrundsfarve:"
+
+#~ msgid "Scroll Up Text Color:"
+#~ msgstr "Scroll Up tekstfarve:"
+
+#~ msgid "Reset Site Color?"
+#~ msgstr "Nulstil farveindstillinger for hele sitet?"
+
+#~ msgid "Leave empty if you want to remove headline"
+#~ msgstr "Udfyld ikke, hvis du ikke vil vise overskrift"
+
+#~ msgid "Featured Post Content Options"
+#~ msgstr "Fremhævet indlægs-indhold indstillinger"
+
+#~ msgid "Click Here To Edit"
+#~ msgstr "Klik her for at redigere"
+
+#~ msgid "Featured Page Content Options"
+#~ msgstr "Fremhævet fastside indhold indstillinger"
+
+#~ msgid "Featured Category Content Options"
+#~ msgstr "Fremhævet kategori indhold indstillinger"
+
+#~ msgid "Select Featured Content Categories"
+#~ msgstr "Vælg kategorier for Fremhævet kategori indhold"
+
+#~ msgid ""
+#~ "Use this only is you want to display posts from Specific Categories in "
+#~ "Featured Content"
+#~ msgstr ""
+#~ "Brug kun denne hvis du kun vil vise indhold fra specifikke kategorier i "
+#~ "Fremhævet kategori indhold"
+
+#~ msgid "Featured Image Content Options"
+#~ msgstr "Fremhævet billed indhold indstillinger"
+
+#~ msgid "Featured Image Content #%s"
+#~ msgstr "Fremhævet billed indhold #%s"
+
+#~ msgid "Insert as Featured Content Image #%s"
+#~ msgstr "Indsæt som Fremhævet billed indhold #%s"
+
+#~ msgid "Add Image"
+#~ msgstr "Tilføj billede"
+
+#~ msgid "Add in the Target URL for the content"
+#~ msgstr "Tilføj Target URL for indholdet"
+
+#~ msgid "The appropriate length for Content is around 10 words."
+#~ msgstr "Den passende længde for indholdet er omkring 10 ord."
+
+#~ msgid "Transition Effect:"
+#~ msgstr "Transitions-effekt:"
+
+#~ msgid "second(s)"
+#~ msgstr "sekund(er)"
+
+#~ msgid "Featured Post Slider Options"
+#~ msgstr "Fremhævet indlægs slider indstillinger"
+
+#~ msgid "Exclude Slider post from Homepage posts?"
+#~ msgstr "Udeluk Slider indlæg fra Homepage indlæg?"
+
+#~ msgid "Check to exclude"
+#~ msgstr "Afmærk for at udelukke"
+
+#~ msgid ""
+#~ "Note: Here You can put your Post IDs which displays on Homepage as slider."
+#~ msgstr ""
+#~ "Bemærk: Her kan du indsætte ID for de indlæg, som vises på forsiden som "
+#~ "slider."
+
+#~ msgid "Featured Page Slider Options"
+#~ msgstr "Fremhævet fast-side slider indstillinger"
+
+#~ msgid ""
+#~ "Note: Here You can put your Page IDs which displays on Homepage as slider."
+#~ msgstr ""
+#~ "Bemærk: Her kan du indsætte ID for de fast-sider, som vises på forsiden "
+#~ "som slider."
+
+#~ msgid "Featured Category Slider Options"
+#~ msgstr "Fremhævet kategori slider indstillinger"
+
+#~ msgid ""
+#~ "Note: Here you can select the categories from which latest posts will "
+#~ "display on Featured Slider."
+#~ msgstr ""
+#~ "Bemærk: Her kan du vælge de kategorier, som der vises indllæg fra på "
+#~ "forsiden som slider."
+
+#~ msgid "Featured Image Slider Options"
+#~ msgstr "Fremhævet billed slider indstillinger"
+
+#~ msgid "Featured Image Slider #%s"
+#~ msgstr "Fremhævet billed slider #%s"
+
+#~ msgid "Insert as Featured Image Slider #%s"
+#~ msgstr "Indsæt som Fremhævet billed slider #%s"
+
+#~ msgid "Upload"
+#~ msgstr "Upload"
+
+#~ msgid "Linkedin"
+#~ msgstr "Linkedin"
+
+#~ msgid "Custom Social Icons"
+#~ msgstr "Brugerdefinerede sociale ikoner"
+
+#~ msgid "Custom Social Icon #%s"
+#~ msgstr "Brugerdefineret social ikon #%s"
+
+#~ msgid "Social Icon Name"
+#~ msgstr "Social ikon navn"
+
+#~ msgid "Social Icon Image URL"
+#~ msgstr "Social ikon billed url"
+
+#~ msgid "Insert as Custom Social Icon Image"
+#~ msgstr "Sæt ind som brugerdefineret social ikon billede"
+
+#~ msgid "Social Icon Image URL on Hover "
+#~ msgstr "Social ikon billede url ved hover "
+
+#~ msgid "Social Icon URL"
+#~ msgstr "Social ikon url"
+
+#~ msgid "Header and Footer Codes"
+#~ msgstr "Koder for sidehoved og –fod (Header og Footer)"
+
+#~ msgid ""
+#~ "Note: Here you can put scripts from Google, Facebook, Twitter, Add This "
+#~ "etc. which will load on Header"
+#~ msgstr ""
+#~ "Bemærk: Her kan du indsætte scripts fra Google, Facebook, Twitter. Tilføj "
+#~ "fx. dette som vil loade i headeren."
+
+#~ msgid ""
+#~ "Note: Here you can put scripts from Google, Facebook, Twitter, Add This "
+#~ "etc. which will load on footer"
+#~ msgstr ""
+#~ "Bemærk: Her kan du indsætte scripts fra Google, Facebook, Twitter. Tilføj "
+#~ "fx. dette som vil loade i footeren"
+
+#~ msgctxt "Previous post link"
+#~ msgid "&larr;"
+#~ msgstr "&larr;"
+
+#~ msgctxt "Next post link"
+#~ msgid "&rarr;"
+#~ msgstr "&rarr;"
+
+#~ msgid "(Edit)"
+#~ msgstr "(Redigér)"
+
+#~ msgid "Post author"
+#~ msgstr "Forfatter"
+
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s  %2$s"
+
+#~ msgid "Reply"
+#~ msgstr "Svar"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "Se alle indlæg af %s"
+
+#~ msgid ""
+#~ "<span class=\"on-date\">Posted on %1$s</span><span class=\"by-author\"> by "
+#~ "%2$s</span>"
+#~ msgstr ""
+#~ "<span class=“on-date”>Udgivet den %1$s</span><span class=“by-author”> af "
+#~ "%2$s</span>"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid ""
+#~ "<span class=\"in-category\">Posted in %1$s</span><span class=\"sep\"> | </"
+#~ "span><span class=\"in-tag\">Tagged %2$s</span>"
+#~ msgstr ""
+#~ "<span class=“in-category”>Udgivet i %1$s</span><span class=“sep”> | </"
+#~ "span><span class=“in-tag”>Tagged %2$s</span>"
+
+#~ msgid "<span class=\"in-category\">Posted in %1$s</span>"
+#~ msgstr "<span class=“in-category”>Udgivet i %1$s</span>"
+
+#~ msgid ""
+#~ "<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+#~ "under %1$s</span><span class=\"sep\"> | </span><span class=\"in-tag"
+#~ "\">Tagged %2$s</span><span class=\"sep\"> | </span><span class=\"by-author"
+#~ "\"> By %4$s</span>"
+#~ msgstr ""
+#~ "<span class=“on-date”>Udgivet %3$s</span><span class=“in-category”> i "
+#~ "%1$s</span><span class=“sep”> | </span><span class=“in-tag”>Tagged %2$s</"
+#~ "span><span class=“sep”> | </span><span class=“by-author”> af %4$s</span>"
+
+#~ msgid ""
+#~ "<span class=\"on-date\">Posted on %3$s</span><span class=\"in-category\"> "
+#~ "under in %1$s</span><span class=\"sep\"> | </span><span class=\"by-author"
+#~ "\"> By %4$s</span>."
+#~ msgstr ""
+#~ "<span class=“on-date”>Udgivet %3$s</span><span class=“in-category”> i in "
+#~ "%1$s</span><span class=“sep”> | </span><span class=“by-author”> af %4$s</"
+#~ "span>."
+
+#~ msgid ""
+#~ "<span class=\"on-date\">Posted on %3$s</span><span class=\"sep\"> | </"
+#~ "span><span class=\"by-author\"> By %4$s</span>."
+#~ msgstr ""
+#~ "<span class=“on-date”>Udgivet %3$s</span><span class=“sep”> | </span><span "
+#~ "class=“by-author”> af %4$s</span>."
+
+#~ msgid ""
+#~ "\n"
+#~ "Menu Hover & Active Background Color"
+#~ msgstr ""
+#~ "\n"
+#~ "Menu hover & aktiv baggrundsfarve"
+
+#~ msgid ""
+#~ "\n"
+#~ "Sub-Menu Background Colo"
+#~ msgstr ""
+#~ "\n"
+#~ "Sub-menu baggrundsfarve"
+
+#~ msgid "Promotion Color Options"
+#~ msgstr "Promotion Farveindstillinger"

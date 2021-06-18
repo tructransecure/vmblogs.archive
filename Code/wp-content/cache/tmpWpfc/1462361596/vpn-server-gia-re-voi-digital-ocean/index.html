@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="//gmpg.org/xfn/11">
+<link rel="pingback" href="">
+<!--[if lt IE 9]>
+<script src="//vmblogs.vn/wp-content/themes/clean-journal/js/html5.min.js"></script>
+<![endif]-->
+<title>VPN Server giá rẻ với Digital Ocean</title>
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="VPN Server giá rẻ với Digital Ocean"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="//vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="VPN Server giá rẻ với Digital Ocean" />
+<meta property="og:description" content="VPN Server giá rẻ với Digital Ocean" />
+<meta property="og:url" content="https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/" />
+<meta property="og:site_name" content="VMBlogs" />
+<meta property="article:publisher" content="https://www.facebook.com/tructransecure" />
+<meta property="article:author" content="https://www.facebook.com/tructransecure" />
+<meta property="article:tag" content="VPN" />
+<meta property="article:tag" content="Digital Ocean" />
+<meta property="article:tag" content="SoftEther" />
+<meta property="article:section" content="Security" />
+<meta property="article:published_time" content="2014-12-29T11:33:15+00:00" />
+<meta property="article:modified_time" content="2014-12-30T15:12:08+00:00" />
+<meta property="og:updated_time" content="2014-12-30T15:12:08+00:00" />
+<meta property="og:image" content="https://vmblogs.vn/wp-content/uploads/2014/12/prot.jpg" />
+<!-- / Yoast SEO plugin. -->
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/vmblogs.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4"}};
+!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),c.toDataURL().length>3e3):("simple"===a?d.fillText(String.fromCharCode(55357,56835),0,0):d.fillText(String.fromCharCode(55356,57135),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='gglcptch-css'  href='//vmblogs.vn/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.21' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='//vmblogs.vn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journalfonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CDroid+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journalstyle-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/style.css?ver=4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/css/genericons/genericons.css?ver=3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='//vmblogs.vn/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.11' type='text/css' media='all' />
+<style id='A2A_SHARE_SAVE-inline-css' type='text/css'>
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+</style>
+<script type='text/javascript' src='//www.google.com/recaptcha/api.js?render=explicit&#038;hl=en&#038;ver=1.21'></script>
+<script src='//vmblogs.vn/wp-content/cache/wpfc-minified/61cd873106b39f4505cb6aac5765c6e7/1451358214index.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script> -->
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script> -->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gglcptch = {"options":{"version":"v2","sitekey":"6LcVVAMTAAAAAIwrDh5EkCdHvSCOqvGZoleD0TgS","theme":"light"},"vars":{"ajaxurl":"https:\/\/vmblogs.vn\/wp-admin\/admin-ajax.php","error_msg":"Error: You have entered an incorrect reCAPTCHA value.","nonce":"d99d0586b9"}};
+/* ]]> */
+</script>
+<script src='//vmblogs.vn/wp-content/cache/wpfc-minified/27731389816aeafe332dc943ca2f5a6e/1451358214index.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-captcha/js/script.js?ver=1.21'></script> -->
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/jquery.sidr.min.js?ver=1.2.1'></script> -->
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-custom-scripts.min.js'></script> -->
+<!-- <script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script> -->
+<link rel='https://api.w.org/' href='//vmblogs.vn/wp-json/' />
+<meta name="generator" content="WordPress 4.4" />
+<link rel="alternate" type="application/json+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F" />
+<link rel="alternate" type="text/xml+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&#038;format=xml" />
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});
+//--></script>
+<!-- refreshing cache --><link rel="shortcut icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" type="image/x-icon" /><!-- refreshing cache -->	<style type="text/css">
+.site-title a,
+.site-description {
+color: #111111;
+}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f9f9f9; }
+</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+var analyticsFileTypes = [''];
+var analyticsSnippet = 'disabled';
+var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+ga('send', 'pageview');
+ga('send', 'pageview');
+</script>
+</head>
+<body class="single single-post postid-923 single-format-standard custom-background two-columns content-left excerpt-image-left mobile-menu-one">
+<div id="page" class="hfeed site">
+<div id="header-top" class="header-top-bar">
+<div class="wrapper">
+<div class="header-top-right full-width">
+<section class="widget widget_clean_journal_social_icons" id="header-right-social-icons">
+<div class="widget-wrap">
+<a class="genericon_parent genericon genericon-facebook-alt" target="_blank" title="facebook" href="https://www.facebook.com/tructransecure"><span class="screen-reader-text">Facebook</span> </a><a class="genericon_parent genericon genericon-youtube" target="_blank" title="youtube" href="https://www.youtube.com/user/tructransecure"><span class="screen-reader-text">YouTube</span> </a><a class="genericon_parent genericon genericon-skype" title="skype" href="tructransecure"><span class="screen-reader-text">Skype</span> </a>								</div><!-- .widget-wrap -->
+</section><!-- #header-right-social-icons -->
+</div><!-- .header-top-right -->
+</div><!-- .wrapper -->
+</div><!-- #header-top -->
+<header id="masthead" role="banner">
+<div class="wrapper">
+<div id="mobile-header-left-menu" class="mobile-menu-anchor primary-menu">
+<a href="#mobile-header-left-nav" id="header-left-menu" class="genericon genericon-menu">
+<span class="mobile-menu-text">Menu</span>
+</a>
+</div><!-- #mobile-header-menu -->
+<div id="site-branding">
+<div id="site-header">
+<h1 class="site-title"><a href="https://vmblogs.vn/">VMBlogs</a></h1>
+<h2 class="site-description">Chia sẻ tri thức công nghệ</h2>
+</div><!-- #site-header --></div><!-- #site-branding-->	<aside class="sidebar sidebar-header-right widget-area">
+<section class="widget widget_search" id="header-right-search">
+<div class="widget-wrap">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</section>	
+</aside><!-- .sidebar .header-sidebar .widget-area -->	
+</div><!-- .wrapper -->
+</header><!-- #masthead -->
+<nav class="nav-primary search-enabled" role="navigation">
+<div class="wrapper">
+<h1 class="assistive-text">Primary Menu</h1>
+<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+<ul id="menu-vmblogs" class="menu clean-journal-nav-menu"><li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li><li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li><li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>	<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li></ul>
+</li><li id="menu-item-335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>	<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>	<li id="menu-item-721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>	<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li></ul>
+</li><li id="menu-item-339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li><li id="menu-item-612" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li><li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li id="menu-item-1172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li></ul>
+</li><li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li><li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li></ul>                <div id="search-toggle" class="genericon">
+<a class="screen-reader-text" href="#search-container">Search</a>
+</div>
+<div id="search-container" class="displaynone">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</div><!-- .wrapper -->
+</nav><!-- .nav-primary -->
+<!-- Disable Header Image --><div id="breadcrumb-list">
+<div class="wrapper"><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/">Home <span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/category/security/">Security<span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb-current">VPN Server giá rẻ với Digital Ocean</span></div><!-- .wrapper --> 
+</div><!-- #breadcrumb-list -->		<div id="content" class="site-content">
+<div class="wrapper">
+<main id="main" class="site-main" role="main">
+<article id="post-923" class="post-923 post type-post status-publish format-standard has-post-thumbnail hentry category-security tag-vpn tag-digital-ocean tag-softether">
+<!-- Page/Post Single Image Disabled or No Image set in Post Thumbnail -->
+<div class="entry-container">
+<header class="entry-header">
+<h1 class="entry-title">VPN Server giá rẻ với Digital Ocean</h1>
+<p class="entry-meta"><span class="posted-on"><span class="screen-reader-text">Posted on</span><a href="https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/" rel="bookmark"><time class="entry-date published" datetime="2014-12-29T11:33:15+00:00">December 29, 2014</time><time class="updated" datetime="2014-12-30T15:12:08+00:00">December 30, 2014</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author</span><a class="url fn n" href="https://vmblogs.vn/author/admin/">Trung Truc Tran</a></span></span><span class="comments-link"><a href="https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/#comments">1 Comment</a></span></p><!-- .entry-meta -->		</header><!-- .entry-header -->
+<div class="entry-content">
+<div class="addtoany_share_save_container addtoany_content_top"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a>
+<script type="text/javascript"><!--
+if(wpa2a)wpa2a.script_load();
+//--></script>
+</div></div><p><span style="color: #0000ff;"><strong>Hướng dẫn xây dựng VPN Server giá rẻ với Digital Ocean</strong></span></p>
+<p><span style="color: #800080;">Giới thiệu về VPN:</span></p>
+<p>VPN là chữ viết tắt của Virtual Private Network, là một dạng kết nối mạng bảo mật thông qua đường truyền Internet, sử dụng VPN, mọi dữ liệu gởi nhận đều được mã hóa giúp bạn sử dụng mạng một cách an toàn, tránh nguy cơ rò rỉ, thất thoát hoặc bị sửa đổi dữ liệu.</p>
+<p><span style="color: #800080;">Lợi ích của việc sử dụng VPN:</span></p>
+<p>Các dịch vụ VPN ngày nay cung cấp rất nhiều các tính năng khác ngoài việc mã hóa dữ liệu trên đường truyền, sử dụng dịch vụ VPN bạn sẽ nhận được:</p>
+<ul>
+<li>Truy cập nội dung bị khóa: Một số dịch vụ khóa nội dung theo vùng địa lý, sử dụng VPN giúp bạn có thể dễ dàng truy cập các nội dung như vậy</li>
+<li>Giảm nguy cơ bị tấn công bởi hacker: Với việc mã hóa đường truyền, VPN hạn chế các thông tin tài khoản, ngân hàng, thông tin cá nhân&#8230;bị hacker đánh cắp</li>
+<li>Lướt web riêng tư: Với việc ẩn đi vùng địa lý và địa chỉ IP, bạn hạn chế được việc bị theo dõi sử dụng thông tin cá nhân tối đa.</li>
+<li>Sử dụng Wifi công cộng an toàn: Wifi công cộng thường không an toàn, VPN giúp truy cập mạng an toàn ở những nơi như vậy</li>
+<li>&#8230;</li>
+</ul>
+<p>Ngày nay nhiều dịch vụ cung cấp VPN cho người sử dụng với giá cả dao động từ miễn phí đến hàng chục $ một tháng.</p>
+<p>Tuy nhiên thông thường bạn sẽ bị giới hạn như lưu lượng, băng thông, hoặc số phiên sử dụng cùng lúc. Thường các dịch vụ sẽ giới hạn chỉ cho phép sử dụng 2 hoặc 3 thiết bị cùng lúc.</p>
+<p>Tham khảo thêm thông tin <a title="BestVPN" href="https://www.bestvpn.com/" target="_blank">tại đây</a></p>
+<p><span style="color: #800080;">Giới thiệu Digital Ocean:</span></p>
+<p>Digital Ocean cung cấp dịch vụ cloud server với chất lượng tương đối tốt và giá thành rẻ. Mình cũng có trải nghiệm sử dụng tương đối tốt khi chọn Digital Ocean.</p>
+<p>Thông tin tham khảo tại <a title="Digital Ocean" href="https://www.digitalocean.com" target="_blank">https://www.digitalocean.com</a></p>
+<p>Trong bài này mình sẽ hướng dẫn chi tiết cách xây dựng VPN server với Digital Ocean cho gói rẻ nhất 5$/tháng</p>
+<p>Vậy tại sao không dùng dịch vụ của các nhà cung cấp?</p>
+<p>Bạn tự xây dựng dịch vụ cho riêng bạn, tự quản lý và tất nhiên là bạn có thể chia sẻ cho nhiều người dùng. Với 5$/tháng mình nghĩ một VPN server cho 10-15 người dùng tương đối tốt. Và tất nhiên không có bất kỳ giới hạn nào nếu so sánh với dịch vụ.</p>
+<p><span style="color: #3366ff;">1/ <a style="color: #3366ff;" title="Đăng ký Digital Ocean" href="http://vmblogs.vn/dang-ky-digital-ocean-va-tao-may-chu-ao/" target="_blank">Đăng ký Digital Ocean và tạo máy chủ ảo</a></span></p>
+<p><span style="color: #3366ff;">2/ <a style="color: #3366ff;" title="Bảo mật VPS Linux" href="http://vmblogs.vn/bao-mat-vps-linux/" target="_blank">Bảo mật máy chủ ảo CentOS</a></span></p>
+<ul>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Bảo mật SSH" href="http://vmblogs.vn/bao-mat-ssh/" target="_blank">Bảo mật SSH</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Bảo mật tường lửa với Advanced Policy Firewall" href="http://vmblogs.vn/bao-mat-tuong-lua-voi-apf/" target="_blank">Bảo mật tường lửa với APF (Advanced Policy Firewall)</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Block brute-force attach with BFD" href="http://vmblogs.vn/chong-tan-cong-brute-force-voi-bfd/" target="_blank">Chống tấn công brute-force với BFD (Brute Force Detection)</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Block virus with ClamAV" href="http://vmblogs.vn/cai-dat-clamav-antivirus-cho-centos/" target="_blank">Phòng ngừa virus với ClamAV</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Block rootkit with RKHunter" href="http://vmblogs.vn/cai-dat-rkhunter-diet-rootkit-cho-centos/" target="_blank">Phòng ngừa rootkit với RKHunter</a></span></li>
+</ul>
+<p><span style="color: #3366ff;">3/ <a style="color: #3366ff;" title="Cài đặt SoftEther VPN Server" href="http://vmblogs.vn/cai-dat-softether-vpn-server/" target="_blank">Cài đặt SoftEther VPN Server</a></span></p>
+<p><span style="color: #3366ff;">4/ Cấu hình SoftEther VPN Server</span></p>
+<ul>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Cấu hình SoftEther VPN Server" href="http://vmblogs.vn/cau-hinh-softether-vpn-server/" target="_blank">Cấu hình SoftEther VPN Server</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Cấu hình VirtualHUB" href="http://vmblogs.vn/cau-hinh-virtualhub/" target="_blank">Cấu hình VirtualHUB</a></span></li>
+</ul>
+<p><span style="color: #3366ff;">5/ Cấu hình kết nối VPN cho thiết bị</span></p>
+<ul>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Setup SSTP VPN cho Windows" href="http://vmblogs.vn/setup-sstp-vpn-cho-windows/" rel="bookmark">Setup SSTP VPN cho Windows</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Permalink to Setup L2TP/IPSec VPN cho Windows" href="http://vmblogs.vn/setup-l2tp-ipsec-vpn-cho-windows/" rel="bookmark">Setup L2TP/IPSec VPN cho Windows</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Permalink to Setup L2TP/IPSec VPN cho Mac" href="http://vmblogs.vn/setup-l2tp-ipsec-vpn-cho-mac/" rel="bookmark">Setup L2TP/IPSec VPN cho Mac</a></span></li>
+<li><span style="color: #3366ff;"><a style="color: #3366ff;" title="Setup SoftEther VPN Client" href="http://vmblogs.vn/setup-softether-vpn-client/" target="_blank">Setup SoftEther VPN Client</a></span></li>
+<li><span style="color: #3366ff;">Hướng dẫn thiết lập VPN cho thiết bị di động <a style="color: #3366ff;" title="VPN WP 8.1" href="http://www.windowsphone.com/en-us/how-to/wp8/connectivity/use-a-vpn-connection" target="_blank">Windows Phone</a>, <a style="color: #3366ff;" title="VPN Android" href="http://www.vpngate.net/en/howto_l2tp.aspx#android" target="_blank">Android</a>, <a style="color: #3366ff;" title="Apple IOS" href="http://www.vpngate.net/en/howto_l2tp.aspx#ios" target="_blank">Apple IOS</a></span></li>
+</ul>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_2"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div></div>					</div><!-- .entry-content -->
+<footer class="entry-footer">
+<p class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Categories</span><a href="https://vmblogs.vn/category/security/" rel="category tag">Security</a></span><span class="tags-links"><span class="screen-reader-text">Tags</span><a href="https://vmblogs.vn/tag/vpn/" rel="tag">VPN</a>, <a href="https://vmblogs.vn/tag/digital-ocean/" rel="tag">Digital Ocean</a>, <a href="https://vmblogs.vn/tag/softether/" rel="tag">SoftEther</a></span></p><!-- .entry-meta -->		</footer><!-- .entry-footer -->
+</div><!-- .entry-container -->
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links"><div class="nav-previous"><a href="https://vmblogs.vn/bao-mat-vps-voi-dome9-lite-cloud/" rel="prev"><span class="meta-nav" aria-hidden="true">&larr; Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Bảo mật VPS với Dome9 Lite Cloud</span></a></div><div class="nav-next"><a href="https://vmblogs.vn/dang-ky-digital-ocean-va-tao-may-chu-ao/" rel="next"><span class="meta-nav" aria-hidden="true">Next &rarr;</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Đăng ký Digital Ocean và tạo máy chủ ảo</span></a></div></div>
+</nav>
+<div id="comments" class="comments-area">
+<h2 class="comments-title">
+One thought on &ldquo;<span>VPN Server giá rẻ với Digital Ocean</span>&rdquo;		</h2>
+<ol class="comment-list">
+<li id="comment-49" class="comment even thread-even depth-1">
+<article id="div-comment-49" class="comment-body">
+<footer class="comment-meta">
+<div class="comment-author vcard">
+<img alt='' src='//0.gravatar.com/avatar/00e83e136fdea23471cc9c15325529ce?s=48&#038;d=retro&#038;r=g' srcset='http://0.gravatar.com/avatar/00e83e136fdea23471cc9c15325529ce?s=96&amp;d=retro&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />						<cite class="fn"><a href='http://www.vpncomparison.org/country/usa/' rel='external nofollow' class='url'>Joseph</a></cite> <span class="says">says:</span>					</div><!-- .comment-author -->
+<div class="comment-metadata">
+<a href="https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/#comment-49">
+<time datetime="2015-08-25T16:56:59+00:00">
+August 25, 2015 at 4:56 pm							</time>
+</a>
+</div><!-- .comment-metadata -->
+</footer><!-- .comment-meta -->
+<div class="comment-content">
+<p>Hey great blog as usual. I am new users in vpn community. I don&#8217;t know anything about vpn comparison. But hardly try to get some knowledge by visiting their website and reviews. Do you have any idea where should I follow? But randomly I searched and found this vpn comparison site and trying to follow this. Here it is: <a href="http://www.vpncomparison.org/provider/expressvpn/" >http://www.vpncomparison.org/provider/expressvpn/</a></p>
+<p>Please check and let me know I am going to the right way.</p>
+</div><!-- .comment-content -->
+<div class="reply"><a rel="nofollow" class="comment-reply-login" href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F">Log in to Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol>		
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/vpn-server-gia-re-voi-digital-ocean/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F">logged in</a> to post a comment.</p>		</div><!-- #respond -->
+</div><!-- #comments -->
+</main><!-- #main -->
+<aside class="sidebar sidebar-primary widget-area" role="complementary">
+<section id="meta-9" class="widget widget_meta"><div class="widget-wrap"><h4 class="widget-title">Đăng nhập</h4>			<ul>
+<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap?action=register">Register</a></li>			<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap">Log in</a></li>
+<li><a href="https://vmblogs.vn/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://vmblogs.vn/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search --><section id="categories-5" class="widget widget_categories"><div class="widget-wrap"><h4 class="widget-title">Danh mục</h4>		<ul>
+<li class="cat-item cat-item-20"><a href="https://vmblogs.vn/category/citrix/" >Citrix</a> (22)
+</li>
+<li class="cat-item cat-item-25"><a href="https://vmblogs.vn/category/citrix-receiver/" >Citrix Receiver</a> (8)
+</li>
+<li class="cat-item cat-item-21"><a href="https://vmblogs.vn/category/microsoft/" >Microsoft</a> (6)
+</li>
+<li class="cat-item cat-item-56"><a href="https://vmblogs.vn/category/news/" >News</a> (2)
+</li>
+<li class="cat-item cat-item-22"><a href="https://vmblogs.vn/category/other/" >Other</a> (34)
+</li>
+<li class="cat-item cat-item-121"><a href="https://vmblogs.vn/category/pvs/" title="Citrix Provisioning Services">Provisioning Services</a> (10)
+</li>
+<li class="cat-item cat-item-116"><a href="https://vmblogs.vn/category/security/" title="Security information and products">Security</a> (18)
+</li>
+<li class="cat-item cat-item-23"><a href="https://vmblogs.vn/category/tools/" >Tools</a> (3)
+</li>
+<li class="cat-item cat-item-24"><a href="https://vmblogs.vn/category/vmware/" >VMWare</a> (3)
+</li>
+<li class="cat-item cat-item-15"><a href="https://vmblogs.vn/category/vsphere/" >VSphere</a> (1)
+</li>
+<li class="cat-item cat-item-17"><a href="https://vmblogs.vn/category/xenapp/" >XenApp</a> (14)
+</li>
+<li class="cat-item cat-item-18"><a href="https://vmblogs.vn/category/xendesktop/" >XenDesktop</a> (8)
+</li>
+<li class="cat-item cat-item-19"><a href="https://vmblogs.vn/category/xenserver/" >XenServer</a> (3)
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->		<section id="recent-posts-6" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widget-title">Bài đăng gần đây</h4>		<ul>
+<li>
+<a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/">Cài đặt CentOS 6.7 và Virtual Tape Library</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p3/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P3</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p2-2/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P2</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/tuy-chinh-bo-cai-windows-voi-ntlite/">Tùy chỉnh bộ cài Windows với NTLite</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/web-gui-cho-vmware-esxi/">Web GUI cho VMware ESXi</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/citrix-receiver-va-citrix-director/">Citrix Receiver và Citrix Director</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cai-dat-va-cau-hinh-storefront-server/">Cài đặt và cấu hình Storefront server</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-delivery-group/">Cấu hình XenDesktop Delivery Group</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-machine-catalog/">Cấu hình XenDesktop Machine Catalog</a>
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->				</aside><!-- .sidebar sidebar-primary widget-area -->
+
+</div><!-- .wrapper -->
+</div><!-- #content -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- refreshing cache -->    	
+<div id="site-generator">
+<div class="wrapper">
+<div id="footer-content" class="copyright">Copyright &copy; 2015 <a href="https://vmblogs.vn/">VMBlogs</a>. All Rights Reserved. &#124; Clean Journal&nbsp;by&nbsp;<a target="_blank" href="http://catchthemes.com/">Catch Themes</a></div>
+</div><!-- .wrapper -->
+</div><!-- #site-generator -->	</footer><!-- #colophon -->
+</div><!-- #page -->
+<!-- refreshing cache --><a href="#masthead" id="scrollup" class="genericon"><span class="screen-reader-text">Scroll Up</span></a><nav id="mobile-header-left-nav" class="mobile-menu" role="navigation"><ul id="header-left-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li></ul></nav><!-- #mobile-header-left-nav -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style a2a_target" id="wpa2a_3" style="right:0px;top:100px;"><a class="a2a_button_facebook" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fvpn-server-gia-re-voi-digital-ocean%2F&amp;linkname=VPN%20Server%20gi%C3%A1%20r%E1%BA%BB%20v%E1%BB%9Bi%20Digital%20Ocean" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div>
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:"VPN Server gi\u00e1 r\u1ebb v\u1edbi Digital Ocean",url:"https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/"},
+{title:"VPN Server gi\u00e1 r\u1ebb v\u1edbi Digital Ocean",url:"https://vmblogs.vn/vpn-server-gia-re-voi-digital-ocean/"},
+{title:document.title,url:location.href}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"http:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"http:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"http:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/navigation.min.js?ver=20120206'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/skip-link-focus-fix.min.js?ver=20130115'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/comment-reply.min.js?ver=4.4'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/fitvids.min.js?ver=1.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-scrollup.min.js?ver=20072014'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/wp-embed.min.js?ver=4.4'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.55132603645325 seconds, on 29-12-15 5:45:59 Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)-->

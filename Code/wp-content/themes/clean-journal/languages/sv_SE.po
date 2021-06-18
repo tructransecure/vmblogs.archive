@@ -1,0 +1,1363 @@
+# Translation of Clean Journal in Swedish
+# This file is distributed under the same license as the Clean Journal package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clean Journal\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2021-04-28 23:24-0700\n"
+"PO-Revision-Date: 2021-04-28 23:24-0700\n"
+"Last-Translator: \n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr_e;esc_attr__;"
+"_nx:1,2,4c;esc_html__;esc_attr_x:1,2c;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Sidan kunde inte hittas."
+
+#: ../404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Det verkar som att det inte finns någonting här. Du kan testa en av länkarna "
+"nedan eller att göra en sökning."
+
+#: ../comments.php:30
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "En reaktion till &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:35
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "En reaktion till &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reaktioner till &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:50 ../comments.php:75
+msgid "Comment navigation"
+msgstr "Kommentarsnavigering"
+
+#: ../comments.php:51 ../comments.php:76
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: ../comments.php:52 ../comments.php:77
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#: ../comments.php:87
+msgid "Comments are closed."
+msgstr "Kommentarer kan inte lämnas på detta inlägg."
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr "Inget hittades"
+
+#: ../content-none.php:21 ../no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Är du redo att posta ditt första inlägg? <a href=\"%1$s\">Starta här</a>."
+
+#: ../content-none.php:25 ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Ledsen, inget matchade dina sökkriterier. Vänligen försök igen med andra "
+"nyckelord."
+
+#: ../content-none.php:30 ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det verkar inte som om vi kan hitta det du letar efter. Kanske kan en "
+"sökning hjälpa."
+
+#: ../content-page.php:28 ../content-single.php:31 ../content.php:46
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: ../content-page.php:35 ../inc/clean-journal-core.php:668
+#: ../inc/clean-journal-core.php:687 ../inc/clean-journal-core.php:813
+msgid "Edit"
+msgstr "Ändra"
+
+#: ../inc/clean-journal-breadcrumb.php:57
+msgid "Home"
+msgstr "Hem"
+
+#: ../inc/clean-journal-breadcrumb.php:58
+#, php-format
+msgid "%1$s Archive for %2$s"
+msgstr "%1$s Arkiv för %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:59
+#, php-format
+msgid "%1$sSearch results for: %2$s"
+msgstr "%1$sSökresultat förr: %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:60
+#, php-format
+msgid "%1$sPosts tagged %2$s"
+msgstr "%1$sInlägg taggade %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:61
+#, php-format
+msgid "%1$sView all posts by %2$s"
+msgstr "%1$sVisa alla inlägg av %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:62
+msgid "Error 404"
+msgstr "Fel 404"
+
+#: ../inc/clean-journal-breadcrumb.php:222
+#, php-format
+msgid "Page %s"
+msgstr "Sida %s"
+
+#: ../inc/clean-journal-core.php:88 ../inc/clean-journal-menus.php:27
+msgid "Primary Menu"
+msgstr "Primär meny"
+
+#: ../inc/clean-journal-core.php:89 ../inc/clean-journal-menus.php:68
+msgid "Secondary Menu"
+msgstr "Sekundär meny"
+
+#: ../inc/clean-journal-core.php:90 ../inc/clean-journal-menus.php:204
+msgid "Header Top Menu"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:177
+msgid "Small"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:178
+msgid "S"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:183
+msgid "Normal"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:184
+msgid "M"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:189
+#, fuzzy
+#| msgid "Large Image"
+msgid "Large"
+msgstr "Stor bild"
+
+#: ../inc/clean-journal-core.php:190
+msgid "L"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:195
+msgid "Huge"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:196
+msgid "XL"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:206
+msgid "White"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:211
+msgid "Black"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:216
+msgid "Gray"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:221
+msgid "Viking"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:226
+msgid "Blue"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:254
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "på"
+
+#: ../inc/clean-journal-core.php:260
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "på"
+
+#: ../inc/clean-journal-core.php:636 ../inc/clean-journal-core.php:1530
+msgid "Post navigation"
+msgstr "Inläggsnavigering"
+
+#: ../inc/clean-journal-core.php:645
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Äldre inlägg"
+
+#: ../inc/clean-journal-core.php:646
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare inlägg <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/clean-journal-core.php:668
+msgid "Pingback:"
+msgstr "Pingback: "
+
+#: ../inc/clean-journal-core.php:678
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">säger:</span>"
+
+#: ../inc/clean-journal-core.php:684
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: ../inc/clean-journal-core.php:691
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar väntar på moderering."
+
+#: ../inc/clean-journal-core.php:794
+msgid "<span class=\"screen-reader-text\">Posted on</span>"
+msgstr "<span class=\"screen-reader-text\">Postades den</span>"
+
+#: ../inc/clean-journal-core.php:801
+msgctxt "Used before post author name."
+msgid "<span class=\"screen-reader-text\">Author</span>"
+msgstr "<span class=\"screen-reader-text\">Författare</span>"
+
+#: ../inc/clean-journal-core.php:809
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: ../inc/clean-journal-core.php:809
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: ../inc/clean-journal-core.php:809
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: ../inc/clean-journal-core.php:830 ../inc/clean-journal-core.php:838
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: ../inc/clean-journal-core.php:833
+msgctxt "Used before category names."
+msgid "<span class=\"screen-reader-text\">Categories</span>"
+msgstr "<span class=\"screen-reader-text\">Kategorier</span>"
+
+#: ../inc/clean-journal-core.php:841
+msgctxt "Used before tag names."
+msgid "<span class=\"screen-reader-text\">Tags</span>"
+msgstr "<span class=\"screen-reader-text\">Taggar</span>"
+
+#: ../inc/clean-journal-core.php:1451
+msgid "Scroll Up"
+msgstr "Scrolla upp"
+
+#: ../inc/clean-journal-core.php:1469
+msgid "Posted on"
+msgstr "﻿Publicerat den"
+
+#: ../inc/clean-journal-core.php:1470
+msgid "By"
+msgstr "av"
+
+#: ../inc/clean-journal-core.php:1512
+msgid "Next &rarr;"
+msgstr "Nästa &rarr;"
+
+#: ../inc/clean-journal-core.php:1513
+msgid "Next post:"
+msgstr "Nästa inlägg:"
+
+#: ../inc/clean-journal-core.php:1515
+msgid "&larr; Previous"
+msgstr "&larr; Föregående"
+
+#: ../inc/clean-journal-core.php:1516
+msgid "Previous post:"
+msgstr "Föregående inlägg:"
+
+#: ../inc/clean-journal-default-options.php:56
+msgid "Read More ..."
+msgstr "Läs mer..."
+
+#: ../inc/clean-journal-default-options.php:67
+msgid "Clean Journal is a Premium Responsive WordPress Theme"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:68
+msgid ""
+"This is promotion headline. You can edit this from Appearance -> Customize -"
+"> Theme Options -> Promotion Headline Options"
+msgstr ""
+"Detta är en marknadsföringsrubrik. Du kan ändra detta från  -> Utseende -> "
+"Teman -> Anpassa"
+
+#: ../inc/clean-journal-default-options.php:69
+msgid "Reviews"
+msgstr "Recensioner"
+
+#: ../inc/clean-journal-default-options.php:74
+msgid "Search..."
+msgstr "Söka"
+
+#: ../inc/clean-journal-default-options.php:85
+#: ../inc/clean-journal-featured-content.php:56
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:34
+msgid "Featured Content"
+msgstr "Utvalt innehåll"
+
+#: ../inc/clean-journal-default-options.php:86
+msgid "Here you can showcase the x number of Featured Content."
+msgstr ""
+"Här kan du visa upp x antal av utvalt innehåll. Du kan redigera denna "
+"rubrik, Underrubrik och utvalt innehåll från \"Utseende-> anpassa-> utseende "
+"innehållsalternativ."
+
+#: ../inc/clean-journal-default-options.php:115
+msgid "Light"
+msgstr "Light"
+
+#: ../inc/clean-journal-default-options.php:116
+msgid "Dark"
+msgstr "Mörkt"
+
+#: ../inc/clean-journal-default-options.php:130
+#: ../inc/clean-journal-default-options.php:496
+msgid "Primary Sidebar, Content"
+msgstr "Primär sidofältet, innehåll"
+
+#: ../inc/clean-journal-default-options.php:131
+#: ../inc/clean-journal-default-options.php:501
+msgid "Content, Primary Sidebar"
+msgstr "Innehåll, primär sidopanel"
+
+#: ../inc/clean-journal-default-options.php:132
+#: ../inc/clean-journal-default-options.php:506
+msgid "No Sidebar ( Content Width )"
+msgstr "Ingen sidpanel (innehållets bredd)"
+
+#: ../inc/clean-journal-default-options.php:145
+#: ../inc/clean-journal-default-options.php:242
+msgid "Show Excerpt"
+msgstr "Visa utdrag"
+
+#: ../inc/clean-journal-default-options.php:146
+msgid "Show Full Content (No Featured Image)"
+msgstr "Visa fullständiga innehåll (ingen utvald bild)"
+
+#: ../inc/clean-journal-default-options.php:160
+#: ../inc/clean-journal-default-options.php:196
+msgid "Homepage / Frontpage"
+msgstr "Hemsida / startsida"
+
+#: ../inc/clean-journal-default-options.php:161
+msgid "Excluding Homepage"
+msgstr "Exkludera hemsida"
+
+#: ../inc/clean-journal-default-options.php:162
+msgid "Excluding Homepage, Page/Post Featured Image"
+msgstr "Exkludera hemsida, Sida/Lagrad utvald bild"
+
+#: ../inc/clean-journal-default-options.php:163
+#: ../inc/clean-journal-default-options.php:197
+msgid "Entire Site"
+msgstr "Hela sajten"
+
+#: ../inc/clean-journal-default-options.php:164
+msgid "Entire Site, Page/Post Featured Image"
+msgstr "Hela sajten, dagens sida/inlägg bild"
+
+#: ../inc/clean-journal-default-options.php:165
+msgid "Pages and Posts"
+msgstr "Sidor och inlägg"
+
+#: ../inc/clean-journal-default-options.php:166
+#: ../inc/clean-journal-default-options.php:198
+#: ../inc/clean-journal-default-options.php:330
+msgid "Disabled"
+msgstr "Off"
+
+#: ../inc/clean-journal-default-options.php:180
+#: ../inc/clean-journal-default-options.php:559
+msgid "Full Image"
+msgstr "Fullständig bild"
+
+#: ../inc/clean-journal-default-options.php:181
+msgid "Large Image"
+msgstr "Stor bild"
+
+#: ../inc/clean-journal-default-options.php:182
+msgid "Slider Image"
+msgstr "Bildspelsbild"
+
+#: ../inc/clean-journal-default-options.php:212
+#: ../inc/clean-journal-default-options.php:258
+msgid "Demo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:213
+#: ../inc/clean-journal-default-options.php:259
+#, fuzzy
+#| msgid "Pages:"
+msgid "Page"
+msgstr "Sidor:"
+
+#: ../inc/clean-journal-default-options.php:227
+msgid "3 columns"
+msgstr "3 kolumner"
+
+#: ../inc/clean-journal-default-options.php:228
+msgid "4 columns"
+msgstr "4 kolumner"
+
+#: ../inc/clean-journal-default-options.php:243
+msgid "Show Full Content"
+msgstr "Visa hela inl&auml;gg"
+
+#: ../inc/clean-journal-default-options.php:244
+msgid "Hide Content"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:273
+msgid "Fade"
+msgstr "Tona in/ut"
+
+#: ../inc/clean-journal-default-options.php:274
+msgid "Fade Out"
+msgstr "Tona ut"
+
+#: ../inc/clean-journal-default-options.php:275
+msgid "None"
+msgstr "Inga"
+
+#: ../inc/clean-journal-default-options.php:276
+msgid "Scroll Horizontal"
+msgstr "Scrolla horisontellt"
+
+#: ../inc/clean-journal-default-options.php:277
+msgid "Scroll Vertical"
+msgstr "Scrolla vertikalt"
+
+#: ../inc/clean-journal-default-options.php:278
+msgid "Flip Horizontal"
+msgstr "Vänd horisontellt"
+
+#: ../inc/clean-journal-default-options.php:279
+msgid "Flip Vertical"
+msgstr "Vänd vertikalt"
+
+#: ../inc/clean-journal-default-options.php:280
+msgid "Tile Slide"
+msgstr "Brick bild"
+
+#: ../inc/clean-journal-default-options.php:281
+msgid "Tile Blind"
+msgstr "Dummy bricka"
+
+#: ../inc/clean-journal-default-options.php:295
+msgid "True"
+msgstr "Ja"
+
+#: ../inc/clean-journal-default-options.php:296
+msgid "Wait"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:297
+msgid "False"
+msgstr "Nej"
+
+#: ../inc/clean-journal-default-options.php:311
+msgid "Default(Older Posts/Newer Posts)"
+msgstr "Standard (äldre inlägg/nyare inlägg)"
+
+#: ../inc/clean-journal-default-options.php:312
+msgid "Numeric"
+msgstr "﻿Numerisk"
+
+#: ../inc/clean-journal-default-options.php:313
+msgid "Infinite Scroll (Click)"
+msgstr "Oändlig scroll (klicka)"
+
+#: ../inc/clean-journal-default-options.php:314
+msgid "Infinite Scroll (Scroll)"
+msgstr "Oändlig scroll (scroll)"
+
+#: ../inc/clean-journal-default-options.php:328
+msgid "Featured"
+msgstr "Utvald"
+
+#: ../inc/clean-journal-default-options.php:329
+msgid "Full Size"
+msgstr "Full storlek"
+
+#: ../inc/clean-journal-default-options.php:345
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/clean-journal-default-options.php:349
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/clean-journal-default-options.php:353
+msgid "Googleplus"
+msgstr "Googleplus"
+
+#: ../inc/clean-journal-default-options.php:357
+#: ../inc/clean-journal-social-icons.php:36
+msgid "Email"
+msgstr "E-mail"
+
+#: ../inc/clean-journal-default-options.php:361
+msgid "Feed"
+msgstr "Feed"
+
+#: ../inc/clean-journal-default-options.php:365
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../inc/clean-journal-default-options.php:369
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/clean-journal-default-options.php:373
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/clean-journal-default-options.php:377
+msgid "Pinterest"
+msgstr "Pintrest"
+
+#: ../inc/clean-journal-default-options.php:381
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/clean-journal-default-options.php:385
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/clean-journal-default-options.php:389
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/clean-journal-default-options.php:393
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/clean-journal-default-options.php:397
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/clean-journal-default-options.php:401
+msgid "PollDaddy"
+msgstr "PollDaddy"
+
+#: ../inc/clean-journal-default-options.php:405
+msgid "CodePen"
+msgstr "CodePen"
+
+#: ../inc/clean-journal-default-options.php:409
+msgid "Path"
+msgstr "Stig"
+
+#: ../inc/clean-journal-default-options.php:413
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/clean-journal-default-options.php:417
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/clean-journal-default-options.php:421
+msgid "Digg"
+msgstr "Digg"
+
+#: ../inc/clean-journal-default-options.php:425
+msgid "Reddit"
+msgstr "Reddit"
+
+#: ../inc/clean-journal-default-options.php:429
+msgid "Stumbleupon"
+msgstr "Stumbleupon"
+
+#: ../inc/clean-journal-default-options.php:433
+msgid "Pocket"
+msgstr "Pocket"
+
+#: ../inc/clean-journal-default-options.php:437
+msgid "DropBox"
+msgstr "DropBox"
+
+#: ../inc/clean-journal-default-options.php:441
+msgid "Spotify"
+msgstr "Spotify"
+
+#: ../inc/clean-journal-default-options.php:445
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: ../inc/clean-journal-default-options.php:449
+msgid "Twitch"
+msgstr "Twitch"
+
+#: ../inc/clean-journal-default-options.php:453
+msgid "Website"
+msgstr "Webbsida"
+
+#: ../inc/clean-journal-default-options.php:457
+msgid "Phone"
+msgstr "Tel"
+
+#: ../inc/clean-journal-default-options.php:461
+msgid "Handset"
+msgstr "Handset"
+
+#: ../inc/clean-journal-default-options.php:465
+msgid "Cart"
+msgstr "Kundvagn"
+
+#: ../inc/clean-journal-default-options.php:469
+msgid "Cloud"
+msgstr "Cloud"
+
+#: ../inc/clean-journal-default-options.php:473
+msgid "Link"
+msgstr "Länk"
+
+#: ../inc/clean-journal-default-options.php:491
+#: ../inc/clean-journal-default-options.php:522
+#: ../inc/clean-journal-default-options.php:549
+msgid "Default"
+msgstr "Standard"
+
+#: ../inc/clean-journal-default-options.php:527
+msgid "Enable"
+msgstr "On"
+
+#: ../inc/clean-journal-default-options.php:532
+msgid "Disable"
+msgstr "Deaktivera"
+
+#: ../inc/clean-journal-default-options.php:554
+msgid "Featured Image"
+msgstr "Utvald bild"
+
+#: ../inc/clean-journal-default-options.php:564
+msgid "Disable Image"
+msgstr "Inaktivera bild"
+
+#: ../inc/clean-journal-default-options.php:579
+#, fuzzy, php-format
+#| msgctxt "1: Year, 2: Site Title with home URL"
+#| msgid "Copyright &copy; %1$s %2$s. All Rights Reserved."
+msgctxt "1: Year, 2: Site Title with home URL 3: Privacy Policy Link\n"
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved. %3$s"
+msgstr "Copyright © %1$s %2$s. Alla rättigheter reserverade."
+
+#: ../inc/clean-journal-default-options.php:580
+#, fuzzy
+#| msgctxt "yearly archives date format"
+#| msgid "Y"
+msgid "Y"
+msgstr "Y"
+
+#: ../inc/clean-journal-default-options.php:582
+msgid "by"
+msgstr "av"
+
+#: ../inc/clean-journal-featured-content.php:57
+msgid ""
+"Here you can showcase the x number of Featured Content. You can edit this "
+"Headline, Subheadline and Feaured Content from \"Appearance -> Customize -> "
+"Featured Content Options\"."
+msgstr ""
+"Här kan du visa upp x antal av utvalt innehåll. Du kan redigera denna "
+"rubrik, Underrubrik och utvalt innehåll från \"Utseende-> anpassa-> utseende "
+"innehållsalternativ\"."
+
+#: ../inc/clean-journal-featured-content.php:256
+#: ../inc/clean-journal-featured-slider.php:180
+msgid "Permalink to: "
+msgstr "Permalänk till:"
+
+#: ../inc/clean-journal-menus.php:43
+msgid "Search"
+msgstr "﻿Sök"
+
+#: ../inc/clean-journal-menus.php:157 ../inc/clean-journal-menus.php:176
+msgid "Menu"
+msgstr "Meny"
+
+#: ../inc/clean-journal-metabox.php:89
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:181
+msgid "Layout Options"
+msgstr "Layoutalternativ"
+
+#: ../inc/clean-journal-metabox.php:106
+msgid "Header Featured Image Options"
+msgstr "Rubrik utvald bild alternativ"
+
+#: ../inc/clean-journal-metabox.php:123
+#, fuzzy
+#| msgid "Single Page/Post Image Layout "
+msgid "Single Page/Post Image Layout"
+msgstr "Enda sida/inlägg bildlayouten"
+
+#: ../inc/clean-journal-metabox.php:186
+msgid "Clean Journal Options"
+msgstr "Clean Journal  alternativ"
+
+#: ../inc/clean-journal-structure.php:65
+msgid "Skip to content"
+msgstr "Hoppa till innehåll"
+
+#: ../inc/clean-journal-structure.php:89
+msgid ""
+"This is Header Top Area. Assign Header Top Menu and Social Icons from Theme "
+"Customizer"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:30
+msgid "Primary Sidebar"
+msgstr "Primär sidopanel"
+
+#: ../inc/clean-journal-widgets.php:36
+msgid ""
+"This is the primary sidebar if you are using a two or three column site "
+"layout option."
+msgstr ""
+"Detta är den primära sidopanelen om du använder en två eller tre kolumn "
+"webbplats layoutalternativ."
+
+#: ../inc/clean-journal-widgets.php:43
+#, php-format
+msgid "Footer Area %d"
+msgstr "Sidfotsområdet %d"
+
+#: ../inc/clean-journal-widgets.php:49
+#, php-format
+msgid "Footer %d widget area."
+msgstr "Sidfot %d widget området."
+
+#: ../inc/clean-journal-widgets.php:69
+msgid "CT: Social Icons"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:70
+msgid "Use this widget to add Social Icons as a widget. "
+msgstr "Använd denna widget för att lägga sociala ikoner som en widget."
+
+#: ../inc/clean-journal-widgets.php:111
+msgid "Title (optional):"
+msgstr "Rubrik (valfri):"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:29
+#, fuzzy
+#| msgid "Select Categories"
+msgid "All Categories"
+msgstr "Välj kategorier"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:36
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+"Håll ned Ctrl (windows) / kommando (Mac)-knappen för att välja flera "
+"alternativ."
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:49
+msgid "Theme Instructions"
+msgstr "Tema instruktioner"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:53
+msgid "Support"
+msgstr "Support"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:57
+msgid "Changelog"
+msgstr "Ändringslogg"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:61
+msgid "Donate Now"
+msgstr "Ge ett bidrag nu"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:65
+msgid "Review"
+msgstr "Recensera"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:28
+msgid "Featured Content Options"
+msgstr "Utvalt innehåll innehållsalternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:46
+msgid "Enable Featured Content on"
+msgstr "Aktivera utvalt innehåll på"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:62
+msgid "Select Featured Content Layout"
+msgstr "Visa utvalt Innehåll"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:77
+msgid "Check to Move above Footer"
+msgstr "Kontrollera att flytta över sidfot"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:93
+msgid "Select Content Type"
+msgstr "Välj innehållstyp"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:108
+msgid "Leave field empty if you want to remove Headline"
+msgstr "Lämna fältet tomt om du vill ta bort rubriken"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:109
+msgid "Headline for Featured Content"
+msgstr "Rubriken för utvalt innehåll"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:125
+msgid "Leave field empty if you want to remove Sub-headline"
+msgstr "Lämna fältet tomt om du vill ta bort sub rubrik"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:126
+msgid "Sub-headline for Featured Content"
+msgstr "Under rubriken för utvalt innehåll"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:142
+msgid ""
+"Save and refresh the page if No. of Featured Content is changed (Max no of "
+"Featured Content is 20)"
+msgstr ""
+"Spara och uppdatera sidan om nej. av dagens innehåll ändras (Max inte av "
+"dagens innehåll är 20)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:149
+msgid "No of Featured Content"
+msgstr "Antal av utvalt innehåll"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:166
+msgid "Display Content"
+msgstr "Visa Innehåll"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:184
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:171
+msgid "Featured Page"
+msgstr "Utvald sida"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:27
+msgid "Featured Slider Options"
+msgstr "Utvald inlägg bildspel"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:33
+msgid "Featured Slider"
+msgstr "Aktuelltbläddraren"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:45
+msgid "Enable Slider on"
+msgstr "Aktivera bildspel på"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:61
+msgid "Transition Effect"
+msgstr "Övergångseffekt"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:77
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:96
+msgid "seconds(s)"
+msgstr "sekunder"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:81
+msgid "Transition Delay"
+msgstr "Fördröjning"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:100
+msgid "Transition Length"
+msgstr "Övergången längd"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:116
+msgid "Image Loader"
+msgstr ""
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:132
+msgid "Select Slider Type"
+msgstr "Välj bildspelstyp"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:147
+msgid ""
+"Save and refresh the page if No. of Slides is changed (Max no of slides is "
+"20)"
+msgstr ""
+"Spara och uppdatera sidan om nej. bilder ändras (Max inte är 20 bilder)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:154
+msgid "No of Slides"
+msgstr "Antal bilder"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:25
+msgid "Enable Featured Header Image on "
+msgstr "Aktivera utvald rubrik bild på"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:40
+msgid "Page/Post Featured Header Image Size"
+msgstr "Sida/Inlägg utvald rubrik bildstorlek"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:53
+msgid "Featured Header Image Alt/Title Tag "
+msgstr "Utvald rubrik bild Alt/titel Tagg"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:66
+msgid "Featured Header Image Link URL"
+msgstr "Utvald rubrik bild länk-URL"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:79
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:364
+msgid "Check to Open Link in New Window/Tab"
+msgstr "﻿Öppna länken i ett nytt fönster/flik"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:19
+msgid "Note: Enter the url for correponding social networking website"
+msgstr "Notera: Skriv ub URL för korresponderande socialt nätverkssajt"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:28
+msgid "Social Links"
+msgstr "Länkar till sociala medier"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:41
+msgid ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?"
+"{action}. More Information in readme file"
+msgstr ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?"
+"{action}. More Information in readme file"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:20
+msgid "Basic theme Options"
+msgstr "Standard Temaval"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:23
+msgid "Theme Options"
+msgstr "Tema inställningar"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:29
+msgid ""
+"Breadcrumbs are a great way of letting your visitors find out where they are "
+"on your site with just a glance. You can enable/disable them on homepage and "
+"entire site."
+msgstr ""
+"Brödsmulor är ett bra sätt att låta dina besökare ta reda på var de är på "
+"din webbplats med bara en blick. Du kan aktivera eller inaktivera dem på "
+"hemsidan och hela platsen."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:31
+msgid "Breadcrumb Options"
+msgstr "Brödsmulor alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:42
+msgid "Check to enable Breadcrumb"
+msgstr "Markera för att aktivera brödsmulor"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:55
+msgid "Check to enable Breadcrumb on Homepage"
+msgstr "Markera för att aktivera brödsmulor på hemsidan"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:71
+msgid "Separator between Breadcrumbs"
+msgstr "Mellanrum emellan brödsmulor"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:86
+msgid "Custom/Inline CSS"
+msgstr "Anpassad CSS för webben"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:89
+msgid "Custom CSS Options"
+msgstr "Anpassa CSS alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:99
+msgid "Enter Custom CSS"
+msgstr "Redigera anpassad CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:113
+msgid "Excerpt Options"
+msgstr "Utdrags alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:123
+msgid "Excerpt length. Default is 55 words"
+msgstr "Utdrag längd. Standard är 55 ord"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:130
+msgid "Excerpt Length (words)"
+msgstr "Utdrag längd (ord)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:144
+msgid "Read More Text"
+msgstr "Läs mer..."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:153
+msgid ""
+"Only posts that belong to the categories selected here will be displayed on "
+"the front page"
+msgstr ""
+"Enda inlägg som hör till de kategorier som väljs här visas på förstasidan"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:156
+msgid "Homepage / Frontpage Options"
+msgstr "Hemsida / startsida alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:166
+msgid "Select Categories"
+msgstr "Välj kategorier"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:192
+msgid "Default Layout"
+msgstr "Standardlayout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:206
+msgid "Archive Content Layout"
+msgstr "Arkivet innehåll Layout"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:219
+msgid "Single Page/Post Image Layout "
+msgstr "Enda sida/inlägg bildlayouten"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:230
+#, fuzzy, php-format
+#| msgid ""
+#| "Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+#| "Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" "
+#| "href=\"%s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%1$s\">WP-PageNavi "
+"Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" href="
+"\"%2$s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Numerisk alternativ kräver <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+"Plugin</a>.<br/>Oändlig Scroll alternativ kräver <a target=\"_blank\" href="
+"\"%s\">JetPack Plugin</a> med oändlig Scroll modul aktiverad."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:237
+#, php-format
+msgid ""
+"Infinite Scroll Options requires <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Oändligt Scroll alternativ kräver <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> med oändlig Scroll modul aktiverad."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:248
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi Plugin</"
+"a>."
+msgstr ""
+"Numerisk alternativ kräver <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+"Plugin</a>."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:259
+msgid "Pagination Options"
+msgstr "Sidbrytningsalternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:270
+msgid "Pagination type"
+msgstr "Sidbrytningstyp"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:279
+msgid "To disable the fields, simply leave them empty."
+msgstr "Om du vill inaktivera fälten lämna dem tomma."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:282
+msgid "Promotion Headline Options"
+msgstr "Utvald rubrik alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:293
+msgid "Enable Promotion Headline on"
+msgstr "Aktivera utvald rubrik på"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:307
+msgid "Appropriate Words: 10"
+msgstr "Lämpligt ord: 10"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:308
+msgid "Promotion Headline Text"
+msgstr "Utvald rubrik text"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:321
+msgid "Appropriate Words: 15"
+msgstr "Lämpligt ord: 15"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:322
+msgid "Promotion Subheadline Text"
+msgstr "Utvald underrubrik text"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:335
+msgid "Appropriate Words: 3"
+msgstr "Lämpligt ord: 3"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:336
+msgid "Promotion Headline Button Text "
+msgstr "Utvald rubrik knapptext"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:350
+msgid "Promotion Headline Link"
+msgstr "Utvald rubrik länk"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:376
+msgid "Scrollup Options"
+msgstr "Scrollupp alternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:386
+msgid "Check to disable Scroll Up"
+msgstr "Markera för att inaktivera Scroll Upp"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:395
+msgid "Change default placeholder text in Search."
+msgstr "Ändra standardplacering för text i Sök"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:398
+msgid "Search Options"
+msgstr "Sökalternativ"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:408
+msgid "Default Display Text in Search"
+msgstr "Standardtext i sök"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:53
+msgid "Logo"
+msgstr "Logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:66
+msgid "Check to disable logo"
+msgstr "Markera för att inaktivera logo"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:80
+msgid "Logo Alt Text"
+msgstr "Logga alternativtext"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:95
+msgid "Check to move Site Title and Tagline before logo"
+msgstr "Kontrollera för att flytta webbplats titel och Tagline innan logotyp"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:113
+msgid "Color Scheme"
+msgstr "Färgschema"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:138
+msgid ""
+"Caution: Reset all settings to default. Refresh the page after save to view "
+"full effects."
+msgstr ""
+"Varning: Återställ alla inställningar till standard. Uppdatera sidan efter "
+"du sparat."
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:140
+msgid "Reset all settings"
+msgstr "Återställ alla inställningar"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:151
+msgid "Check to reset all settings to default"
+msgstr "Markera för att återställa alla inställningar till standard"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:161
+#: ../inc/customizer-includes/clean-journal-customizer.php:172
+msgid "Important Links"
+msgstr "Viktiga länkar"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:206
+msgid "Refresh the customizer page after saving to view reset effects"
+msgstr ""
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:76
+msgid "Clean Journal Pro"
+msgstr "Clean Journal Pro"
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:77
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../no-results.php:14
+msgid "Error 404-Page NOT Found"
+msgstr "Fel 404 - sidan hittades inte"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Sök resultat för: %s"
+
+#: ../searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "Sök efter:"
+
+#: ../searchform.php:17
+msgctxt "submit button"
+msgid "Search"
+msgstr "Sök"
+
+#: ../sidebar.php:37
+msgid "Primary Sidebar Widget Area"
+msgstr "Primära sidofältet Widget område"
+
+#: ../sidebar.php:40
+msgid ""
+"This is the Primary Sidebar Widget Area if you are using a two or three "
+"column site layout option."
+msgstr ""
+"Detta är den primära sidopanelen om du använder en två eller tre kolumn "
+"webbplats layoutalternativ."
+
+#: ../sidebar.php:41
+#, php-format
+msgid ""
+"By default it will load Search and Archives widgets as shown below. You can "
+"add widget to this area by visiting your <a href=\"%s\">Widgets Panel</a> "
+"which will replace default widgets."
+msgstr ""
+"Som standard läser den Sök och arkiv widgets som visas nedan. Du kan lägga "
+"till widgeten på detta område genom att besöka din <a href=\"%s\">Widgets "
+"Panel</a> som kommer att ersätta standard widgets."
+
+#: ../sidebar.php:54
+msgid "Archives"
+msgstr "Arkiv"
+
+#~ msgctxt "Droid Sans font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgid "Demo Featured Content"
+#~ msgstr "Visa utvalt Innehåll"
+
+#~ msgid "Featured Page Content"
+#~ msgstr "Visa utvalt sidoinnehåll"
+
+#~ msgid "Demo Featured Slider"
+#~ msgstr "Visa utvalt Innehåll"
+
+#~ msgid "Featured Page Slider"
+#~ msgstr "Visa utvalt sidoinnehåll"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Remove Icon images to disable."
+#~ msgstr "Ta bort ikonbilder att inaktivera."
+
+#~ msgid "Icon Options"
+#~ msgstr "Ikonalternativ"
+
+#~ msgid "Select/Add Favicon"
+#~ msgstr "Välj/Lägg till Favoritikon"
+
+#~ msgid ""
+#~ "Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Web Clip ikonen för Apple-enheter. Rekommenderade storleken - bredd 144px "
+#~ "och höjd 144px höjd, som kommer att stödja hög upplösning enheter som "
+#~ "iPad retina"
+
+#~ msgid "Select/Add Web Clip Icon"
+#~ msgstr "Välj/Lägg till Web Clip Icon"
+
+#, fuzzy
+#~ msgid "Clean Journal"
+#~ msgstr "Clean Journal  alternativ"
+
+#~ msgid "Catch Themes"
+#~ msgstr "Catch Themes"
+
+#~ msgid "Upgrade To Pro &raquo;"
+#~ msgstr "Uppgradera till Catch Base Pro &raquo;"
+
+#~ msgid ""
+#~ "Some settings might be missing or disorganized in this version of "
+#~ "WordPress. So we suggest you to upgrade to version 4.0 or better."
+#~ msgstr ""
+#~ "Some settings might be missing or disorganized in this version of "
+#~ "WordPress. So we suggest you to upgrade to version 4.0 or better."
+
+#~ msgid "Author: %s"
+#~ msgstr "Författade: %s"
+
+#~ msgid "Day: %s"
+#~ msgstr "Dag: %s"
+
+#~ msgid "Month: %s"
+#~ msgstr "Månad: %s"
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+#~ msgid "Year: %s"
+#~ msgstr "År: %s"
+
+#~ msgid "Asides"
+#~ msgstr "Noteringar"
+
+#~ msgid "Galleries"
+#~ msgstr "Gallerier"
+
+#~ msgid "Images"
+#~ msgstr "Bilder"
+
+#~ msgid "Videos"
+#~ msgstr "Videos"
+
+#~ msgid "Quotes"
+#~ msgstr "Citat"
+
+#~ msgid "Links"
+#~ msgstr "Länkar"
+
+#~ msgid "Statuses"
+#~ msgstr "Statusar"
+
+#~ msgid "Audios"
+#~ msgstr "Ljud"
+
+#~ msgid "Chats"
+#~ msgstr "Chatt"
+
+#~ msgctxt "Used before publish date."
+#~ msgid "<span class=\"screen-reader-text\">Posted on</span>"
+#~ msgstr "<span class=\"screen-reader-text\">Postades den</span>"

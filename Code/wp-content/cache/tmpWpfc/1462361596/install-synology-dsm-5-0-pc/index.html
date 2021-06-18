@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="//gmpg.org/xfn/11">
+<link rel="pingback" href="">
+<!--[if lt IE 9]>
+<script src="//vmblogs.vn/wp-content/themes/clean-journal/js/html5.min.js"></script>
+<![endif]-->
+<title>Install Synology DSM 5.0 on PC</title>
+<!-- This site is optimized with the Yoast SEO plugin v3.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Install Synology DSM 5.0 on PC"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="//vmblogs.vn/install-synology-dsm-5-0-pc/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Install Synology DSM 5.0 on PC" />
+<meta property="og:description" content="Install Synology DSM 5.0 on PC" />
+<meta property="og:url" content="https://vmblogs.vn/install-synology-dsm-5-0-pc/" />
+<meta property="og:site_name" content="VMBlogs" />
+<meta property="article:publisher" content="https://www.facebook.com/tructransecure" />
+<meta property="article:author" content="https://www.facebook.com/tructransecure" />
+<meta property="article:tag" content="DSM 5.0" />
+<meta property="article:tag" content="Synology" />
+<meta property="article:section" content="Other" />
+<meta property="article:published_time" content="2014-09-17T20:36:40+00:00" />
+<meta property="article:modified_time" content="2014-12-30T15:00:36+00:00" />
+<meta property="og:updated_time" content="2014-12-30T15:00:36+00:00" />
+<meta property="og:image" content="https://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16.png" />
+<meta property="og:image:width" content="1441" />
+<meta property="og:image:height" content="793" />
+<!-- / Yoast SEO plugin. -->
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/vmblogs.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='gglcptch-css'  href='//vmblogs.vn/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.22' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='//vmblogs.vn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journal-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CDroid+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journal-style-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/style.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/css/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='//vmblogs.vn/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.12' type='text/css' media='all' />
+<style id='A2A_SHARE_SAVE-inline-css' type='text/css'>
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+</style>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/jquery.sidr.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-custom-scripts.min.js'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+<link rel='https://api.w.org/' href='//vmblogs.vn/wp-json/' />
+<meta name="generator" content="WordPress 4.4.2" />
+<link rel="alternate" type="application/json+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F" />
+<link rel="alternate" type="text/xml+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&#038;format=xml" />
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});a2a_config.templates=a2a_config.templates||{};
+//--></script>
+<!-- refreshing cache --><link rel="shortcut icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" type="image/x-icon" /><!-- refreshing cache -->	<style type="text/css">
+.site-title a,
+.site-description {
+color: #111111;
+}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f9f9f9; }
+</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+var analyticsFileTypes = [''];
+var analyticsSnippet = 'disabled';
+var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+ga('send', 'pageview');
+ga('send', 'pageview');
+</script>
+</head>
+<body class="single single-post postid-342 single-format-standard custom-background two-columns content-left excerpt-image-left mobile-menu-one">
+<div id="page" class="hfeed site">
+<div id="header-top" class="header-top-bar">
+<div class="wrapper">
+<div class="header-top-right full-width">
+<section class="widget widget_clean_journal_social_icons" id="header-right-social-icons">
+<div class="widget-wrap">
+<a class="genericon_parent genericon genericon-facebook-alt" target="_blank" title="Facebook" href="https://www.facebook.com/tructransecure"><span class="screen-reader-text">Facebook</span> </a><a class="genericon_parent genericon genericon-youtube" target="_blank" title="YouTube" href="https://www.youtube.com/user/tructransecure"><span class="screen-reader-text">YouTube</span> </a><a class="genericon_parent genericon genericon-skype" target="_blank" title="Skype" href="tructransecure"><span class="screen-reader-text">Skype</span> </a>								</div><!-- .widget-wrap -->
+</section><!-- #header-right-social-icons -->
+</div><!-- .header-top-right -->
+</div><!-- .wrapper -->
+</div><!-- #header-top -->
+<header id="masthead" role="banner">
+<div class="wrapper">
+<div id="mobile-header-left-menu" class="mobile-menu-anchor primary-menu">
+<a href="#mobile-header-left-nav" id="header-left-menu" class="genericon genericon-menu">
+<span class="mobile-menu-text">Menu</span>
+</a>
+</div><!-- #mobile-header-menu -->
+<div id="site-branding">
+<div id="site-header">
+<h1 class="site-title"><a href="https://vmblogs.vn/">VMBlogs</a></h1>
+<h2 class="site-description">Chia sẻ tri thức công nghệ</h2>
+</div><!-- #site-header --></div><!-- #site-branding-->	<aside class="sidebar sidebar-header-right widget-area">
+<section class="widget widget_search" id="header-right-search">
+<div class="widget-wrap">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</section>
+</aside><!-- .sidebar .header-sidebar .widget-area -->
+</div><!-- .wrapper -->
+</header><!-- #masthead -->
+<nav class="nav-primary search-enabled" role="navigation">
+<div class="wrapper">
+<h1 class="assistive-text">Primary Menu</h1>
+<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+<ul id="menu-vmblogs" class="menu clean-journal-nav-menu"><li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li>
+<li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li>
+<li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li>
+</ul>
+</li>
+<li id="menu-item-335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>
+<li id="menu-item-721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li>
+</ul>
+</li>
+<li id="menu-item-339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li>
+<li id="menu-item-612" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li>
+<li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li id="menu-item-1172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li>
+</ul>
+</li>
+<li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li>
+</ul>                <div id="search-toggle" class="genericon">
+<a class="screen-reader-text" href="#search-container">Search</a>
+</div>
+<div id="search-container" class="displaynone">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</div><!-- .wrapper -->
+</nav><!-- .nav-primary -->
+<!-- Disable Header Image --><div id="breadcrumb-list">
+<div class="wrapper"><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/">Home <span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/category/other/">Other<span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb-current">Install Synology DSM 5.0 on PC</span></div><!-- .wrapper --> 
+</div><!-- #breadcrumb-list -->		<div id="content" class="site-content">
+<div class="wrapper">
+<main id="main" class="site-main" role="main">
+<article id="post-342" class="post-342 post type-post status-publish format-standard has-post-thumbnail hentry category-other tag-dsm-5-0 tag-synology">
+<!-- Page/Post Single Image Disabled or No Image set in Post Thumbnail -->
+<div class="entry-container">
+<header class="entry-header">
+<h1 class="entry-title">Install Synology DSM 5.0 on PC</h1>
+<p class="entry-meta"><span class="posted-on"><span class="screen-reader-text">Posted on</span><a href="https://vmblogs.vn/install-synology-dsm-5-0-pc/" rel="bookmark"><time class="entry-date published" datetime="2014-09-17T20:36:40+00:00">September 17, 2014</time><time class="updated" datetime="2014-12-30T15:00:36+00:00">December 30, 2014</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author</span><a class="url fn n" href="https://vmblogs.vn/author/admin/">Trung Truc Tran</a></span></span><span class="comments-link"><a href="https://vmblogs.vn/install-synology-dsm-5-0-pc/#respond">Leave a comment</a></span></p><!-- .entry-meta -->		</header><!-- .entry-header -->
+<div class="entry-content">
+<div class="addtoany_share_save_container addtoany_content_top"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a>
+<script type="text/javascript"><!--
+if(wpa2a)wpa2a.script_load();
+//--></script>
+</div></div><p>Install Synology DSM 5.0 on PC</p>
+<p>This topic will guide you all how to install &#8220;custom&#8221; Synology DSM 5.0 on PC</p>
+<p>Please download all necessary components below</p>
+<p>Nanoboot to help boot system and emulator PC as Synology hardware.</p>
+<p><span style="color: #ff0000;"><strong>Download</strong></span></p>
+<p><strong><span style="text-decoration: underline;">1 &#8211; Boot Images</span></strong></p>
+<p>X64 ISO</p>
+<ul>
+<li><a title="Nanoboot-5.0.3.2 DSM 5.0-4493 X64" href="https://drive.google.com/file/d/0B8bHHUWAxe2kTmhYOXhnVHNBaFE/edit?usp=sharing" target="_blank">Nanoboot-5.0.3.2 <strong>DSM 5.0-4493</strong> X64</a></li>
+<li><a title="Nanoboot-5.0.3.1 DSM 5.0-4493 X64" href="https://drive.google.com/file/d/0B8bHHUWAxe2kV08xVHptZzFBblU/edit?usp=sharing" target="_blank">Nanoboot-5.0.3.1 <strong>DSM 5.0-4493</strong> X64</a></li>
+</ul>
+<p>X86 ISO</p>
+<ul>
+<li><a title="Nanoboot-5.0.2.4 DSM 5.0-4493 X86" href="https://drive.google.com/file/d/0B8bHHUWAxe2kTFItM3o1M09GdUk/edit?usp=sharing" target="_blank">Nanoboot-5.0.2.4 <strong>DSM 5.0-4493</strong> X86</a></li>
+<li><a title="Nanoboot-5.0.2.4 DSM 5.0-4482 X86" href="https://drive.google.com/file/d/0B8bHHUWAxe2kMjlmTDZkVTZ5VXM/edit?usp=sharing" target="_blank">Nanoboot-5.0.2.4 <strong>DSM 5.0-4482</strong> X86</a></li>
+</ul>
+<p>X64 IMG</p>
+<ul>
+<li><a title="Nanoboot-5.0.3.2 DSM 5.0-4493 X64" href="https://drive.google.com/file/d/0B8bHHUWAxe2kNllJS2lBd0lkS1E/edit?usp=sharing" target="_blank">Nanoboot-5.0.3.2 <strong>DSM 5.0-4493</strong> X64</a></li>
+<li><a title="Nanoboot-5.0.3.1DSM 5.0-4493 X64" href="https://drive.google.com/file/d/0B8bHHUWAxe2kZkVDbnFEU0VlV0U/edit?usp=sharing" target="_blank">Nanoboot-5.0.3.1 <strong>DSM 5.0-4493</strong> X64</a></li>
+</ul>
+<p>X86 IMG</p>
+<ul>
+<li><a title="Nanoboot-5.0.2.4 DSM 5.0-4493 X86" href="https://drive.google.com/file/d/0B8bHHUWAxe2kVmFlNW5kckNaODA/edit?usp=sharing" target="_blank">Nanoboot-5.0.2.4 <strong>DSM</strong> <strong>5.0-4493</strong> X86</a></li>
+<li><a title="Nanoboot-5.0.2.4 DSM 5.0-4482 X86" href="https://drive.google.com/file/d/0B8bHHUWAxe2kUjYzVzJhVVJILVE/edit?usp=sharing" target="_blank">Nanoboot-5.0.2.4 <strong>DSM 5.0-4482</strong> X86</a></li>
+</ul>
+<p><a title="Win32 Disk Imager" href="http://sourceforge.net/projects/win32diskimager/" target="_blank">WIn32 Disk Imager </a>to write IMG to USB drive</p>
+<p><strong>2 &#8211; Synology DSM 5.0 from Synology</strong></p>
+<p>X64 (DS3612xs)</p>
+<ul>
+<li><a title="DSM 5.0-4493 (DS3612xs)" href="http://ukdl.synology.com/download/DSM/5.0/4493/DSM_DS3612xs_4493.pat" target="_blank">DSM 5.0-4493</a> (Main install)</li>
+</ul>
+<p>X86 (DS214play)</p>
+<ul>
+<li><a title="DSM 5.0-4493 (DS214play)" href="http://ukdl.synology.com/download/DSM/5.0/4493/DSM_DS214play_4493.pat" target="_blank">DSM 5.0-4493</a> (Main install)</li>
+<li><a title="Synology DSM 5.0-4482 (DS214play)" href="http://ukdl.synology.com/download/DSM/5.0/4482/DSM_DS214play_4482.pat" target="_blank">DSM 5.0.4482</a> (Main install)</li>
+</ul>
+<p><strong>3- <a title="Synology Assistant" href="http://global.download.synology.com/download/Tools/SynologyAssistant/4448/Windows/SynologyAssistantSetup-5.0-4448.exe" target="_blank">Synology Assistant</a> from Synology</strong>.</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-1.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-343" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-1-620x344.png" alt="Synology DSM 5 - 1" width="620" height="344" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-1-620x344.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-1-705x391.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-1.png 720w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>First, boot up target PC (Fake Synology NAS) with Nano Boot ISO file or transfer to USB device.</p>
+<p><strong><span style="color: #ff0000;">Remember that you can&#8217;t remove this CD or USB cause this helps boot process and emulate Synology hardware</span></strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-344" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2-620x465.png" alt="Synology DSM 5 - 2" width="620" height="465" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2-620x465.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2-920x690.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2-705x528.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-2.png 1024w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Boot from ISO/USB image and wait ultil DiskStation Login appears<br />
+<span id="more-342"></span></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-3.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-345" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-3-620x536.png" alt="Synology DSM 5 - 3" width="620" height="536" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-3-620x536.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-3-705x609.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-3.png 710w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Open Synology Assistant then search for Synology device on network</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-4.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-346" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-4-620x380.png" alt="Synology DSM 5 - 4" width="620" height="380" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-4-620x380.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-4-705x432.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-4.png 797w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Right click on detected Synology device and click <strong>Install</strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-5.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-347" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-5-620x427.png" alt="Synology DSM 5 - 5" width="620" height="427" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-5-620x427.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-5-705x486.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-5.png 754w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Browse to DSM 5.0 instllation file on harddrive then <strong>Next</strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-6.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-348" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-6-620x425.png" alt="Synology DSM 5 - 6" width="620" height="425" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-6-620x425.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-6-705x484.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-6.png 757w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Input admin password and server name then click <strong>Next</strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-7.png" rel="lightbox[342]"><img class="aligncenter size-full wp-image-349" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-7.png" alt="Synology DSM 5 - 7" width="507" height="129" /></a></p>
+<p>A warning dialog appears to warn about destroying all data. Click <strong>OK </strong>to go to next step</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-8.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-350" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-8-620x425.png" alt="Synology DSM 5 - 8" width="620" height="425" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-8-620x425.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-8-705x484.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-8.png 757w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Setup network information for NAS device</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-9.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-351" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-9-620x485.png" alt="Synology DSM 5 - 9" width="620" height="485" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-9-620x485.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-9-705x552.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-9.png 817w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Installation process, the fake NAS will reboot once</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-10.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-352" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-10-620x485.png" alt="Synology DSM 5 - 10" width="620" height="485" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-10-620x485.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-10-705x552.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-10.png 817w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Installation completed</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-353" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11-620x348.png" alt="Synology DSM 5 - 11" width="620" height="348" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11-620x348.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11-920x517.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11-705x396.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-11.png 1441w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Open up Internet browser and type IP of fake Synology device</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-354" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12-620x341.png" alt="Synology DSM 5 - 12" width="620" height="341" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12-620x341.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12-920x506.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12-705x387.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-12.png 1441w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click <strong>Next </strong>at Welcome Screen</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-355" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13-620x341.png" alt="Synology DSM 5 - 13" width="620" height="341" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13-620x341.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13-920x506.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13-705x387.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-13.png 1441w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Setup Quick Connect, just optional so I skip and click <strong>Next</strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-14.png" rel="lightbox[342]"><img class="aligncenter size-full wp-image-356" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-14.png" alt="Synology DSM 5 - 14" width="579" height="148" /></a></p>
+<p>A dialog appears again, just click <strong>OK</strong></p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-357" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15-620x341.png" alt="Synology DSM 5 - 15" width="620" height="341" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15-620x341.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15-920x506.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15-705x387.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-15.png 1441w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Every is OK now. Click Go and start using your fake Synology NAS</p>
+<p><a href="http://vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16.png" rel="lightbox[342]"><img class="aligncenter size-medium wp-image-358" src="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16-620x341.png" alt="Synology DSM 5 - 16" width="620" height="341" srcset="//vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16-620x341.png 620w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16-920x506.png 920w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16-705x387.png 705w, //vmblogs.vn/wp-content/uploads/2014/09/Synology-DSM-5-16.png 1441w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Interface, much better prior versions. Cheer!!!</p>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_2"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div></div>					</div><!-- .entry-content -->
+<footer class="entry-footer">
+<p class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Categories</span><a href="https://vmblogs.vn/category/other/" rel="category tag">Other</a></span><span class="tags-links"><span class="screen-reader-text">Tags</span><a href="https://vmblogs.vn/tag/dsm-5-0/" rel="tag">DSM 5.0</a>, <a href="https://vmblogs.vn/tag/synology/" rel="tag">Synology</a></span></p><!-- .entry-meta -->		</footer><!-- .entry-footer -->
+</div><!-- .entry-container -->
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links"><div class="nav-previous"><a href="https://vmblogs.vn/hdx-monitor/" rel="prev"><span class="meta-nav" aria-hidden="true">&larr; Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">HDX Monitor</span></a></div><div class="nav-next"><a href="https://vmblogs.vn/vmware-os-optimization-tool/" rel="next"><span class="meta-nav" aria-hidden="true">Next &rarr;</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">VMware OS Optimization Tool</span></a></div></div>
+</nav>
+<div id="comments" class="comments-area">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/install-synology-dsm-5-0-pc/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F">logged in</a> to post a comment.</p>		</div><!-- #respond -->
+</div><!-- #comments -->
+</main><!-- #main -->
+<aside class="sidebar sidebar-primary widget-area" role="complementary">
+<section id="meta-9" class="widget widget_meta"><div class="widget-wrap"><h4 class="widget-title">Đăng nhập</h4>			<ul>
+<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap?action=register">Register</a></li>			<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap">Log in</a></li>
+<li><a href="https://vmblogs.vn/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://vmblogs.vn/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search --><section id="categories-5" class="widget widget_categories"><div class="widget-wrap"><h4 class="widget-title">Danh mục</h4>		<ul>
+<li class="cat-item cat-item-20"><a href="https://vmblogs.vn/category/citrix/" >Citrix</a> (22)
+</li>
+<li class="cat-item cat-item-25"><a href="https://vmblogs.vn/category/citrix-receiver/" >Citrix Receiver</a> (8)
+</li>
+<li class="cat-item cat-item-21"><a href="https://vmblogs.vn/category/microsoft/" >Microsoft</a> (6)
+</li>
+<li class="cat-item cat-item-56"><a href="https://vmblogs.vn/category/news/" >News</a> (2)
+</li>
+<li class="cat-item cat-item-22"><a href="https://vmblogs.vn/category/other/" >Other</a> (34)
+</li>
+<li class="cat-item cat-item-121"><a href="https://vmblogs.vn/category/pvs/" title="Citrix Provisioning Services">Provisioning Services</a> (10)
+</li>
+<li class="cat-item cat-item-116"><a href="https://vmblogs.vn/category/security/" title="Security information and products">Security</a> (18)
+</li>
+<li class="cat-item cat-item-23"><a href="https://vmblogs.vn/category/tools/" >Tools</a> (3)
+</li>
+<li class="cat-item cat-item-24"><a href="https://vmblogs.vn/category/vmware/" >VMWare</a> (3)
+</li>
+<li class="cat-item cat-item-15"><a href="https://vmblogs.vn/category/vsphere/" >VSphere</a> (1)
+</li>
+<li class="cat-item cat-item-17"><a href="https://vmblogs.vn/category/xenapp/" >XenApp</a> (14)
+</li>
+<li class="cat-item cat-item-18"><a href="https://vmblogs.vn/category/xendesktop/" >XenDesktop</a> (8)
+</li>
+<li class="cat-item cat-item-19"><a href="https://vmblogs.vn/category/xenserver/" >XenServer</a> (3)
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->		<section id="recent-posts-6" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widget-title">Bài đăng gần đây</h4>		<ul>
+<li>
+<a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/">Cài đặt CentOS 6.7 và Virtual Tape Library</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p3/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P3</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p2-2/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P2</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/tuy-chinh-bo-cai-windows-voi-ntlite/">Tùy chỉnh bộ cài Windows với NTLite</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/web-gui-cho-vmware-esxi/">Web GUI cho VMware ESXi</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/citrix-receiver-va-citrix-director/">Citrix Receiver và Citrix Director</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cai-dat-va-cau-hinh-storefront-server/">Cài đặt và cấu hình Storefront server</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-delivery-group/">Cấu hình XenDesktop Delivery Group</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-machine-catalog/">Cấu hình XenDesktop Machine Catalog</a>
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->				</aside><!-- .sidebar sidebar-primary widget-area -->
+
+</div><!-- .wrapper -->
+</div><!-- #content -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- refreshing cache -->
+<div id="site-generator">
+<div class="wrapper">
+<div id="footer-content" class="copyright">Copyright &copy; 2016 <a href="https://vmblogs.vn/">VMBlogs</a>. All Rights Reserved. &#124; Clean Journal&nbsp;by&nbsp;<a target="_blank" href="http://catchthemes.com/">Catch Themes</a></div>
+</div><!-- .wrapper -->
+</div><!-- #site-generator -->	</footer><!-- #colophon -->
+</div><!-- #page -->
+<!-- refreshing cache --><a href="#masthead" id="scrollup" class="genericon"><span class="screen-reader-text">Scroll Up</span></a><nav id="mobile-header-left-nav" class="mobile-menu" role="navigation"><ul id="header-left-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li>
+</ul></nav><!-- #mobile-header-left-nav -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style a2a_target" id="wpa2a_3" style="right:0px;top:100px;"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Finstall-synology-dsm-5-0-pc%2F&amp;linkname=Install%20Synology%20DSM%205.0%20on%20PC" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div>
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:"Install Synology DSM 5.0 on PC",url:"https://vmblogs.vn/install-synology-dsm-5-0-pc/"},
+{title:"Install Synology DSM 5.0 on PC",url:"https://vmblogs.vn/install-synology-dsm-5-0-pc/"},
+{title:document.title,url:location.href}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/navigation.min.js?ver=20120206'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/skip-link-focus-fix.min.js?ver=20130115'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/comment-reply.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/fitvids.min.js?ver=1.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-scrollup.min.js?ver=20072014'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.34743499755859 seconds, on 09-03-16 14:47:39 Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko-->

@@ -1,0 +1,1374 @@
+# Translation of Themes - Clean Journal in Lithuanian
+# This file is distributed under the same license as the Themes - Clean Journal package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Clean Journal\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2021-04-28 23:24-0700\n"
+"PO-Revision-Date: 2021-04-28 23:24-0700\n"
+"Last-Translator: \n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr_e;esc_attr__;"
+"_nx:1,2,4c;esc_html__;esc_attr_x:1,2c;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Deja, toks puslapis nerastas."
+
+#: ../404.php:24
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Nieko nerasta. Galbūt pabandykite vieną iš nuorodų žemiau, arba paiešką?"
+
+#: ../comments.php:30
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "%1$s komentaras<!--%2$s-->"
+
+#: ../comments.php:35
+#, fuzzy, php-format
+#| msgctxt "comments title"
+#| msgid "One thought on &ldquo;%2$s&rdquo;"
+#| msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s komentaras<!--%2$s-->"
+msgstr[1] "%1$s komentarai<!--%2$s-->"
+msgstr[2] "%1$s komentarų<!--%2$s-->"
+
+#: ../comments.php:50 ../comments.php:75
+msgid "Comment navigation"
+msgstr "Komentaro naršymas"
+
+#: ../comments.php:51 ../comments.php:76
+msgid "&larr; Older Comments"
+msgstr "&larr; Senesni komentarai"
+
+#: ../comments.php:52 ../comments.php:77
+msgid "Newer Comments &rarr;"
+msgstr "Naujesni komentarai &rarr;"
+
+#: ../comments.php:87
+msgid "Comments are closed."
+msgstr "Komentarai uždrausti."
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr "Nepavyko rasti"
+
+#: ../content-none.php:21 ../no-results.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pasirengę paskelbti pirmąjį įrašą? <a href=\"%1$s\">Pradėkite čia</a>."
+
+#: ../content-none.php:25 ../no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Deja, pagal Jūsų užklausą nieko nerasta. Pabandykite dar kartą, naudodami "
+"kitokius raktažodžius."
+
+#: ../content-none.php:30 ../no-results.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Deja, neradome to, ko Jūs ieškote. Galbūt pasisektų, jei pasinaudotumėte "
+"paieška."
+
+#: ../content-page.php:28 ../content-single.php:31 ../content.php:46
+msgid "Pages:"
+msgstr "Puslapiai:"
+
+#: ../content-page.php:35 ../inc/clean-journal-core.php:668
+#: ../inc/clean-journal-core.php:687 ../inc/clean-journal-core.php:813
+msgid "Edit"
+msgstr "Редактировать"
+
+#: ../inc/clean-journal-breadcrumb.php:57
+msgid "Home"
+msgstr "Namo"
+
+#: ../inc/clean-journal-breadcrumb.php:58
+#, php-format
+msgid "%1$s Archive for %2$s"
+msgstr "%1$s archyvas %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:59
+#, php-format
+msgid "%1$sSearch results for: %2$s"
+msgstr "%1$sPaieškos rezultatal: %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:60
+#, php-format
+msgid "%1$sPosts tagged %2$s"
+msgstr "%1$sĮrašai pažymėti %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:61
+#, php-format
+msgid "%1$sView all posts by %2$s"
+msgstr "%1$sPeržiūrėti įrašus pagal %2$s"
+
+#: ../inc/clean-journal-breadcrumb.php:62
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: ../inc/clean-journal-breadcrumb.php:222
+#, php-format
+msgid "Page %s"
+msgstr "%s puslapis"
+
+#: ../inc/clean-journal-core.php:88 ../inc/clean-journal-menus.php:27
+msgid "Primary Menu"
+msgstr "Pagrindinis meniu"
+
+#: ../inc/clean-journal-core.php:89 ../inc/clean-journal-menus.php:68
+msgid "Secondary Menu"
+msgstr "Antrinis meniu"
+
+#: ../inc/clean-journal-core.php:90 ../inc/clean-journal-menus.php:204
+msgid "Header Top Menu"
+msgstr "Antraštės viršutinis meniu"
+
+#: ../inc/clean-journal-core.php:177
+msgid "Small"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:178
+msgid "S"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:183
+msgid "Normal"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:184
+msgid "M"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:189
+#, fuzzy
+#| msgid "Large Image"
+msgid "Large"
+msgstr "Didelis paveiksliukas"
+
+#: ../inc/clean-journal-core.php:190
+msgid "L"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:195
+msgid "Huge"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:196
+msgid "XL"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:206
+msgid "White"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:211
+msgid "Black"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:216
+msgid "Gray"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:221
+msgid "Viking"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:226
+msgid "Blue"
+msgstr ""
+
+#: ../inc/clean-journal-core.php:254
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "on"
+
+#: ../inc/clean-journal-core.php:260
+#, fuzzy
+#| msgctxt "Open Sans font: on or off"
+#| msgid "on"
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "on"
+
+#: ../inc/clean-journal-core.php:636 ../inc/clean-journal-core.php:1530
+msgid "Post navigation"
+msgstr "Įrašo naršymas"
+
+#: ../inc/clean-journal-core.php:645
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Senesni įrašai"
+
+#: ../inc/clean-journal-core.php:646
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Naujesni įrašai <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/clean-journal-core.php:668
+msgid "Pingback:"
+msgstr "Atgalinis pranešimas"
+
+#: ../inc/clean-journal-core.php:678
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">parašė:</span>"
+
+#: ../inc/clean-journal-core.php:684
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: ../inc/clean-journal-core.php:691
+msgid "Your comment is awaiting moderation."
+msgstr "Jūsų komentaras laukia patvirtinimo."
+
+#: ../inc/clean-journal-core.php:794
+msgid "<span class=\"screen-reader-text\">Posted on</span>"
+msgstr "<span class=\"screen-reader-text\">Paskelbta</span>"
+
+#: ../inc/clean-journal-core.php:801
+msgctxt "Used before post author name."
+msgid "<span class=\"screen-reader-text\">Author</span>"
+msgstr "<span class=\"screen-reader-text\">Autorius</span>"
+
+#: ../inc/clean-journal-core.php:809
+msgid "Leave a comment"
+msgstr "Komentuoti"
+
+#: ../inc/clean-journal-core.php:809
+msgid "1 Comment"
+msgstr "Komentarų: 1"
+
+#: ../inc/clean-journal-core.php:809
+msgid "% Comments"
+msgstr "Komentarų: %"
+
+#: ../inc/clean-journal-core.php:830 ../inc/clean-journal-core.php:838
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: ../inc/clean-journal-core.php:833
+msgctxt "Used before category names."
+msgid "<span class=\"screen-reader-text\">Categories</span>"
+msgstr "<span class=\"screen-reader-text\">Kategorijos</span>"
+
+#: ../inc/clean-journal-core.php:841
+msgctxt "Used before tag names."
+msgid "<span class=\"screen-reader-text\">Tags</span>"
+msgstr "<span class=\"screen-reader-text\">Žymės</span>"
+
+#: ../inc/clean-journal-core.php:1451
+msgid "Scroll Up"
+msgstr "Slinkti aukštyn"
+
+#: ../inc/clean-journal-core.php:1469
+msgid "Posted on"
+msgstr "Paskelbta"
+
+#: ../inc/clean-journal-core.php:1470
+msgid "By"
+msgstr "pagal"
+
+#: ../inc/clean-journal-core.php:1512
+msgid "Next &rarr;"
+msgstr "Kitas &rarr;"
+
+#: ../inc/clean-journal-core.php:1513
+msgid "Next post:"
+msgstr "Kitas įrašas:"
+
+#: ../inc/clean-journal-core.php:1515
+msgid "&larr; Previous"
+msgstr "&larr; Ankstesnis"
+
+#: ../inc/clean-journal-core.php:1516
+msgid "Previous post:"
+msgstr "Ankstesnis įrašas:"
+
+#: ../inc/clean-journal-default-options.php:56
+msgid "Read More ..."
+msgstr "Skaityti toliau ..."
+
+#: ../inc/clean-journal-default-options.php:67
+msgid "Clean Journal is a Premium Responsive WordPress Theme"
+msgstr ""
+"Clean Journal yra premium mobiliesiems įrenginiams pritaikyta WordPress tema"
+
+#: ../inc/clean-journal-default-options.php:68
+msgid ""
+"This is promotion headline. You can edit this from Appearance -> Customize -"
+"> Theme Options -> Promotion Headline Options"
+msgstr ""
+"Tai yra skatinamoji antraštė. Galite redaguoti ją per Išvaizda -> Tinkinti -"
+"> Temos parinktys -> Reklaminės antraštės parinktys"
+
+#: ../inc/clean-journal-default-options.php:69
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: ../inc/clean-journal-default-options.php:74
+msgid "Search..."
+msgstr "Paieška..."
+
+#: ../inc/clean-journal-default-options.php:85
+#: ../inc/clean-journal-featured-content.php:56
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:34
+msgid "Featured Content"
+msgstr "Rekomenduojami įrašai"
+
+#: ../inc/clean-journal-default-options.php:86
+msgid "Here you can showcase the x number of Featured Content."
+msgstr "Čia Jūs galite demonstruoti x skaičių reklaminio turinio."
+
+#: ../inc/clean-journal-default-options.php:115
+msgid "Light"
+msgstr "Šviesių spalvų"
+
+#: ../inc/clean-journal-default-options.php:116
+msgid "Dark"
+msgstr "Tamsi"
+
+#: ../inc/clean-journal-default-options.php:130
+#: ../inc/clean-journal-default-options.php:496
+msgid "Primary Sidebar, Content"
+msgstr "Pagrindinė šoninė juosta, turinys"
+
+#: ../inc/clean-journal-default-options.php:131
+#: ../inc/clean-journal-default-options.php:501
+msgid "Content, Primary Sidebar"
+msgstr "Turinys, pagrindinė šoninė juosta"
+
+#: ../inc/clean-journal-default-options.php:132
+#: ../inc/clean-journal-default-options.php:506
+msgid "No Sidebar ( Content Width )"
+msgstr "Be šoninės juostos (turinio plotis)"
+
+#: ../inc/clean-journal-default-options.php:145
+#: ../inc/clean-journal-default-options.php:242
+msgid "Show Excerpt"
+msgstr "Rodyti Ištrauką"
+
+#: ../inc/clean-journal-default-options.php:146
+msgid "Show Full Content (No Featured Image)"
+msgstr "Rodyti visą turinį (be reklaminio paveikslėlio)"
+
+#: ../inc/clean-journal-default-options.php:160
+#: ../inc/clean-journal-default-options.php:196
+msgid "Homepage / Frontpage"
+msgstr "Pradžia / titulinis"
+
+#: ../inc/clean-journal-default-options.php:161
+msgid "Excluding Homepage"
+msgstr "Išskyrus pradžią"
+
+#: ../inc/clean-journal-default-options.php:162
+msgid "Excluding Homepage, Page/Post Featured Image"
+msgstr "Išskyrus pradžią, puslapio/įrašo reklaminis paveiksliukas"
+
+#: ../inc/clean-journal-default-options.php:163
+#: ../inc/clean-journal-default-options.php:197
+msgid "Entire Site"
+msgstr "Visas tinklapis"
+
+#: ../inc/clean-journal-default-options.php:164
+msgid "Entire Site, Page/Post Featured Image"
+msgstr "Visas tinklapis, puslapio/įrašo reklaminis paveiksliukas"
+
+#: ../inc/clean-journal-default-options.php:165
+msgid "Pages and Posts"
+msgstr "Puslapiai ir įrašai"
+
+#: ../inc/clean-journal-default-options.php:166
+#: ../inc/clean-journal-default-options.php:198
+#: ../inc/clean-journal-default-options.php:330
+msgid "Disabled"
+msgstr "Neįgaliesiems"
+
+#: ../inc/clean-journal-default-options.php:180
+#: ../inc/clean-journal-default-options.php:559
+msgid "Full Image"
+msgstr "Visas paveiksliukas"
+
+#: ../inc/clean-journal-default-options.php:181
+msgid "Large Image"
+msgstr "Didelis paveiksliukas"
+
+#: ../inc/clean-journal-default-options.php:182
+msgid "Slider Image"
+msgstr "Slankiklio paveiksliukas"
+
+#: ../inc/clean-journal-default-options.php:212
+#: ../inc/clean-journal-default-options.php:258
+msgid "Demo"
+msgstr ""
+
+#: ../inc/clean-journal-default-options.php:213
+#: ../inc/clean-journal-default-options.php:259
+#, fuzzy
+#| msgid "Pages:"
+msgid "Page"
+msgstr "Puslapiai:"
+
+#: ../inc/clean-journal-default-options.php:227
+msgid "3 columns"
+msgstr "3 stulpeliai"
+
+#: ../inc/clean-journal-default-options.php:228
+msgid "4 columns"
+msgstr "4 stulpeliai"
+
+#: ../inc/clean-journal-default-options.php:243
+msgid "Show Full Content"
+msgstr "Rodyti pilną turinį"
+
+#: ../inc/clean-journal-default-options.php:244
+msgid "Hide Content"
+msgstr "Slepti turinį"
+
+#: ../inc/clean-journal-default-options.php:273
+msgid "Fade"
+msgstr "Stelbti"
+
+#: ../inc/clean-journal-default-options.php:274
+msgid "Fade Out"
+msgstr "Išnykti"
+
+#: ../inc/clean-journal-default-options.php:275
+msgid "None"
+msgstr "Нет"
+
+#: ../inc/clean-journal-default-options.php:276
+msgid "Scroll Horizontal"
+msgstr "Slinkti horizontaliai"
+
+#: ../inc/clean-journal-default-options.php:277
+msgid "Scroll Vertical"
+msgstr "Slinkti vertikaliai"
+
+#: ../inc/clean-journal-default-options.php:278
+msgid "Flip Horizontal"
+msgstr "Apsukti horizontaliai"
+
+#: ../inc/clean-journal-default-options.php:279
+msgid "Flip Vertical"
+msgstr "Apsukti vertikaliai"
+
+#: ../inc/clean-journal-default-options.php:280
+msgid "Tile Slide"
+msgstr "Plytelių slinkimas"
+
+#: ../inc/clean-journal-default-options.php:281
+msgid "Tile Blind"
+msgstr "Plytelių užuolaida"
+
+#: ../inc/clean-journal-default-options.php:295
+msgid "True"
+msgstr "Tiesa"
+
+#: ../inc/clean-journal-default-options.php:296
+msgid "Wait"
+msgstr "Laukti"
+
+#: ../inc/clean-journal-default-options.php:297
+msgid "False"
+msgstr "Netiesa"
+
+#: ../inc/clean-journal-default-options.php:311
+msgid "Default(Older Posts/Newer Posts)"
+msgstr "Įprastas (senesni pranešimai/naujesni pranešimai)"
+
+#: ../inc/clean-journal-default-options.php:312
+msgid "Numeric"
+msgstr "Skaitinė"
+
+#: ../inc/clean-journal-default-options.php:313
+msgid "Infinite Scroll (Click)"
+msgstr "Begalinis slinkimas (paspaudimas)"
+
+#: ../inc/clean-journal-default-options.php:314
+msgid "Infinite Scroll (Scroll)"
+msgstr "Begalinis slinkimas (slinkimas)"
+
+#: ../inc/clean-journal-default-options.php:328
+msgid "Featured"
+msgstr "Рекомендуемые"
+
+#: ../inc/clean-journal-default-options.php:329
+msgid "Full Size"
+msgstr "Pilnas"
+
+#: ../inc/clean-journal-default-options.php:345
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../inc/clean-journal-default-options.php:349
+msgid "Twitter"
+msgstr " Twitter socialiniuose tinkluose"
+
+#: ../inc/clean-journal-default-options.php:353
+msgid "Googleplus"
+msgstr "Googleplus"
+
+#: ../inc/clean-journal-default-options.php:357
+#: ../inc/clean-journal-social-icons.php:36
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/clean-journal-default-options.php:361
+msgid "Feed"
+msgstr "Kanalas"
+
+#: ../inc/clean-journal-default-options.php:365
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../inc/clean-journal-default-options.php:369
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/clean-journal-default-options.php:373
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: ../inc/clean-journal-default-options.php:377
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: ../inc/clean-journal-default-options.php:381
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../inc/clean-journal-default-options.php:385
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/clean-journal-default-options.php:389
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/clean-journal-default-options.php:393
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: ../inc/clean-journal-default-options.php:397
+msgid "Instagram"
+msgstr "Instagram"
+
+#: ../inc/clean-journal-default-options.php:401
+msgid "PollDaddy"
+msgstr "PollDaddy"
+
+#: ../inc/clean-journal-default-options.php:405
+msgid "CodePen"
+msgstr "CodePen"
+
+#: ../inc/clean-journal-default-options.php:409
+msgid "Path"
+msgstr "Adresas (path)"
+
+#: ../inc/clean-journal-default-options.php:413
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: ../inc/clean-journal-default-options.php:417
+msgid "Skype"
+msgstr "Skype"
+
+#: ../inc/clean-journal-default-options.php:421
+msgid "Digg"
+msgstr "Digg"
+
+#: ../inc/clean-journal-default-options.php:425
+msgid "Reddit"
+msgstr "Reddit"
+
+#: ../inc/clean-journal-default-options.php:429
+msgid "Stumbleupon"
+msgstr "Stumbleupon"
+
+#: ../inc/clean-journal-default-options.php:433
+msgid "Pocket"
+msgstr "Pocket"
+
+#: ../inc/clean-journal-default-options.php:437
+msgid "DropBox"
+msgstr "DropBox"
+
+#: ../inc/clean-journal-default-options.php:441
+msgid "Spotify"
+msgstr "Spotify"
+
+#: ../inc/clean-journal-default-options.php:445
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: ../inc/clean-journal-default-options.php:449
+msgid "Twitch"
+msgstr "Twitch"
+
+#: ../inc/clean-journal-default-options.php:453
+msgid "Website"
+msgstr "Interneto svetainėje"
+
+#: ../inc/clean-journal-default-options.php:457
+msgid "Phone"
+msgstr "Telefono Nr."
+
+#: ../inc/clean-journal-default-options.php:461
+msgid "Handset"
+msgstr "Įrengnys"
+
+#: ../inc/clean-journal-default-options.php:465
+msgid "Cart"
+msgstr "Krepšelis"
+
+#: ../inc/clean-journal-default-options.php:469
+msgid "Cloud"
+msgstr "Debesis"
+
+#: ../inc/clean-journal-default-options.php:473
+msgid "Link"
+msgstr "Nuoroda"
+
+#: ../inc/clean-journal-default-options.php:491
+#: ../inc/clean-journal-default-options.php:522
+#: ../inc/clean-journal-default-options.php:549
+msgid "Default"
+msgstr "Standartiniai nustatymai"
+
+#: ../inc/clean-journal-default-options.php:527
+msgid "Enable"
+msgstr "Įjungti"
+
+#: ../inc/clean-journal-default-options.php:532
+msgid "Disable"
+msgstr "Išjungti"
+
+#: ../inc/clean-journal-default-options.php:554
+msgid "Featured Image"
+msgstr "Spec. paveikslėlis"
+
+#: ../inc/clean-journal-default-options.php:564
+msgid "Disable Image"
+msgstr "Išjungti paveikslėlį"
+
+#: ../inc/clean-journal-default-options.php:579
+#, fuzzy, php-format
+#| msgctxt "1: Year, 2: Site Title with home URL"
+#| msgid "Copyright &copy; %1$s %2$s. All Rights Reserved."
+msgctxt "1: Year, 2: Site Title with home URL 3: Privacy Policy Link\n"
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved. %3$s"
+msgstr "Autorinės teisės &copy; %1$s %2$s. Visos Teisės Saugomos."
+
+#: ../inc/clean-journal-default-options.php:580
+#, fuzzy
+#| msgctxt "yearly archives date format"
+#| msgid "Y"
+msgid "Y"
+msgstr "Y"
+
+#: ../inc/clean-journal-default-options.php:582
+msgid "by"
+msgstr " "
+
+#: ../inc/clean-journal-featured-content.php:57
+msgid ""
+"Here you can showcase the x number of Featured Content. You can edit this "
+"Headline, Subheadline and Feaured Content from \"Appearance -> Customize -> "
+"Featured Content Options\"."
+msgstr ""
+"Čia Jūs galite demonstruoti x skaičių reklaminio turinio. Jūs galite "
+"redaguoti šią antraštę, Paantraštę ir reklaminį turinį iš \"Išvaizda -> "
+"Tinkinti -> Reklaminio turinio parinktys\"."
+
+#: ../inc/clean-journal-featured-content.php:256
+#: ../inc/clean-journal-featured-slider.php:180
+msgid "Permalink to: "
+msgstr "Pastovi nuoroda į:"
+
+#: ../inc/clean-journal-menus.php:43
+msgid "Search"
+msgstr "Поиск"
+
+#: ../inc/clean-journal-menus.php:157 ../inc/clean-journal-menus.php:176
+msgid "Menu"
+msgstr "Meniu"
+
+#: ../inc/clean-journal-metabox.php:89
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:181
+msgid "Layout Options"
+msgstr "Maketo parinktys"
+
+#: ../inc/clean-journal-metabox.php:106
+msgid "Header Featured Image Options"
+msgstr "Antraštės reklaminio paveikslėlio parinktys"
+
+#: ../inc/clean-journal-metabox.php:123
+#, fuzzy
+#| msgid "Single Page/Post Image Layout "
+msgid "Single Page/Post Image Layout"
+msgstr "Atskiro puslapio/įrašo paveikslėlio padėtis"
+
+#: ../inc/clean-journal-metabox.php:186
+msgid "Clean Journal Options"
+msgstr "Clean Journal nustatymai"
+
+#: ../inc/clean-journal-structure.php:65
+msgid "Skip to content"
+msgstr "Eiti prie turinio"
+
+#: ../inc/clean-journal-structure.php:89
+msgid ""
+"This is Header Top Area. Assign Header Top Menu and Social Icons from Theme "
+"Customizer"
+msgstr ""
+
+#: ../inc/clean-journal-widgets.php:30
+msgid "Primary Sidebar"
+msgstr "Pagr. šoninė juosta"
+
+#: ../inc/clean-journal-widgets.php:36
+msgid ""
+"This is the primary sidebar if you are using a two or three column site "
+"layout option."
+msgstr ""
+"Tai yra pagrindinė šoninė juosta, jei Jūs naudojate dviejų ar trijų "
+"stulpelių svetainės išdėstymo variantą."
+
+#: ../inc/clean-journal-widgets.php:43
+#, php-format
+msgid "Footer Area %d"
+msgstr "Apačios sritis %d"
+
+#: ../inc/clean-journal-widgets.php:49
+#, php-format
+msgid "Footer %d widget area."
+msgstr "Apačia %d valdiklio sritis."
+
+#: ../inc/clean-journal-widgets.php:69
+msgid "CT: Social Icons"
+msgstr "CT: Soc. tinklų piktogramos"
+
+#: ../inc/clean-journal-widgets.php:70
+msgid "Use this widget to add Social Icons as a widget. "
+msgstr ""
+"Naudokite šį valdiklį tam, kad pridėti socialines piktogramas kaip "
+"valdiklius."
+
+#: ../inc/clean-journal-widgets.php:111
+msgid "Title (optional):"
+msgstr "Pavadinimas (nebūtina):"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:29
+#, fuzzy
+#| msgid "Select Categories"
+msgid "All Categories"
+msgstr "Pasirinkite kategorijas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:36
+msgid ""
+"Hold down the Ctrl (windows) / Command (Mac) button to select multiple "
+"options."
+msgstr ""
+"Laikykite nuspaudę Ctrl (Windows) / Command (Mac) mygtuką, norėdami "
+"pasirinkti kelis variantus."
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:49
+msgid "Theme Instructions"
+msgstr "Temos instrukcijos"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:53
+msgid "Support"
+msgstr "atbalstīt"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:57
+msgid "Changelog"
+msgstr "Pakeitimų sąrašas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:61
+msgid "Donate Now"
+msgstr "Paaukok dabar"
+
+#: ../inc/customizer-includes/clean-journal-customizer-custom-controls.php:65
+msgid "Review"
+msgstr "Apžvalga"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:28
+msgid "Featured Content Options"
+msgstr "Reklaminio turinio parinktys "
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:46
+msgid "Enable Featured Content on"
+msgstr "Įjungti reklaminį turinį"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:62
+msgid "Select Featured Content Layout"
+msgstr "Pasirinkti reklaminio turinio išdėstymą"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:77
+msgid "Check to Move above Footer"
+msgstr "Pažymėkite norėdami perkelti aukščiau apačios"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:93
+msgid "Select Content Type"
+msgstr "Pasirinkite Turinio tipą"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:108
+msgid "Leave field empty if you want to remove Headline"
+msgstr "Palikite lauką tuščią, jei norite pašalinti antraštę"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:109
+msgid "Headline for Featured Content"
+msgstr "Antraštė reklaminiam turiniui"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:125
+msgid "Leave field empty if you want to remove Sub-headline"
+msgstr "Palikite lauką tuščią, jei norite pašalinti poantraštę"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:126
+msgid "Sub-headline for Featured Content"
+msgstr "Poantraštė reklaminiam turiniui"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:142
+msgid ""
+"Save and refresh the page if No. of Featured Content is changed (Max no of "
+"Featured Content is 20)"
+msgstr ""
+"Išsaugokite ir atnaujinkite puslapį, jei reklaminio turinio skaičius "
+"pasikeitė (Max skaičius reklaminio turinio yra 20)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:149
+msgid "No of Featured Content"
+msgstr "Reklaminio turinio skaičius"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:166
+msgid "Display Content"
+msgstr "Rodyti turinį"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-content-setting.php:184
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:171
+msgid "Featured Page"
+msgstr "Reklaminis puslapis"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:19
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:27
+msgid "Featured Slider Options"
+msgstr "Reklaminio slinkiklio parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:33
+msgid "Featured Slider"
+msgstr "Karuselė"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:45
+msgid "Enable Slider on"
+msgstr "Įjungti slinkiklį"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:61
+msgid "Transition Effect"
+msgstr "Pereinamasis efektas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:77
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:96
+msgid "seconds(s)"
+msgstr "sekundės(-džių)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:81
+msgid "Transition Delay"
+msgstr "Perėjimo delsimas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:100
+msgid "Transition Length"
+msgstr "Perėjimo ilgis"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:116
+msgid "Image Loader"
+msgstr "Paveikslėlių įkėlėjas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:132
+msgid "Select Slider Type"
+msgstr "Pasirinkite slankiklio tipą"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:147
+msgid ""
+"Save and refresh the page if No. of Slides is changed (Max no of slides is "
+"20)"
+msgstr ""
+"Išsaugokite ir atnaujinkite puslapį, jei skaidrių skaičius yra pasikeitęs "
+"(maks. skaičius skaidrių yra 20)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-featured-slider.php:154
+msgid "No of Slides"
+msgstr "Skaidrių skaičius"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:25
+msgid "Enable Featured Header Image on "
+msgstr "Įjungti reklaminės antraštės paveiksliuką"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:40
+msgid "Page/Post Featured Header Image Size"
+msgstr "Puslapio/įrašo reklaminės antraštės paveiksliuko dydis"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:53
+msgid "Featured Header Image Alt/Title Tag "
+msgstr "Reklaminės antraštės paveiksliuko alternatyvus tekstas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:66
+msgid "Featured Header Image Link URL"
+msgstr "Reklaminės antraštės paveiksliuko nuorodos URL"
+
+#: ../inc/customizer-includes/clean-journal-customizer-header-options.php:79
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:364
+msgid "Check to Open Link in New Window/Tab"
+msgstr "Pažymėkite, kad atidaryti nuorodą naujame lange/kortelėje"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:19
+msgid "Note: Enter the url for correponding social networking website"
+msgstr "Pastaba: įveskite URL atitinkamai socialinio tinklo svetainei"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:21
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:28
+msgid "Social Links"
+msgstr "Socialinės nuorodos"
+
+#: ../inc/customizer-includes/clean-journal-customizer-social-icons.php:41
+msgid ""
+"Skype link can be of formats:<br>callto://+{number}<br> skype:{username}?"
+"{action}. More Information in readme file"
+msgstr ""
+"Skype nuoroda gali būti formatais:<br>callto://+{number}<br> skype:"
+"{username}?{action}. Daugiau informacijos readme faile."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:20
+msgid "Basic theme Options"
+msgstr "Pagrindinės temos parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:23
+msgid "Theme Options"
+msgstr "Apipavidalinimo Parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:29
+msgid ""
+"Breadcrumbs are a great way of letting your visitors find out where they are "
+"on your site with just a glance. You can enable/disable them on homepage and "
+"entire site."
+msgstr ""
+"Viršutinis slankusis laukas yra puikus būdas leisti savo lankytojams "
+"sužinoti, kur jie yra jūsų svetainėje vos tik žvilgterėjus. Jūs galite "
+"įjungti/išjungti juos puslapyje ir visoje svetainėje."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:31
+msgid "Breadcrumb Options"
+msgstr "Viršutinio slankaus lauko parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:42
+msgid "Check to enable Breadcrumb"
+msgstr "Pažymėkite norėdami įjungti viršutinį slankųjį lauką."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:55
+msgid "Check to enable Breadcrumb on Homepage"
+msgstr ""
+"Pažymėkite norėdami įjungti viršutinį slankųjį lauką pradžios puslapyje."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:71
+msgid "Separator between Breadcrumbs"
+msgstr "Viršutiniojo slankaus lauko skirtukas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:86
+msgid "Custom/Inline CSS"
+msgstr "Individualus/Inline CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:89
+msgid "Custom CSS Options"
+msgstr "Individualaus CSS parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:99
+msgid "Enter Custom CSS"
+msgstr "Įveskite individualų CSS"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:113
+msgid "Excerpt Options"
+msgstr "Ištraukos parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:123
+msgid "Excerpt length. Default is 55 words"
+msgstr "Numatytasis nustatymas yra 55 žodžiai."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:130
+msgid "Excerpt Length (words)"
+msgstr "Ištraukos Ilgis (žodžiais)"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:144
+msgid "Read More Text"
+msgstr "Skaityti daugiau teksto"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:153
+msgid ""
+"Only posts that belong to the categories selected here will be displayed on "
+"the front page"
+msgstr ""
+"Tik pranešimai, kurie priklauso vienai iš pažymėtų kategorijų, bus rodomi "
+"tituliniame puslapyje."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:156
+msgid "Homepage / Frontpage Options"
+msgstr "Pradžios/titulinio puslapio parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:166
+msgid "Select Categories"
+msgstr "Pasirinkite kategorijas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:192
+msgid "Default Layout"
+msgstr "Numatytasis išdėstymas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:206
+msgid "Archive Content Layout"
+msgstr "Archyvo turinio išdėstymas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:219
+msgid "Single Page/Post Image Layout "
+msgstr "Atskiro puslapio/įrašo paveikslėlio padėtis"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:230
+#, fuzzy, php-format
+#| msgid ""
+#| "Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+#| "Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" "
+#| "href=\"%s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%1$s\">WP-PageNavi "
+"Plugin</a>.<br/>Infinite Scroll Options requires <a target=\"_blank\" href="
+"\"%2$s\">JetPack Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Skaičių variantas reikalauja <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+"įskiepio</a> . <br/> Begalinio slinkimo parinktys reikalauja <a target="
+"\"_blank\" href=\"%s\">Jetpack įskiepio</a> su įjungtu begalinio slinkimo "
+"moduliu."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:237
+#, php-format
+msgid ""
+"Infinite Scroll Options requires <a target=\"_blank\" href=\"%s\">JetPack "
+"Plugin</a> with Infinite Scroll module Enabled."
+msgstr ""
+"Begalinio slinkimo parinktys reikalauja <a target=\"_blank\" href=\"%s"
+"\">Jetpack įskiepio</a> su įjungtu begalinio slinkimo moduliu."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:248
+#, php-format
+msgid ""
+"Numeric Option requires <a target=\"_blank\" href=\"%s\">WP-PageNavi Plugin</"
+"a>."
+msgstr ""
+"Skaičių variantas reikalauja <a target=\"_blank\" href=\"%s\">WP-PageNavi "
+"įskiepio</a> ."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:259
+msgid "Pagination Options"
+msgstr "Numeracijos parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:270
+msgid "Pagination type"
+msgstr "Numeracijos tipas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:279
+msgid "To disable the fields, simply leave them empty."
+msgstr "Norėdami išjungti laukus, tiesiog palikite juos tuščius."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:282
+msgid "Promotion Headline Options"
+msgstr "Reklaminės antraštės parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:293
+msgid "Enable Promotion Headline on"
+msgstr "Įjungti reklaminę antraštę"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:307
+msgid "Appropriate Words: 10"
+msgstr "Tinka žodžių: 10"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:308
+msgid "Promotion Headline Text"
+msgstr "Reklaminės antraštės tekstas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:321
+msgid "Appropriate Words: 15"
+msgstr "Tinka žodžių: 15"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:322
+msgid "Promotion Subheadline Text"
+msgstr "Reklaminės poantraštės tekstas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:335
+msgid "Appropriate Words: 3"
+msgstr "Tinka žodžių: 3"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:336
+msgid "Promotion Headline Button Text "
+msgstr "Reklaminės antraštės mygtuko tekstas"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:350
+msgid "Promotion Headline Link"
+msgstr "Reklaminės antraštės nuoroda"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:376
+msgid "Scrollup Options"
+msgstr "Scrollup nustatymai"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:386
+msgid "Check to disable Scroll Up"
+msgstr "Pažymėję išjungsite Scroll Up efektą"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:395
+msgid "Change default placeholder text in Search."
+msgstr "Keisti numatytąjį tekstą paieškoje."
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:398
+msgid "Search Options"
+msgstr "Paieškos parinktys"
+
+#: ../inc/customizer-includes/clean-journal-customizer-theme-options.php:408
+msgid "Default Display Text in Search"
+msgstr "Įprastas ekrano tekstas paieškoje"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:53
+msgid "Logo"
+msgstr "Logotipas"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:66
+msgid "Check to disable logo"
+msgstr "Pažymėkite langelį, jei norite išjungti logotipą."
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:80
+msgid "Logo Alt Text"
+msgstr "Logotipo alternatyvus tekstas"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:95
+msgid "Check to move Site Title and Tagline before logo"
+msgstr ""
+"Pažymėkite norėdami padėti tinklapio pavadinimą ir apibūdinimą prieš logotipą"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:113
+msgid "Color Scheme"
+msgstr "Spalvų schema"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:138
+msgid ""
+"Caution: Reset all settings to default. Refresh the page after save to view "
+"full effects."
+msgstr ""
+"Atsargiai: Atstatykite visus nustatymus į numatytuosius. Po išsaugojimo "
+"atnaujinkite puslapį, kad galėtumėte peržiūrėti pilną efektą."
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:140
+msgid "Reset all settings"
+msgstr "Atstatyti visus nustatymus"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:151
+msgid "Check to reset all settings to default"
+msgstr "Pažymėkite norėdami atstatyti visus nustatymus į numatytuosius"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:161
+#: ../inc/customizer-includes/clean-journal-customizer.php:172
+msgid "Important Links"
+msgstr "Svarbios nuorodos"
+
+#: ../inc/customizer-includes/clean-journal-customizer.php:206
+msgid "Refresh the customizer page after saving to view reset effects"
+msgstr ""
+"Po išsaugojimo atnaujinkite puslapį, kad galėtumėte peržiūrėti pilną efektą."
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:76
+msgid "Clean Journal Pro"
+msgstr "Clean Journal Pro"
+
+#: ../inc/customizer-includes/upgrade-button/class-customize.php:77
+msgid "Upgrade Now"
+msgstr ""
+
+#: ../no-results.php:14
+msgid "Error 404-Page NOT Found"
+msgstr "Klaida 404 puslapis nerastas"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Paieškos rezultatai skirti: %s"
+
+#: ../searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "Ieškoti:"
+
+#: ../searchform.php:17
+msgctxt "submit button"
+msgid "Search"
+msgstr "Paieška"
+
+#: ../sidebar.php:37
+msgid "Primary Sidebar Widget Area"
+msgstr "Pagrindinės šoninės juostos valdiklių sritis"
+
+#: ../sidebar.php:40
+msgid ""
+"This is the Primary Sidebar Widget Area if you are using a two or three "
+"column site layout option."
+msgstr ""
+"Tai yra pagrindinės šoninės juostos valdiklių sritis, jei naudojate dviejų "
+"ar trijų stulpelių svetainės išdėstymo variantą."
+
+#: ../sidebar.php:41
+#, php-format
+msgid ""
+"By default it will load Search and Archives widgets as shown below. You can "
+"add widget to this area by visiting your <a href=\"%s\">Widgets Panel</a> "
+"which will replace default widgets."
+msgstr ""
+"Pagal nutylėjimą jis užkraus paieškos ir archyvų valdiklius, kaip parodyta "
+"žemiau. Jūs galite pridėti valdiklį į šią sritį apsilankę savo <a href=\"%s"
+"\">valdiklių skyde</a> , kuris pakeis numatytuosius valdiklius."
+
+#: ../sidebar.php:54
+msgid "Archives"
+msgstr "Archyvai"
+
+#~ msgid "Shuffle"
+#~ msgstr "Shuffle"
+
+#~ msgctxt "Droid Sans font: on or off"
+#~ msgid "on"
+#~ msgstr "Įjungti"
+
+#~ msgid "Demo Featured Content"
+#~ msgstr "Demo reklaminis turinys"
+
+#~ msgid "Featured Page Content"
+#~ msgstr "reklaminis puslapio turinys"
+
+#~ msgid "Demo Featured Slider"
+#~ msgstr "Demo reklaminis slankiklis"
+
+#~ msgid "Featured Page Slider"
+#~ msgstr "Reklaminis puslapio slankiklis"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Remove Icon images to disable."
+#~ msgstr "Pašalinkite favicon paveiksliukus tam, kad išjungti."
+
+#~ msgid "Icon Options"
+#~ msgstr "Ikonos parinktys"
+
+#~ msgid "Select/Add Favicon"
+#~ msgstr "Pasirinkti/įdėti Favicon"
+
+#~ msgid ""
+#~ "Web Clip Icon for Apple devices. Recommended Size - Width 144px and "
+#~ "Height 144px height, which will support High Resolution Devices like iPad "
+#~ "Retina."
+#~ msgstr ""
+#~ "Web Clip ikona Apple įrenginiams. Rekomenduojamas dydis - plotis 144px ir "
+#~ "aukštis 144px, kuris palaikys didelės raiškos įrenginius, pavyzdžiui, "
+#~ "iPad Retina."
+
+#~ msgid "Select/Add Web Clip Icon"
+#~ msgstr "Pasirinkti/pridėti Web Clip ikoną"
+
+#~ msgid "Clean Journal"
+#~ msgstr "Clean Journal"
+
+#~ msgid "https://catchthemes.com/themes/clean-journal"
+#~ msgstr "https://catchthemes.com/themes/clean-journal"
+
+#~ msgid "Catch Themes"
+#~ msgstr "Catch Themes"
+
+#~ msgid "https://catchthemes.com/"
+#~ msgstr "https://catchthemes.com/"
+
+#~ msgid "Upgrade To Pro &raquo;"
+#~ msgstr "Atnaujinkite į Pro &raquo;"
+
+#~ msgid ""
+#~ "Some settings might be missing or disorganized in this version of "
+#~ "WordPress. So we suggest you to upgrade to version 4.0 or better."
+#~ msgstr ""
+#~ "Kai kurių nustatymų gali trūkti arba būti neorganizuoti šioje WordPress "
+#~ "versijoje. Taigi, mes rekomenduojame jums atnaujinti iki versijos 4.0 ar "
+#~ "geresnės."
+
+#~ msgid "Chats"
+#~ msgstr "Pokalbiai"
+
+#~ msgid "Audios"
+#~ msgstr "Audio"
+
+#~ msgid "Statuses"
+#~ msgstr "Statusai"
+
+#~ msgid "Links"
+#~ msgstr "Saitai"
+
+#~ msgid "Quotes"
+#~ msgstr "Citatos"
+
+#~ msgid "Videos"
+#~ msgstr "Video"
+
+#~ msgid "Images"
+#~ msgstr "Изображения"
+
+#~ msgid "Galleries"
+#~ msgstr "Galerijos"
+
+#~ msgid "Asides"
+#~ msgstr "Užrašai"
+
+#~ msgid "Year: %s"
+#~ msgstr "Metai: %s"
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+#~ msgid "Month: %s"
+#~ msgstr "Mėnuo: %s"
+
+#~ msgid "Day: %s"
+#~ msgstr "Diena: %s"
+
+#~ msgid "Author: %s"
+#~ msgstr "Autorius: %s"

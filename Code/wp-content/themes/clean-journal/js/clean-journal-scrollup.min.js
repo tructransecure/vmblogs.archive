@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery(function(){jQuery(window).on( 'scroll',function(){100<jQuery(this).scrollTop()?(jQuery("#scrollup").fadeIn("slow"),jQuery("#scrollup").show()):(jQuery("#scrollup").fadeOut("slow"),jQuery("#scrollup").hide())}),jQuery("#scrollup").on( 'click',function(){return jQuery("body,html").animate({scrollTop:0},500),!1})})});

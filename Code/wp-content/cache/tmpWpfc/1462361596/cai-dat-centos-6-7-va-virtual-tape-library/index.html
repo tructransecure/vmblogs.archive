@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="//gmpg.org/xfn/11">
+<link rel="pingback" href="">
+<!--[if lt IE 9]>
+<script src="//vmblogs.vn/wp-content/themes/clean-journal/js/html5.min.js"></script>
+<![endif]-->
+<title>Cài đặt CentOS 6.7 và Virtual Tape Library</title>
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="keywords" content="Virtual Tape Library"/>
+<link rel="canonical" href="//vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cài đặt CentOS 6.7 và Virtual Tape Library" />
+<meta property="og:description" content="Cài đặt CentOS 6.7 và Virtual Tape Library Tape backup vẫn còn rất phổ biến ngày nay ở rất nhiều doanh nghiệp tuy nhiên để tiếp cận các thiết bị tape hoặc tape library dường như khó khăn cho rất nhiều người. Trong bài viết này mình sẽ hướng dẫn cài đặt Virtual Tape Library Read More ..." />
+<meta property="og:url" content="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/" />
+<meta property="og:site_name" content="VMBlogs" />
+<meta property="article:publisher" content="https://www.facebook.com/tructransecure" />
+<meta property="article:author" content="https://www.facebook.com/tructransecure" />
+<meta property="article:tag" content="Virtual Tape Library" />
+<meta property="article:section" content="Other" />
+<meta property="article:published_time" content="2015-12-23T14:28:24+00:00" />
+<meta property="og:image" content="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-14.26.00.png" />
+<!-- / Yoast SEO plugin. -->
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/vmblogs.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4"}};
+!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),c.toDataURL().length>3e3):("simple"===a?d.fillText(String.fromCharCode(55357,56835),0,0):d.fillText(String.fromCharCode(55356,57135),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='gglcptch-css'  href='//vmblogs.vn/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.21' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='//vmblogs.vn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journalfonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CDroid+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='clean-journalstyle-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/style.css?ver=4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='//vmblogs.vn/wp-content/themes/clean-journal/css/genericons/genericons.css?ver=3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='//vmblogs.vn/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.11' type='text/css' media='all' />
+<style id='A2A_SHARE_SAVE-inline-css' type='text/css'>
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+</style>
+<script type='text/javascript' src='//www.google.com/recaptcha/api.js?render=explicit&#038;hl=en&#038;ver=1.21'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gglcptch = {"options":{"version":"v2","sitekey":"6LcVVAMTAAAAAIwrDh5EkCdHvSCOqvGZoleD0TgS","theme":"light"},"vars":{"ajaxurl":"https:\/\/vmblogs.vn\/wp-admin\/admin-ajax.php","error_msg":"Error: You have entered an incorrect reCAPTCHA value.","nonce":"d99d0586b9"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-captcha/js/script.js?ver=1.21'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/jquery.sidr.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-custom-scripts.min.js'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+<link rel='https://api.w.org/' href='//vmblogs.vn/wp-json/' />
+<meta name="generator" content="WordPress 4.4" />
+<link rel="alternate" type="application/json+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F" />
+<link rel="alternate" type="text/xml+oembed" href="//vmblogs.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&#038;format=xml" />
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});
+//--></script>
+<!-- refreshing cache --><link rel="shortcut icon" href="//vmblogs.vn/wp-content/uploads/2015/11/favicon.ico" type="image/x-icon" /><!-- refreshing cache -->	<style type="text/css">
+.site-title a,
+.site-description {
+color: #111111;
+}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f9f9f9; }
+</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+var analyticsFileTypes = [''];
+var analyticsSnippet = 'disabled';
+var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17687675-1', 'auto');
+ga('send', 'pageview');
+ga('send', 'pageview');
+</script>
+</head>
+<body class="single single-post postid-1862 single-format-standard custom-background two-columns content-left excerpt-image-left mobile-menu-one">
+<div id="page" class="hfeed site">
+<div id="header-top" class="header-top-bar">
+<div class="wrapper">
+<div class="header-top-right full-width">
+<section class="widget widget_clean_journal_social_icons" id="header-right-social-icons">
+<div class="widget-wrap">
+<a class="genericon_parent genericon genericon-facebook-alt" target="_blank" title="facebook" href="https://www.facebook.com/tructransecure"><span class="screen-reader-text">Facebook</span> </a><a class="genericon_parent genericon genericon-youtube" target="_blank" title="youtube" href="https://www.youtube.com/user/tructransecure"><span class="screen-reader-text">YouTube</span> </a><a class="genericon_parent genericon genericon-skype" title="skype" href="tructransecure"><span class="screen-reader-text">Skype</span> </a>								</div><!-- .widget-wrap -->
+</section><!-- #header-right-social-icons -->
+</div><!-- .header-top-right -->
+</div><!-- .wrapper -->
+</div><!-- #header-top -->
+<header id="masthead" role="banner">
+<div class="wrapper">
+<div id="mobile-header-left-menu" class="mobile-menu-anchor primary-menu">
+<a href="#mobile-header-left-nav" id="header-left-menu" class="genericon genericon-menu">
+<span class="mobile-menu-text">Menu</span>
+</a>
+</div><!-- #mobile-header-menu -->
+<div id="site-branding">
+<div id="site-header">
+<h1 class="site-title"><a href="https://vmblogs.vn/">VMBlogs</a></h1>
+<h2 class="site-description">Chia sẻ tri thức công nghệ</h2>
+</div><!-- #site-header --></div><!-- #site-branding-->	<aside class="sidebar sidebar-header-right widget-area">
+<section class="widget widget_search" id="header-right-search">
+<div class="widget-wrap">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</section>	
+</aside><!-- .sidebar .header-sidebar .widget-area -->	
+</div><!-- .wrapper -->
+</header><!-- #masthead -->
+<nav class="nav-primary search-enabled" role="navigation">
+<div class="wrapper">
+<h1 class="assistive-text">Primary Menu</h1>
+<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+<ul id="menu-vmblogs" class="menu clean-journal-nav-menu"><li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li><li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li><li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>	<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li></ul>
+</li><li id="menu-item-335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>	<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>	<li id="menu-item-721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>	<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li></ul>
+</li><li id="menu-item-339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li><li id="menu-item-612" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li><li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li id="menu-item-1172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li></ul>
+</li><li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li><li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li></ul>                <div id="search-toggle" class="genericon">
+<a class="screen-reader-text" href="#search-container">Search</a>
+</div>
+<div id="search-container" class="displaynone">
+<form role="search" method="get" class="search-form" action="//vmblogs.vn/">
+<label>
+<span class="screen-reader-text">Search for:</span>
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+</label>
+<input type="submit" class="search-submit" value="Search">
+</form>
+</div>
+</div><!-- .wrapper -->
+</nav><!-- .nav-primary -->
+<!-- Disable Header Image --><div id="breadcrumb-list">
+<div class="wrapper"><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/">Home <span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb" typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://vmblogs.vn/category/other/">Other<span class="sep">&raquo;</span><!-- .sep --></a></span><span class="breadcrumb-current">Cài đặt CentOS 6.7 và Virtual Tape Library</span></div><!-- .wrapper --> 
+</div><!-- #breadcrumb-list -->		<div id="content" class="site-content">
+<div class="wrapper">
+<main id="main" class="site-main" role="main">
+<article id="post-1862" class="post-1862 post type-post status-publish format-standard has-post-thumbnail hentry category-other tag-virtual-tape-library">
+<!-- Page/Post Single Image Disabled or No Image set in Post Thumbnail -->
+<div class="entry-container">
+<header class="entry-header">
+<h1 class="entry-title">Cài đặt CentOS 6.7 và Virtual Tape Library</h1>
+<p class="entry-meta"><span class="posted-on"><span class="screen-reader-text">Posted on</span><a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/" rel="bookmark"><time class="entry-date published updated" datetime="2015-12-23T14:28:24+00:00">December 23, 2015</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author</span><a class="url fn n" href="https://vmblogs.vn/author/admin/">Trung Truc Tran</a></span></span><span class="comments-link"><a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/#respond">Leave a comment</a></span></p><!-- .entry-meta -->		</header><!-- .entry-header -->
+<div class="entry-content">
+<div class="addtoany_share_save_container addtoany_content_top"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a>
+<script type="text/javascript"><!--
+if(wpa2a)wpa2a.script_load();
+//--></script>
+</div></div><p><span style="color: #0000ff;"><strong>Cài đặt CentOS 6.7 và Virtual Tape Library</strong></span></p>
+<p>Tape backup vẫn còn rất phổ biến ngày nay ở rất nhiều doanh nghiệp tuy nhiên để tiếp cận các thiết bị tape hoặc tape library dường như khó khăn cho rất nhiều người. Trong bài viết này mình sẽ hướng dẫn cài đặt Virtual Tape Library trên hệ điều hành CentOS 6.7 Minimal.</p>
+<p>Để cài đặt các bạn cần download CentOS 6.7 Minimal và QuadStor VTL</p>
+<p>QuadStor VTL hỗ trợ rất nhiều hệ điều hành khác nhau như CentOS, Red Hat, SuSe, BSD&#8230;tuy nhiên giới hạn trong bài viết này mình sử dụng CentOS để hướng dẫn</p>
+<p>Để download CentOS các bạn có thể vào trang chủ hoặc link dưới để tải</p>
+<p><a href="http://mirrors.digipower.vn/centos/6.7/isos/x86_64/" target="_blank">http://mirrors.digipower.vn/centos/6.7/isos/x86_64/</a></p>
+<p>Bài viết này hướng đến tất cả các đối tượng bạn đọc với cách viết step by step để mọi người có thể theo dõi dễ dàng, tuy nhiên mọi người có thể bỏ qua các phần đã biết để hướng đến các mục trọng tâm</p>
+<p><strong>1 &#8211; Hướng dẫn cài đặt CentOS</strong></p>
+<p>Để cài đặt CentOS phục vụ cho việc cài đặt QuadStor VTL, các bạn có thể cài đặt lên máy vật lý hoặc máy ảo với cấu hình yêu cầu khoảng 4GB RAM, để sử dụng tính năng deduplication hiệu quả yêu cầu có nhiều RAM hơn trong hệ thống tuy nhiên đây là mô hình LAB nên 4GB hoặc thấp hơn vẫn chạy tốt</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.39.40.png"  rel="lightbox[1862] attachment wp-att-1863"><img class="aligncenter size-medium wp-image-1863" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.39.40-620x465.png" alt="Snap 2015-12-23 at 10.39.40" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.39.40-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.39.40-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.39.40.png 641w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.40.39.png"  rel="lightbox[1862] attachment wp-att-1864"><img class="aligncenter size-medium wp-image-1864" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.40.39-620x345.png" alt="Snap 2015-12-23 at 10.40.39" width="620" height="345" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.40.39-620x345.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.40.39.png 721w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08.png"  rel="lightbox[1862] attachment wp-att-1865"><img class="aligncenter size-medium wp-image-1865" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08-620x465.png" alt="Snap 2015-12-23 at 10.41.08" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.08.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23.png"  rel="lightbox[1862] attachment wp-att-1866"><img class="aligncenter size-medium wp-image-1866" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23-620x465.png" alt="Snap 2015-12-23 at 10.41.23" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.23.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39.png"  rel="lightbox[1862] attachment wp-att-1867"><img class="aligncenter size-medium wp-image-1867" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39-620x465.png" alt="Snap 2015-12-23 at 10.41.39" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.39.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55.png"  rel="lightbox[1862] attachment wp-att-1868"><img class="aligncenter size-medium wp-image-1868" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55-620x465.png" alt="Snap 2015-12-23 at 10.41.55" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.41.55.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15.png"  rel="lightbox[1862] attachment wp-att-1869"><img class="aligncenter size-medium wp-image-1869" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15-620x465.png" alt="Snap 2015-12-23 at 10.42.15" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.42.15.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36.png"  rel="lightbox[1862] attachment wp-att-1870"><img class="aligncenter size-medium wp-image-1870" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36-620x465.png" alt="Snap 2015-12-23 at 10.43.36" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.36.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56.png"  rel="lightbox[1862] attachment wp-att-1871"><img class="aligncenter size-medium wp-image-1871" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56-620x465.png" alt="Snap 2015-12-23 at 10.43.56" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.43.56.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17.png"  rel="lightbox[1862] attachment wp-att-1872"><img class="aligncenter size-medium wp-image-1872" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17-620x465.png" alt="Snap 2015-12-23 at 10.44.17" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.17.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38.png"  rel="lightbox[1862] attachment wp-att-1873"><img class="aligncenter size-medium wp-image-1873" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38-620x465.png" alt="Snap 2015-12-23 at 10.44.38" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.38.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58.png"  rel="lightbox[1862] attachment wp-att-1874"><img class="aligncenter size-medium wp-image-1874" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58-620x465.png" alt="Snap 2015-12-23 at 10.44.58" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.44.58.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38.png"  rel="lightbox[1862] attachment wp-att-1875"><img class="aligncenter size-medium wp-image-1875" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38-620x465.png" alt="Snap 2015-12-23 at 10.45.38" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.45.38.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38.png"  rel="lightbox[1862] attachment wp-att-1876"><img class="aligncenter size-medium wp-image-1876" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38-620x465.png" alt="Snap 2015-12-23 at 10.59.38" width="620" height="465" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38-620x465.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38-768x576.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38-350x263.png 350w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38-780x586.png 780w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-10.59.38.png 801w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.01.56.png"  rel="lightbox[1862] attachment wp-att-1877"><img class="aligncenter size-medium wp-image-1877" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.01.56-620x345.png" alt="Snap 2015-12-23 at 11.01.56" width="620" height="345" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.01.56-620x345.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.01.56.png 721w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><strong>2 &#8211; Cài đặt QuadStor VTL</strong></p>
+<p>Sau khi hoàn tất việc cài đặt CentOS, chúng ta tiến hành cài đặt QuadStor VTL, tuy nhiên trước khi cài đặt QuadStor chúng ta cần chuẩn bị một số bước</p>
+<p>Cập nhật CentOS</p>
+<blockquote><p>yum update -y</p></blockquote>
+<p>Cài đặt một số công cụ hệ thống</p>
+<blockquote><p>yum install epel wget htop nano -y</p></blockquote>
+<p>Cấu hình tường lửa iptables</p>
+<p>QuadStor VTL được cấu hình thông qua web nên chúng ta cần mở các port 80, 443 và mở port 3260 cho giao thức iSCSI</p>
+<blockquote><p>nano /etc/sysconfig/iptables</p></blockquote>
+<blockquote><p># Firewall configuration written by system-config-firewall<br />
+# Manual customization of this file is not recommended.<br />
+*filter<br />
+:INPUT ACCEPT [0:0]<br />
+:FORWARD ACCEPT [0:0]<br />
+:OUTPUT ACCEPT [0:0]<br />
+-A INPUT -m state &#8211;state ESTABLISHED,RELATED -j ACCEPT<br />
+-A INPUT -p icmp -j ACCEPT<br />
+-A INPUT -i lo -j ACCEPT<br />
+-A INPUT -m state &#8211;state NEW -m tcp -p tcp &#8211;dport 22 -j ACCEPT<br />
+<span style="color: #0000ff;">-A INPUT -m state &#8211;state NEW -m tcp -p tcp &#8211;dport 80 -j ACCEPT</span><br />
+<span style="color: #0000ff;"> -A INPUT -m state &#8211;state NEW -m tcp -p tcp &#8211;dport 443 -j ACCEPT</span><br />
+<span style="color: #0000ff;"> -A INPUT -m state &#8211;state NEW -m tcp -p tcp &#8211;dport 3260 -j ACCEPT</span><br />
+-A INPUT -j REJECT &#8211;reject-with icmp-host-prohibited<br />
+-A FORWARD -j REJECT &#8211;reject-with icmp-host-prohibited<br />
+COMMIT</p></blockquote>
+<p>Save tập tin lại và restart iptables</p>
+<blockquote><p>service iptables restart</p></blockquote>
+<p>Tắt SELinux (không khuyên)</p>
+<p>SELinux là một tính năng bảo mật của CentOS/RedHat giúp hệ thống an toàn hơn tuy nhiên SElinux sẽ gây phiền toái nếu không được cấu hình chính xác, do đó trong bài này mình sẽ tắt SELinux</p>
+<blockquote><p>nano /etc/selinux/config</p></blockquote>
+<blockquote><p>SELINUX=disabled</p></blockquote>
+<p>Save file đã cấu hình</p>
+<p>Tắt dịch vụ postfix và cấu hình postfix không chạy lúc khởi động</p>
+<blockquote><p>service postfix stop</p></blockquote>
+<blockquote><p>chkconfig postfix off</p></blockquote>
+<p>Khởi động lại server CentOS</p>
+<blockquote><p>reboot</p></blockquote>
+<p>Cài đặt các thành phần cần thiết cho QuadStor VTL</p>
+<blockquote><p>yum install gcc httpd perl kernel-devel sg3_utils -y</p></blockquote>
+<blockquote><p>yum update -y</p></blockquote>
+<p>Tải và cài đặt QuadStor VTL</p>
+<blockquote><p>cd /opt</p></blockquote>
+<blockquote><p>wget http://www.quadstor.com/vtlextdownloads/quadstor-vtl-ext-2.4.51-rhel6.x86_64.rpm</p></blockquote>
+<blockquote><p>rpm -ivh quadstor-vtl-ext-2.4.51-rhel6.x86_64.rpm</p></blockquote>
+<p>Khởi động dịch vụ httpd</p>
+<blockquote><p>service httpd start</p></blockquote>
+<blockquote><p>chkconfig httpd on</p></blockquote>
+<blockquote><p>chkconfig quadstorvtl on</p></blockquote>
+<p>Khởi động lại máy chủ CentOS<br />
+reboot</p>
+<p>Sau khi khởi động lại chúng ta có giao diện web như bên dưới</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49.png"  rel="lightbox[1862] attachment wp-att-1878"><img class="aligncenter size-medium wp-image-1878" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49-620x332.png" alt="Snap 2015-12-23 at 11.55.49" width="620" height="332" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49-620x332.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49-768x411.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49-920x493.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-11.55.49.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><strong>Cấu hình RAID trên CentOS (tùy chọn)</strong></p>
+<p>QuadStor VTL có thể làm việc trực tiếp với HDD gắn trên CentOS hoặc RAID, trong bài hướng dẫn này mình sẽ hướng dẫn cấu hình RAID0 2 HDD</p>
+<p>Để liệt kê các ổ cứng có trong máy chúng ta chạy lệnh</p>
+<blockquote><p>fdisk -l</p></blockquote>
+<p>Disk<strong> /dev/sdb</strong>: 53.7 GB, 53687091200 bytes<br />
+255 heads, 63 sectors/track, 6527 cylinders<br />
+Units = cylinders of 16065 * 512 = 8225280 bytes<br />
+Sector size (logical/physical): 512 bytes / 512 bytes<br />
+I/O size (minimum/optimal): 512 bytes / 512 bytes<br />
+Disk identifier: 0x00000000</p>
+<p>Disk <strong>/dev/sdc</strong>: 53.7 GB, 53687091200 bytes<br />
+255 heads, 63 sectors/track, 6527 cylinders<br />
+Units = cylinders of 16065 * 512 = 8225280 bytes<br />
+Sector size (logical/physical): 512 bytes / 512 bytes<br />
+I/O size (minimum/optimal): 512 bytes / 512 bytes<br />
+Disk identifier: 0x00000000</p>
+<p>Trước khi tạo RAID, cần tạo phân vùng cho 2 ổ cứng sdb và sdc</p>
+<blockquote><p>fdisk /dev/sdb</p></blockquote>
+<p>Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel<br />
+Building a new DOS disklabel with disk identifier 0x7653b52d.<br />
+Changes will remain in memory only, until you decide to write them.<br />
+After that, of course, the previous content won&#8217;t be recoverable.</p>
+<p>Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)</p>
+<p>WARNING: DOS-compatible mode is deprecated. It&#8217;s strongly recommended to<br />
+switch off the mode (command &#8216;c&#8217;) and change display units to<br />
+sectors (command &#8216;u&#8217;).</p>
+<p>Command (m for help): n<br />
+Command action<br />
+e extended<br />
+p primary partition (1-4)<br />
+p<br />
+Partition number (1-4): 1<br />
+First cylinder (1-6527, default 1):<br />
+Using default value 1<br />
+Last cylinder, +cylinders or +size{K,M,G} (1-6527, default 6527):<br />
+Using default value 6527</p>
+<p>Command (m for help): w<br />
+The partition table has been altered!</p>
+<p>Calling ioctl() to re-read partition table.<br />
+Syncing disks.</p>
+<p>Tương tự cho /dev/sdc</p>
+<p>Cấu hình RAID 0 từ 2 phân vùng mới tạo</p>
+<blockquote><p>mdadm &#8211;create /dev/md0 &#8211;level=0 &#8211;raid-devices=2 /dev/sdb1 /dev/sdc1</p></blockquote>
+<p>Sau khi hoàn tất việc tạo RAID, kiểm tra phần physical storage sẽ hiển thị thông tin RAID như ảnh dưới</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32.png"  rel="lightbox[1862] attachment wp-att-1879"><img class="aligncenter size-medium wp-image-1879" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32-620x332.png" alt="Snap 2015-12-23 at 12.23.32" width="620" height="332" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32-620x332.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32-768x411.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32-920x493.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.23.32.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><strong>3 &#8211; Cấu hình Storage Pool</strong></p>
+<p>Do QuadStor giả lập các thiết bị tape cần nơi lưu trữ do đó để có thể vận hành chúng ta cần phải cấu hình Storage Pool làm nơi chứa dữ liệu.</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10.png"  rel="lightbox[1862] attachment wp-att-1880"><img class="aligncenter size-medium wp-image-1880" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10-620x145.png" alt="Snap 2015-12-23 at 12.53.10" width="620" height="145" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10-620x145.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10-768x180.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10-920x215.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.53.10.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Click mục Storage Pools và click nút Add Pool</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13.png"  rel="lightbox[1862] attachment wp-att-1881"><img class="aligncenter size-medium wp-image-1881" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13-620x270.png" alt="Snap 2015-12-23 at 12.54.13" width="620" height="270" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13-620x270.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13-768x334.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13-920x400.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.13.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đặt tên pool, check chọn các chức năng cần bật và click Submit</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56.png"  rel="lightbox[1862] attachment wp-att-1882"><img class="aligncenter size-medium wp-image-1882" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56-620x136.png" alt="Snap 2015-12-23 at 12.54.56" width="620" height="136" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56-620x136.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56-768x169.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56-920x203.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.54.56.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Mục Storage Pools thể hiện thông tin Storage Pool vừa tạo</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24.png"  rel="lightbox[1862] attachment wp-att-1883"><img class="aligncenter size-medium wp-image-1883" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24-620x232.png" alt="Snap 2015-12-23 at 12.55.24" width="620" height="232" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24-620x232.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24-768x288.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24-920x345.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.55.24.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Quay trở lại mục Physical Storage, click Add để thêm đĩa cứng vào Storage Pool</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08.png"  rel="lightbox[1862] attachment wp-att-1884"><img class="aligncenter size-medium wp-image-1884" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08-620x119.png" alt="Snap 2015-12-23 at 12.56.08" width="620" height="119" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08-620x119.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08-768x147.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08-920x177.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.56.08.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn Storage Pool và click Submit</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51.png"  rel="lightbox[1862] attachment wp-att-1885"><img class="aligncenter size-medium wp-image-1885" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51-620x232.png" alt="Snap 2015-12-23 at 12.57.51" width="620" height="232" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51-620x232.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51-768x287.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51-920x344.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.57.51.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Phần Physical Storage thể hiện các thông tin sau khi đã add vào Storage Pool</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22.png"  rel="lightbox[1862] attachment wp-att-1886"><img class="aligncenter size-medium wp-image-1886" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22-620x133.png" alt="Snap 2015-12-23 at 12.58.22" width="620" height="133" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22-620x133.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22-768x165.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22-920x198.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-12.58.22.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Và mục Storage Pool sau khi đã add ổ cứng.</p>
+<p><strong>4 &#8211; Cấu hình Virtual Tape Library</strong></p>
+<p>QuadStor hỗ trợ giả lập rất nhiều Tape Library của các hãng như HP, IBM, Quantum&#8230;Việc lựa chọn tùy thuộc vào sở thích cá nhân. Ở bài viết này mình sử dụng Quantum Scalar i500 và Scalar i2000. Việc cài đặt driver cho các tape library này cũng khá dễ dàng và nhanh chóng</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08.png"  rel="lightbox[1862] attachment wp-att-1887"><img class="aligncenter size-medium wp-image-1887" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08-620x114.png" alt="Snap 2015-12-23 at 13.00.08" width="620" height="114" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08-620x114.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08-768x141.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08-920x169.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.00.08.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Để add tape library, click chọn mục Tape Libraries và click Add VTL</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21.png"  rel="lightbox[1862] attachment wp-att-1888"><img class="aligncenter size-medium wp-image-1888" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21-620x263.png" alt="Snap 2015-12-23 at 13.01.21" width="620" height="263" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21-620x263.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21-768x326.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21-920x391.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.21.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Đặt tên cho VTL, chọn nhà sản xuất và model tape library cũng như các tham số liên quan.</p>
+<p>Ở đây mình chọn ADIC/Quantum Scalar i2000 và Ultrium6<br />
+1 VDrive<br />
+20 slot tape<br />
+0 port Import/Export tape</p>
+<p>click Submit</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48.png"  rel="lightbox[1862] attachment wp-att-1889"><img class="aligncenter size-medium wp-image-1889" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48-620x200.png" alt="Snap 2015-12-23 at 13.01.48" width="620" height="200" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48-620x200.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48-768x248.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48-920x297.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.01.48.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Review lại thông tin và click Add VTL để tiếp tục</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35.png"  rel="lightbox[1862] attachment wp-att-1890"><img class="aligncenter size-medium wp-image-1890" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35-620x332.png" alt="Snap 2015-12-23 at 13.02.35" width="620" height="332" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35-620x332.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35-768x411.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35-920x493.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.02.35.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Để có thể sử dụng chúng ta cần add tape, ở đây là vCartridge</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40.png"  rel="lightbox[1862] attachment wp-att-1891"><img class="aligncenter size-medium wp-image-1891" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40-620x197.png" alt="Snap 2015-12-23 at 13.03.40" width="620" height="197" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40-620x197.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40-768x243.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40-920x292.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.03.40.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Chọn Storage Pool, số lượng tape (vCartridge) và thiết lập nhãn (label)</p>
+<p>Submit</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19.png"  rel="lightbox[1862] attachment wp-att-1892"><img class="aligncenter size-medium wp-image-1892" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19-620x332.png" alt="Snap 2015-12-23 at 13.04.19" width="620" height="332" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19-620x332.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19-768x411.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19-920x493.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.04.19.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Hoàn tất</p>
+<p><a href="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11.png"  rel="lightbox[1862] attachment wp-att-1893"><img class="aligncenter size-medium wp-image-1893" src="//vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11-620x134.png" alt="Snap 2015-12-23 at 13.06.11" width="620" height="134" srcset="https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11-620x134.png 620w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11-768x165.png 768w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11-920x198.png 920w, https://vmblogs.vn/wp-content/uploads/2015/12/Snap-2015-12-23-at-13.06.11.png 1281w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Thao tác tương tự để add các tape library khác</p>
+<p>Trong ảnh mình tạo sẵn 2 tape library để cho các phần mềm backup kết nối.</p>
+<p>Trong phần tới mình sẽ hướng dẫn cách thức kết nối, cài đặt driver, thiết lập các phần mềm backup như Symantec Backup Exec 2014 và Veeam Backup &amp; Replication 8 hoạt động với virtual tape library</p>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_2"><a class="a2a_button_facebook a2a_counter" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div></div>					</div><!-- .entry-content -->
+<footer class="entry-footer">
+<p class="entry-meta"><span class="cat-links"><span class="screen-reader-text">Categories</span><a href="https://vmblogs.vn/category/other/" rel="category tag">Other</a></span><span class="tags-links"><span class="screen-reader-text">Tags</span><a href="https://vmblogs.vn/tag/virtual-tape-library/" rel="tag">Virtual Tape Library</a></span></p><!-- .entry-meta -->		</footer><!-- .entry-footer -->
+</div><!-- .entry-container -->
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation">
+<h2 class="screen-reader-text">Post navigation</h2>
+<div class="nav-links"><div class="nav-previous"><a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p3/" rel="prev"><span class="meta-nav" aria-hidden="true">&larr; Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P3</span></a></div></div>
+</nav>
+<div id="comments" class="comments-area">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/cai-dat-centos-6-7-va-virtual-tape-library/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://vmblogs.vn/dangnhap?redirect_to=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F">logged in</a> to post a comment.</p>		</div><!-- #respond -->
+</div><!-- #comments -->
+</main><!-- #main -->
+<aside class="sidebar sidebar-primary widget-area" role="complementary">
+<section id="meta-9" class="widget widget_meta"><div class="widget-wrap"><h4 class="widget-title">Đăng nhập</h4>			<ul>
+<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap?action=register">Register</a></li>			<li><a rel="nofollow" href="https://vmblogs.vn/dangnhap">Log in</a></li>
+<li><a href="https://vmblogs.vn/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://vmblogs.vn/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search --><section id="categories-5" class="widget widget_categories"><div class="widget-wrap"><h4 class="widget-title">Danh mục</h4>		<ul>
+<li class="cat-item cat-item-20"><a href="https://vmblogs.vn/category/citrix/" >Citrix</a> (22)
+</li>
+<li class="cat-item cat-item-25"><a href="https://vmblogs.vn/category/citrix-receiver/" >Citrix Receiver</a> (8)
+</li>
+<li class="cat-item cat-item-21"><a href="https://vmblogs.vn/category/microsoft/" >Microsoft</a> (6)
+</li>
+<li class="cat-item cat-item-56"><a href="https://vmblogs.vn/category/news/" >News</a> (2)
+</li>
+<li class="cat-item cat-item-22"><a href="https://vmblogs.vn/category/other/" >Other</a> (34)
+</li>
+<li class="cat-item cat-item-121"><a href="https://vmblogs.vn/category/pvs/" title="Citrix Provisioning Services">Provisioning Services</a> (10)
+</li>
+<li class="cat-item cat-item-116"><a href="https://vmblogs.vn/category/security/" title="Security information and products">Security</a> (18)
+</li>
+<li class="cat-item cat-item-23"><a href="https://vmblogs.vn/category/tools/" >Tools</a> (3)
+</li>
+<li class="cat-item cat-item-24"><a href="https://vmblogs.vn/category/vmware/" >VMWare</a> (3)
+</li>
+<li class="cat-item cat-item-15"><a href="https://vmblogs.vn/category/vsphere/" >VSphere</a> (1)
+</li>
+<li class="cat-item cat-item-17"><a href="https://vmblogs.vn/category/xenapp/" >XenApp</a> (14)
+</li>
+<li class="cat-item cat-item-18"><a href="https://vmblogs.vn/category/xendesktop/" >XenDesktop</a> (8)
+</li>
+<li class="cat-item cat-item-19"><a href="https://vmblogs.vn/category/xenserver/" >XenServer</a> (3)
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->		<section id="recent-posts-6" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widget-title">Bài đăng gần đây</h4>		<ul>
+<li>
+<a href="https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/">Cài đặt CentOS 6.7 và Virtual Tape Library</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p3/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P3</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p2-2/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P2</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/deploy-windows-10-va-office-2013-voi-microsoft-deployment-toolkit-p1/">Deploy Windows 10 và Office 2013 với Microsoft Deployment Toolkit P1</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/tuy-chinh-bo-cai-windows-voi-ntlite/">Tùy chỉnh bộ cài Windows với NTLite</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/web-gui-cho-vmware-esxi/">Web GUI cho VMware ESXi</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/citrix-receiver-va-citrix-director/">Citrix Receiver và Citrix Director</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cai-dat-va-cau-hinh-storefront-server/">Cài đặt và cấu hình Storefront server</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-delivery-group/">Cấu hình XenDesktop Delivery Group</a>
+</li>
+<li>
+<a href="https://vmblogs.vn/cau-hinh-xendesktop-machine-catalog/">Cấu hình XenDesktop Machine Catalog</a>
+</li>
+</ul>
+</div><!-- .widget-wrap --></section><!-- #widget-default-search -->				</aside><!-- .sidebar sidebar-primary widget-area -->
+
+</div><!-- .wrapper -->
+</div><!-- #content -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- refreshing cache -->    	
+<div id="site-generator">
+<div class="wrapper">
+<div id="footer-content" class="copyright">Copyright &copy; 2015 <a href="https://vmblogs.vn/">VMBlogs</a>. All Rights Reserved. &#124; Clean Journal&nbsp;by&nbsp;<a target="_blank" href="http://catchthemes.com/">Catch Themes</a></div>
+</div><!-- .wrapper -->
+</div><!-- #site-generator -->	</footer><!-- #colophon -->
+</div><!-- #page -->
+<!-- refreshing cache --><a href="#masthead" id="scrollup" class="genericon"><span class="screen-reader-text">Scroll Up</span></a><nav id="mobile-header-left-nav" class="mobile-menu" role="navigation"><ul id="header-left-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-608"><a href="https://vmblogs.vn">Trang chủ</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-338"><a href="https://vmblogs.vn/category/news/">Tin tức</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-337"><a href="https://vmblogs.vn/category/vmware/">VMWare</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="https://vmblogs.vn/category/view/">View</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="https://vmblogs.vn/category/vsphere/">VSphere</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-335"><a href="https://vmblogs.vn/category/citrix/">Citrix</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://vmblogs.vn/category/xenapp/">XenApp</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="https://vmblogs.vn/category/xendesktop/">XenDesktop</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-721"><a href="https://vmblogs.vn/category/pvs/">Provisioning Services</a></li>	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="https://vmblogs.vn/category/xenserver/">XenServer</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-339"><a href="https://vmblogs.vn/category/microsoft/">Microsoft</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-612"><a href="https://vmblogs.vn/category/security/">Bảo mật</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-340"><a href="https://vmblogs.vn/category/other/">Danh mục khác</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"><a href="https://vmblogs.vn/backup-recovery/">Backup-Recovery</a></li></ul>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://vmblogs.vn/category/tools/">Phần mềm</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="https://vmblogs.vn/about/">Liên hệ</a></li></ul></nav><!-- #mobile-header-left-nav -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style a2a_target" id="wpa2a_3" style="right:0px;top:100px;"><a class="a2a_button_facebook" href="http://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_button_email" href="http://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fvmblogs.vn%2Fcai-dat-centos-6-7-va-virtual-tape-library%2F&amp;linkname=C%C3%A0i%20%C4%91%E1%BA%B7t%20CentOS%206.7%20v%C3%A0%20Virtual%20Tape%20Library" title="Email" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"></a></div>
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:"C\u00e0i \u0111\u1eb7t CentOS 6.7 v\u00e0 Virtual Tape Library",url:"https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/"},
+{title:"C\u00e0i \u0111\u1eb7t CentOS 6.7 v\u00e0 Virtual Tape Library",url:"https://vmblogs.vn/cai-dat-centos-6-7-va-virtual-tape-library/"},
+{title:document.title,url:location.href}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/vmblogs.vn\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/navigation.min.js?ver=20120206'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/skip-link-focus-fix.min.js?ver=20130115'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/comment-reply.min.js?ver=4.4'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/fitvids.min.js?ver=1.1'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-content/themes/clean-journal/js/clean-journal-scrollup.min.js?ver=20072014'></script>
+<script type='text/javascript' src='//vmblogs.vn/wp-includes/js/wp-embed.min.js?ver=4.4'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.32372212409973 seconds, on 29-12-15 2:59:40 Mozilla/5.0 (Windows NT 6.1; rv:43.0) Gecko/20100101 Firefox/43.0-->

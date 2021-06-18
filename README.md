@@ -1,4 +1,4 @@
-#### VMBlogs Archive - Hướng dẫn restore blog wordpress từ backup
+## VMBlogs Archive - Hướng dẫn restore blog wordpress từ backup
 
 ------
 
@@ -12,9 +12,9 @@
 
 Trong nội dung bài viết này, mình sẽ hướng dẫn cách cài đặt các thành phần trên với hệ điều hành CentOS phiên bản Minimal (sử dụng dòng lệnh 100%), áp dụng tương tự cho các phiên bản hệ điều hành nền RedHat như CentOS, Fedora, RedHat...
 
-##### Cài đặt các thành phần cần thiết
+#### Cài đặt các thành phần cần thiết
 
-Cài đặt các repo bổ sung cho CentOS
+##### Cài đặt các repo bổ sung cho CentOS
 
 ```
 yum install epel-release -y
@@ -22,7 +22,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum update -y
 ```
 
-###### Cài đặt các thành phần cơ bản để chạy web php (wordpress)
+##### Cài đặt các thành phần cơ bản để chạy web php (wordpress)
 
 Cài đặt php và httpd
 

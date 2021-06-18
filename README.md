@@ -12,7 +12,7 @@
 
 Trong nội dung bài viết này, mình sẽ hướng dẫn cách cài đặt các thành phần trên với hệ điều hành CentOS phiên bản Minimal (sử dụng dòng lệnh 100%), áp dụng tương tự cho các phiên bản hệ điều hành nền RedHat như CentOS, Fedora, RedHat...
 
-### Cài đặt các thành phần cần thiết
+### 1.Cài đặt các thành phần cần thiết
 
 #### Cài đặt các repo bổ sung cho CentOS
 
@@ -36,7 +36,7 @@ Cài đặt database server
 yum install mariadb mariadb-server -y
 ```
 
-### Cấu hình web server (httpd) và database server (MariaDB server)
+### 2.Cấu hình web server (httpd) và database server (MariaDB server)
 
 Cấu hình service chạy lúc khởi động
 
@@ -58,7 +58,7 @@ Cấu hình bảo mật MariaDB
 mysql_secure_installation
 ```
 
-### Restore database
+### 3.Restore database
 
 Copy file backup database lên máy chủ vào một thư mục nào đó ví dụ /home/vmblogs3_db.sql
 
@@ -90,9 +90,46 @@ use vmblogs3_db;
 source /home/vmblogs3_db.sql
 ```
 
-### Restore thư mục wordpress
+### 4.Restore thư mục wordpress
 
 Upload thư mục wordpress đã backup lên máy chủ bằng FTP hoặc SFTP vào thư mục bất kỳ ví dụ 
 
 > /var/www/html/vmblogs
+
+### 5.Update cấu hình web server cho thư mục wordpress mới restore
+
+> nano /etc/httpd/conf/httpd.conf
+
+Update một số giá trị để phù hợp với website wordpress restore
+
+```
+DocumentRoot => /var/www/html/vmblogs (thư mục web)
+
+AllowOverRide None => AllowOverRide All (cho phép sử dụng .htaccess)
+```
+
+Khởi động lại web server
+
+```
+systemctl restart httpd
+```
+
+### 6.Cấu hình tường lửa cho phép truy cập từ bên ngoài
+
+Để cho phép người dùng truy cập từ bên ngoài, hai port cơ bản của web server là 80 và 443 cần được cấu hình để tường lửa cho phép truy cập
+
+Bật tường lửa và cho phép chạy lúc khởi động
+
+```
+systemctl enable firewalld
+systemctl start firewalld
+```
+
+Cấu hình cho phép dịch vụ web
+
+```
+firewall-cmd --zone=public --permanent --add-service=http
+firewall-cmd --zone=public --permanent --add-service=https
+firewall-cmd --reload
+```
 

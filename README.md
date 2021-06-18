@@ -36,3 +36,25 @@ Cài đặt database server
 yum install mariadb mariadb-server -y
 ```
 
+##### Cấu hình web server (httpd) và database server (MariaDB server)
+
+Cấu hình service chạy lúc khởi động
+
+```
+systemctl enable httpd
+systemctl enable mariadb
+```
+
+Start service
+
+```
+systemctl start httpd
+systemctl start mariadb
+```
+
+Cấu hình bảo mật MariaDB
+
+```
+mysql_secure_installation
+```
+

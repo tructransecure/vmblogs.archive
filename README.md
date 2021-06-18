@@ -96,6 +96,10 @@ Upload thư mục wordpress đã backup lên máy chủ bằng FTP hoặc SFTP v
 
 > /var/www/html/vmblogs
 
+Gán quyền cho thư mục
+
+> chown -R apache:apache /var/www/html/vmblogs
+
 ### 5.Update cấu hình web server cho thư mục wordpress mới restore
 
 > nano /etc/httpd/conf/httpd.conf

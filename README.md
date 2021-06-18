@@ -1,16 +1,18 @@
-## VMBlogs Archive - Hướng dẫn restore blog wordpress từ backup
+## VMBlogs - Hướng dẫn restore blog wordpress từ backup
 
 ------
 
 ![homepage](https://github.com/tructransecure/vmblogs.archive/blob/main/resource/homepage.jpg)
 
-Để cài đặt blog worppress, chúng ta cần có đủ các thành phần cơ bản như sau:
+Để cài đặt blog Wordpress, chúng ta cần có đủ các thành phần cơ bản như sau:
 
 - PHP7
 - Database server (MySQL/MariaDB)
 - Web server (httpd)
 
 Trong nội dung bài viết này, mình sẽ hướng dẫn cách cài đặt các thành phần trên với hệ điều hành CentOS phiên bản Minimal (sử dụng dòng lệnh 100%), áp dụng tương tự cho các phiên bản hệ điều hành nền RedHat như CentOS, Fedora, RedHat...
+
+Để thuận tiện cho những người mới bắt đầu, nên cài bản đầy đủ có giao diện đồ họa để dễ tiếp cận
 
 ### 1.Cài đặt các thành phần cần thiết
 
@@ -22,7 +24,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum update -y
 ```
 
-#### Cài đặt các thành phần cơ bản để chạy web php (wordpress)
+#### Cài đặt các thành phần cơ bản để chạy web Wordpress
 
 Cài đặt php và httpd
 
@@ -57,6 +59,8 @@ Cấu hình bảo mật MariaDB
 ```
 mysql_secure_installation
 ```
+
+Trả lời các câu hỏi để nâng mức bảo mật database server như không cho login từ bên ngoài hoặc đặt mật khẩu cho tài khoản quản trị root
 
 ### 3.Restore database
 

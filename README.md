@@ -12,9 +12,9 @@
 
 Trong nội dung bài viết này, mình sẽ hướng dẫn cách cài đặt các thành phần trên với hệ điều hành CentOS phiên bản Minimal (sử dụng dòng lệnh 100%), áp dụng tương tự cho các phiên bản hệ điều hành nền RedHat như CentOS, Fedora, RedHat...
 
-#### Cài đặt các thành phần cần thiết
+### Cài đặt các thành phần cần thiết
 
-##### Cài đặt các repo bổ sung cho CentOS
+#### Cài đặt các repo bổ sung cho CentOS
 
 ```
 yum install epel-release -y
@@ -22,7 +22,7 @@ rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum update -y
 ```
 
-##### Cài đặt các thành phần cơ bản để chạy web php (wordpress)
+#### Cài đặt các thành phần cơ bản để chạy web php (wordpress)
 
 Cài đặt php và httpd
 
@@ -36,7 +36,7 @@ Cài đặt database server
 yum install mariadb mariadb-server -y
 ```
 
-##### Cấu hình web server (httpd) và database server (MariaDB server)
+### Cấu hình web server (httpd) và database server (MariaDB server)
 
 Cấu hình service chạy lúc khởi động
 
@@ -58,7 +58,7 @@ Cấu hình bảo mật MariaDB
 mysql_secure_installation
 ```
 
-##### Restore database
+### Restore database
 
 Copy file backup database lên máy chủ vào một thư mục nào đó ví dụ /home/vmblogs3_db.sql
 
@@ -90,8 +90,9 @@ use vmblogs3_db;
 source /home/vmblogs3_db.sql
 ```
 
-##### Restore thư mục wordpress
+### Restore thư mục wordpress
 
 Upload thư mục wordpress đã backup lên máy chủ bằng FTP hoặc SFTP vào thư mục bất kỳ ví dụ 
 
 > /var/www/html/vmblogs
+

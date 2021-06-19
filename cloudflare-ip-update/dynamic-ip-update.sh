@@ -11,7 +11,7 @@ set -o pipefail
 # Tạo thư mục bất kỳ để lưu script cập nhật IP động
 # mkdir /root/DynamicIPUpdate
 # Tải script về thư mục đã tạo và gán quyền thực thi script
-# curl https://raw.githubusercontent.com/yulewang/cloudflare-api-v4-ddns/master/cf-v4-ddns.sh > /root/DynamicIPUpdate/cloudflare-ip-update.sh && chmod +x /root/DynamicIPUpdate/cloudflare-ip-update.sh
+# curl https://raw.githubusercontent.com/tructransecure/vmblogs.archive/main/cloudflare-ip-update/dynamic-ip-update.sh > /root/DynamicIPUpdate/cloudflare-ip-update.sh && chmod +x /root/DynamicIPUpdate/cloudflare-ip-update.sh
 # chạy `crontab -e` và thêm dòng:
 # */1 * * * * /root/DynamicIPUpdate/cloudflare-ip-update.sh >/dev/null 2>&1
 # hoặc nếu cần lưu log:
